@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Family Church</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.7;
+        color: #333;
+        background: #ffffff;
+    }
+
+    header {
+    background: #1a1612;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #faf9f8;
+    height: 50px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 28px;
+    }
+
+    .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+    color: #A68A6D;
+    }
+
+    .menu-btn {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+        min-height: 80vh;
+
+        background:
+            linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+            ),
+            url("images/church.jpg") center/cover no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        color: white;
+        padding: 30px 20px;
+    }
+
+    .hero-content {
+        max-width: 750px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #A68A6D;
+        color: white;
+        padding: 11px 22px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: 0.2s;
+    }
+
+    .btn:hover {
+        background: #806A50;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================== */
+
+    section {
+        padding: 75px 20px;
+    }
+
+    .container {
+        max-width: 1150px;
+        margin: auto;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+        font-weight: 500;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .section-title p {
+        color: #777;
+        font-size: 15px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+        background: #fafafa;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about img {
+        width: 100%;
+        border-radius: 6px;
+        display: block;
+    }
+
+    .about-text h3 {
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        color: #A68A6D;
+    }
+
+    .about-text p {
+        color: #555;
+    }
+
+    /* =========================
+       ANNOUNCEMENTS
+    ========================== */
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    .card {
+        background: #ffffff;
+        border: 1px solid #eeeeee;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card-content {
+        padding: 22px;
+    }
+
+    .card-content h3 {
+        color: #333;
+        font-size: 19px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+    .date {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    /* =========================
+       WEEKLY SCHEDULE
+    ========================== */
+
+    .event {
+        position: relative;
+        overflow: hidden;
+
+        min-height: 210px;
+        margin-bottom: 18px;
+        padding: 30px;
+
+        border-radius: 6px;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        color: white;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Dark image overlay */
+
+    .event::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.48);
+    }
+
+    .event h3,
+.event p {
+    position: relative;
+    z-index: 1;
+}
+
+.event h3 {
+    color: #fffbf5;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+}
+
+.event p {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+    /* Schedule Images */
+
+    .tuesday {
+        background-image: url("images/tuesday.jpg");
+    }
+
+    .wednesday {
+        background-image: url("images/wednesday.jpg");
+    }
+
+    .thursday {
+        background-image: url("images/thursday.jpg");
+    }
+
+    .friday {
+        background-image: url("images/friday.jpg");
+    }
+
+    .saturday {
+        background-image: url("images/saturday.jpg");
+    }
+
+    .sunday {
+        background-image: url("images/imagesunday.jpg");
+    }
+
+    /* =========================
+       MINISTRIES
+    ========================== */
+
+    .ministry-card {
+        text-align: center;
+        padding: 35px 25px;
+    }
+
+    .ministry-card i {
+        font-size: 38px;
+        color: #A68A6D;
+        margin-bottom: 15px;
+    }
+
+    .ministry-card h3 {
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    /* =========================
+       VIDEOS
+    ========================== */
+
+    .video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 18px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.video {
+    width: 300px;
+}
+
+@media (max-width: 1000px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 300px);
+    }
+}
+
+@media (max-width: 650px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .video {
+        width: 300px;
+        margin: 0 auto;
+    }
+}
+
+    /* =========================
+       GALLERY
+    ========================== */
+
+    .gallery {
+        background: #fafafa;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+
+    .gallery-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #f5f5f5;
+    display: block;
+    border-radius: 5px;
+    }
+
+    .gallery-grid img:hover {
+        transform: none;
+    }
+
+    /* =========================
+       SERVICE TIMES
+    ========================== */
+
+    .services {
+        text-align: center;
+    }
+
+    .service-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .service {
+        padding: 30px 20px;
+        background: #fafafa;
+        border: 1px solid #eeeeee;
+        border-radius: 6px;
+    }
+
+    .service i {
+        font-size: 30px;
+        color: #A68A6D;
+        margin-bottom: 12px;
+    }
+
+    .service h3 {
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+        background: #fafafa;
+    }
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .contact-info h3 {
+        color: #A68A6D;
+        font-weight: 500;
+        margin-bottom: 18px;
+    }
+
+    .contact-info p {
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    form input,
+    form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 14px;
+
+        border: 1px solid #ddd;
+        border-radius: 4px;
+
+        font-family: inherit;
+        font-size: 14px;
+    }
+
+    form input:focus,
+    form textarea:focus {
+        outline: none;
+        border-color: #A68A6D;
+    }
+
+    form textarea {
+        height: 140px;
+        resize: vertical;
+    }
+
+    form button {
+        border: none;
+        cursor: pointer;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+        background: #1a1612;
+        color: white;
+        text-align: center;
+        padding: 45px 20px;
+    }
+
+    footer h3 {
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    .social-links {
+        margin: 22px 0;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 50%;
+        background: #ffffff;
+        color: #A68A6D;
+
+        text-decoration: none;
+        font-size: 17px;
+
+        transition: 0.2s;
+    }
+
+    .social-links a:hover {
+        background: #A68A6D;
+        color: white;
+        transform: none;
+    }
+
+    footer p {
+        font-size: 13px;
+        color: #ccc;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 768px) {
+
+        .menu-btn {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+
+            position: absolute;
+            top: 65px;
+            left: 0;
+
+            width: 100%;
+
+            background: white;
+
+            flex-direction: column;
+            padding: 20px;
+
+            text-align: center;
+
+            border-top: 1px solid #eeeeee;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .hero {
+            min-height: 70vh;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .about-content,
+        .contact-content,
+        .video-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .service-box {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .hero h1 {
+            font-size: 32px;
+        }
+
+        .hero p {
+            font-size: 16px;
+        }
+
+        section {
+            padding: 55px 18px;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .event {
+            min-height: 190px;
+            padding: 25px;
+        }
+
+        .event h3 {
+            font-size: 22px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+    <img src="images/logo.png" alt="Family Church Logo">
+    <span>Family Church</span>
+        </div>
+
+            <div class="menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#announcements">Announcements</a>
+                </li>
+
+                <li>
+                    <a href="#events">Events</a>
+                </li>
+
+                <li>
+                    <a href="#videos">Videos</a>
+                </li>
+
+                <li>
+                    <a href="#gallery">Gallery</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Welcome to Family Church</h1>
+
+            <p>
+                𝘉𝘦𝘺𝘰𝘯𝘥 𝘕𝘢𝘮𝘦𝘴. 𝘉𝘦𝘺𝘰𝘯𝘥 𝘞𝘢𝘭𝘭𝘴. 𝘉𝘦𝘺𝘰𝘯𝘥 𝘋𝘦𝘯𝘰𝘮𝘪𝘯𝘢𝘵𝘪𝘰𝘯𝘴. 𝘈𝘭𝘭 𝘧𝘰𝘳 𝘏𝘪𝘴 𝘨𝘭𝘰𝘳𝘺!
+            </p>
+
+            <a href="#about" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>About Us</h2>
+
+                <p>
+                    Get to know our church and our mission.
+                </p>
+
+            </div>
+
+            <div class="about-content">
+
+                <div>
+
+                    <img src="images/church-family.jpg"
+                         alt="Family Church">
+
+                </div>
+
+                <div class="about-text">
+
+                    <h3>We Are Family</h3>
+
+                    <p>
+                        Family Church is a community of believers
+                        committed to following Jesus Christ, growing
+                        together in faith, and serving our community.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Our desire is to create a welcoming environment
+                        where individuals and families can worship God,
+                        build meaningful relationships, and discover
+                        their purpose.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ANNOUNCEMENTS
+    ========================== -->
+
+    <section id="announcements">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Latest Announcements</h2>
+
+                <p>
+                    Stay updated with what's happening in our church.
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <img src="images/event1.jpg"
+                         alt="Church Event">
+
+                    <div class="card-content">
+
+                        <div class="date">
+                            September 21, 2026
+                        </div>
+
+                        <h3>Sunday Worship Service</h3>
+
+                        <p>
+                            Join us this Sunday for worship,
+                            fellowship, and God's Word.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="images/event2.jpg"
+                         alt="Youth Ministry">
+
+                    <div class="card-content">
+
+                        <div class="date">
+                            September 25, 2026
+                        </div>
+
+                        <h3>Youth Fellowship</h3>
+
+                        <p>
+                            A special gathering for our young
+                            people to connect and grow in faith.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+
+                    <img src="images/event3.jpg"
+                         alt="Prayer Meeting">
+
+                    <div class="card-content">
+
+                        <div class="date">
+                            September 28, 2026
+                        </div>
+
+                        <h3>Prayer Meeting</h3>
+
+                        <p>
+                            Come together as a church family
+                            to pray and seek God's presence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EVENTS
+    ========================== -->
+
+    <section class="events" id="events">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Weekly Schedule</h2>
+
+                <p>
+                    Mark your calendars and join us!
+                </p>
+
+            </div>
+
+
+           <div class="event tuesday">
+
+    <h3>TUESDAY</h3>
+
+    <p>Camella 4B Home Bible Study — 2:00 PM</p>
+    <p>Mentoring — 6:00 PM</p>
+
+</div>
+
+
+<div class="event wednesday">
+
+    <h3>WEDNESDAY</h3>
+
+    <p>SHOP — 2:00 PM</p>
+    <p>Prayer Meeting — 6:00 PM</p>
+
+</div>
+
+
+<div class="event thursday">
+
+    <h3>THURSDAY</h3>
+
+    <p>Mentoring — 2:00 PM</p>
+
+</div>
+
+
+<div class="event friday">
+
+    <h3>FRIDAY</h3>
+
+    <p>Katihan HBS — 2:00 PM</p>
+    <p>YEARN — 3:00 PM</p>
+
+</div>
+
+
+<div class="event saturday">
+
+    <h3>SATURDAY</h3>
+
+    <p>Outreaches and HBS</p>
+    <p>Music Team Practice — 4:00 PM</p>
+
+</div>
+
+
+<div class="event sunday">
+
+    <h3>SUNDAY</h3>
+
+    <p>Sweet Hour of Prayer — 7:30 AM</p>
+    <p>Sunday School — 8:30 AM</p>
+    <p>Worship Service — 9:45 AM</p>
+    <p>Afternoon Fellowships — 1:00 PM</p>
+
+</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MINISTRIES
+    ========================== -->
+
+    <section>
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Ministries</h2>
+
+                <p>
+                    There is a place for everyone in the family.
+                </p>
+
+            </div>
+
+            <div class="cards">
+
+                <div class="card ministry-card">
+
+                    <i class="fas fa-child"></i>
+
+                    <h3>Kids Ministry</h3>
+
+                    <p>
+                        Helping children learn about God's
+                        love in a fun and meaningful way.
+                    </p>
+
+                </div>
+
+
+                <div class="card ministry-card">
+
+                    <i class="fas fa-users"></i>
+
+                    <h3>Youth Ministry</h3>
+
+                    <p>
+                        Building a generation that follows
+                        Christ and makes a difference.
+                    </p>
+
+                </div>
+
+
+                <div class="card ministry-card">
+
+                    <i class="fas fa-heart"></i>
+
+                    <h3>Family Ministry</h3>
+
+                    <p>
+                        Strengthening families through
+                        faith, fellowship, and God's Word.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         VIDEOS
+    ========================== -->
+
+    <section id="videos">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Church Videos</h2>
+
+                <p>
+                    Watch our latest sermons and church activities.
+                </p>
+
+            </div>
+
+            <div class="video-grid">
+
+    <div class="video-grid">
+
+    <!-- VIDEO 1 -->
+    <div class="video">
+        <a href="https://www.facebook.com/reel/1043837205310881/"
+           target="_blank"
+           style="text-decoration: none;">
+
+            <div style="
+                height: 476px;
+                background:
+                    linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
+                    url('images/video1.png') center/cover no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                border-radius: 5px;
+                padding: 30px;
+            ">
+
+                <i class="fab fa-facebook"
+                   style="font-size: 50px; margin-bottom: 20px;">
+                </i>
+
+                <h3 style="margin-bottom: 10px;">
+                    Watch Our Video
+                </h3>
+
+                <p style="color: white;">
+                    Watch this video on our Facebook page
+                </p>
+
+                <span style="
+                    margin-top: 15px;
+                    background: #A68A6D;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                ">
+                    Watch on Facebook
+                </span>
+
+            </div>
+        </a>
+    </div>
+
+
+    <!-- VIDEO 2 -->
+    <div class="video">
+        <a href="https://www.facebook.com/reel/986780407785770/"
+           target="_blank"
+           style="text-decoration: none;">
+
+            <div style="
+                height: 476px;
+                background:
+                    linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
+                    url('images/video2.png') center/cover no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                border-radius: 5px;
+                padding: 30px;
+            ">
+
+                <i class="fab fa-facebook"
+                   style="font-size: 50px; margin-bottom: 20px;">
+                </i>
+
+                <h3 style="margin-bottom: 10px;">
+                    Watch Our Video
+                </h3>
+
+                <p style="color: white;">
+                    Watch this video on our Facebook page
+                </p>
+
+                <span style="
+                    margin-top: 15px;
+                    background: #A68A6D;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                ">
+                    Watch on Facebook
+                </span>
+
+            </div>
+        </a>
+    </div>
+
+
+    <!-- VIDEO 3 -->
+    <div class="video">
+        <a href="https://www.facebook.com/reel/2152212382338864/"
+           target="_blank"
+           style="text-decoration: none;">
+
+            <div style="
+                height: 476px;
+                background:
+                    linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
+                    url('images/video3.png') center/cover no-repeat;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                border-radius: 5px;
+                padding: 30px;
+            ">
+
+                <i class="fab fa-facebook"
+                   style="font-size: 50px; margin-bottom: 20px;">
+                </i>
+
+                <h3 style="margin-bottom: 10px;">
+                    Watch Our Video
+                </h3>
+
+                <p style="color: white;">
+                    Watch this video on our Facebook page
+                </p>
+
+                <span style="
+                    margin-top: 15px;
+                    background: #A68A6D;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                ">
+                    Watch on Facebook
+                </span>
+
+            </div>
+        </a>
+    </div>
+
+</div>
+
+    </section>
+
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
+    <section class="gallery" id="gallery">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Church Gallery</h2>
+
+                <p>
+                    Moments and memories from our church family.
+                </p>
+
+            </div>
+
+            <div class="gallery-grid">
+
+                <img src="images/gallery1.jpg"
+                     alt="Church Activity">
+
+                <img src="images/gallery2.jpg"
+                     alt="Church Activity">
+
+                <img src="images/gallery3.jpg"
+                     alt="Church Activity">
+
+                <img src="images/gallery4.jpg"
+                     alt="Church Activity">
+
+                <img src="images/gallery5.jpg"
+                     alt="Church Activity">
+
+                <img src="images/gallery6.jpg"
+                     alt="Church Activity">
+
+                <img src="images/gallery7.jpg"
+                     alt="Church Activity">
+
+                <img src="images/gallery8.jpg"
+                     alt="Church Activity">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICE TIMES
+    ========================== -->
+
+    <section class="services">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Service Times</h2>
+
+                <p>
+                    We would love to worship with you.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <div class="service">
+
+                    <i class="fas fa-church"></i>
+
+                    <h3>Sunday Worship</h3>
+
+                    <p>
+                        Every Sunday
+                    </p>
+
+                    <p>
+                        9:00 AM
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <i class="fas fa-praying-hands"></i>
+
+                    <h3>Prayer Meeting</h3>
+
+                    <p>
+                        Every Wednesday
+                    </p>
+
+                    <p>
+                        6:00 PM
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <i class="fas fa-users"></i>
+
+                    <h3>YEARN</h3>
+
+                    <p>
+                        Every Friday
+                    </p>
+
+                    <p>
+                        3:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    We would love to hear from you.
+                </p>
+
+            </div>
+
+
+            <div class="contact-content">
+
+                <div class="contact-info">
+
+                    <h3>Get In Touch</h3>
+
+                    <p>
+                        <i class="fas fa-location-dot"></i>
+                        Family Church
+                    </p>
+
+                    <p>
+                        <i class="fas fa-phone"></i>
+                        Phone: 0935 727 3837
+                    </p>
+
+                    <p>
+                        <i class="fas fa-envelope"></i>
+                        Email: familychurch.acts1631@gmail.com
+                    </p>
+
+                    <p>
+                        <i class="fas fa-clock"></i>
+                        Sunday Service: 9:45 AM
+                    </p>
+
+                </div>
+
+
+                <form id="contactForm">
+
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        required>
+
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        required>
+
+                    <textarea
+                        placeholder="Your Message"
+                        required>
+                    </textarea>
+
+                    <button
+                        type="submit"
+                        class="btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <h3>Family Church</h3>
+
+        <p>
+            Faith • Family • Fellowship
+        </p>
+
+
+        <!-- SOCIAL MEDIA LINKS -->
+
+        <div class="social-links">
+
+            <!-- Facebook -->
+            <a
+                href="https://www.facebook.com/profile.php?id=61558112182416"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook">
+
+                <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+
+            <!-- Instagram -->
+            <a
+                href="https://www.instagram.com/familychurch77/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram">
+
+                <i class="fab fa-instagram"></i>
+
+            </a>
+
+        </div>
+
+
+        <p>
+            © 2026 Family Church. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        // Mobile Menu
+        function toggleMenu() {
+
+            const navLinks =
+                document.getElementById("navLinks");
+
+            navLinks.classList.toggle("active");
+
+        }
+
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("navLinks")
+                    .classList.remove("active");
+
+            });
+
+        });
+
+
+        // Contact Form
+        document
+            .getElementById("contactForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                alert(
+                    "Thank you for contacting Family Church! We will get back to you soon."
+                );
+
+                this.reset();
+
+            });
+
+    </script>
+
+</body>
+</html>
