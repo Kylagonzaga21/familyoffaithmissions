@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <title>Family Church</title>
+
+    <title>Family of Faith Missions, Inc.</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet"
@@ -47,15 +49,15 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
     color: #faf9f8;
     height: 50px;
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
 }
 
@@ -113,7 +115,7 @@ nav {
 
     .hero h1 {
         font-size: 52px;
-        font-weight: 500;
+        font-weight: 600;
         margin-bottom: 15px;
     }
 
@@ -204,34 +206,45 @@ nav {
        ANNOUNCEMENTS
     ========================== */
 
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
 
-    .card {
-        background: #ffffff;
-        border: 1px solid #eeeeee;
-        border-radius: 6px;
-        overflow: hidden;
-        box-shadow: none;
-    }
+.card {
+    overflow: hidden;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
 
-    .card:hover {
-        transform: none;
-    }
+.card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
 
-    .card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        display: block;
-    }
+.card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+    border: 1px solid transparent;
+}
 
-    .card-content {
-        padding: 22px;
-    }
+/* When the cursor points to a card */
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #A68A6D;
+    box-shadow: 0 10px 25px rgba(166, 138, 109, 0.30);
+}
+
+.card-content {
+    padding: 20px;
+}
+
 
     .card-content h3 {
         color: #333;
@@ -303,32 +316,29 @@ nav {
     /* Schedule Images */
 
     .tuesday {
-        background-image: url("images/tuesday.jpg");
+        background-image: url("images/imagetuesday.jpg");
     }
 
     .wednesday {
-        background-image: url("images/wednesday.jpg");
+        background-image: url("images/imagewednesday.jpg");
     }
 
     .thursday {
-        background-image: url("images/thursday.jpg");
+        background-image: url("images/imagethursday.jpg");
     }
 
     .friday {
-        background-image: url("images/friday.jpg");
+        background-image: url("images/imagefriday.jpg");
     }
 
     .saturday {
-        background-image: url("images/saturday.jpg");
+        background-image: url("images/imagesaturday.jpg");
     }
 
     .sunday {
         background-image: url("images/imagesunday.jpg");
     }
 
-    /* =========================
-       MINISTRIES
-    ========================== */
 
     .ministry-card {
         text-align: center;
@@ -380,32 +390,62 @@ nav {
     }
 }
 
-    /* =========================
-       GALLERY
-    ========================== */
+    
+/* =========================
+   GALLERY
+========================== */
 
-    .gallery {
-        background: #fafafa;
-    }
+/* General gallery background */
+.gallery {
+    background: #fafafa;
+}
 
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-    }
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
 
-    .gallery-grid img {
+/* General gallery images */
+.gallery-grid img {
     width: 100%;
     height: 220px;
     object-fit: contain;
     background: #f5f5f5;
     display: block;
     border-radius: 5px;
-    }
+}
 
-    .gallery-grid img:hover {
-        transform: none;
-    }
+/* Original Church Gallery: no hover zoom */
+#gallery .gallery-grid img:hover {
+    transform: none;
+}
+
+/* Ministry photo hover effect */
+#ministry-pictures .gallery-grid img {
+    height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.35s ease,
+                filter 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+/* Hover effect for ministry photos */
+#ministry-pictures .gallery-grid img:hover {
+    transform: scale(1.04);
+    filter: brightness(0.78);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+/* Keep unselected ministry photos hidden */
+#ministry-pictures img[hidden] {
+    display: none !important;
+}
+
 
     /* =========================
        SERVICE TIMES
@@ -634,15 +674,256 @@ nav {
 
     }
 
+/* YouTube Preachings */
+.youtube-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 20px;
+}
+
+.youtube-section h2 {
+    color: #1a1612;
+    margin-bottom: 15px;
+}
+
+.youtube-section > p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.youtube-container {
+    max-width: 850px;
+    margin: 0 auto 30px;
+}
+
+.youtube-card {
+    overflow: hidden;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.youtube-card iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+/* YouTube Channel Button */
+.youtube-section .video-button {
+    display: inline-block;
+    background: #1a1612;
+    color: #ffffff;
+    border: 1px solid #A68A6D;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.youtube-section .video-button:hover {
+    background: #A68A6D;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.youtube-section .video-button i {
+    margin-right: 8px;
+}
+
+/* Ministry Pictures */
+#ministry-pictures {
+    scroll-margin-top: 90px;
+}
+
+#ministry-pictures .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#ministry-pictures .gallery-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+#ministry-pictures .gallery-grid img[hidden] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #ministry-pictures .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    #ministry-pictures .gallery-grid img {
+        height: 180px;
+    }
+}
+
+
+/* Floating ministry photo panel */
+.ministry-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ministry-modal.show {
+    display: flex;
+}
+
+.ministry-modal-content {
+    position: relative;
+    background: #fff;
+    color: #1a1612;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+}
+
+.ministry-modal-content h2 {
+    color: #1a1612;
+    margin: 0 40px 8px 0;
+}
+
+.ministry-modal-content p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.close-ministry-modal {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: none;
+    background: transparent;
+    color: #1a1612;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+.ministry-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.ministry-photo-grid img {
+    display: block;
+    width: 100%;
+    height: clamp(200px, 26vh, 280px);
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ministry-photo-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 900px) {
+    .ministry-photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .ministry-photo-grid img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .ministry-modal {
+        padding: 10px;
+    }
+
+    .ministry-modal-content {
+        padding: 65px 10px 20px;
+        max-height: none;
+    }
+
+    .ministry-photo-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .ministry-photo-grid img {
+        height: 260px;
+    }
+}
+
+#ministry-pictures {
+    display: none;
+}
+
+/* Facebook Page Button */
+.facebook-page-button {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 30px auto 10px !important;
+}
+
+.facebook-page-button .facebook-btn {
+    display: table;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.facebook-btn,
+.youtube-section .video-button {
+    display: inline-block;
+    box-sizing: border-box;
+    background: #1a1612;
+    color: #ffffff;
+    border: 1px solid #A68A6D;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.facebook-btn:hover,
+.youtube-section .video-button:hover {
+    background: #A68A6D;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.facebook-btn i,
+.youtube-section .video-button i {
+    margin-right: 8px;
+}
+
 </style>
 
 </head>
 
 <body>
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
 
     <header>
 
@@ -650,7 +931,7 @@ nav {
 
             <div class="logo">
     <img src="images/logo.png" alt="Family Church Logo">
-    <span>Family Church</span>
+    <span>Family of Faith Missions, Inc.</span>
         </div>
 
             <div class="menu-btn" onclick="toggleMenu()">
@@ -693,19 +974,16 @@ nav {
 
     </header>
 
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
     <section class="hero" id="home">
 
         <div class="hero-content">
 
-            <h1>Welcome to Family Church</h1>
+            <h1>Welcome to Family of Faith Missions, Inc.</h1>
 
             <p>
-                𝘉𝘦𝘺𝘰𝘯𝘥 𝘕𝘢𝘮𝘦𝘴. 𝘉𝘦𝘺𝘰𝘯𝘥 𝘞𝘢𝘭𝘭𝘴. 𝘉𝘦𝘺𝘰𝘯𝘥 𝘋𝘦𝘯𝘰𝘮𝘪𝘯𝘢𝘵𝘪𝘰𝘯𝘴. 𝘈𝘭𝘭 𝘧𝘰𝘳 𝘏𝘪𝘴 𝘨𝘭𝘰𝘳𝘺!
+                𝘍𝘙𝘖𝘔 𝘍𝘈𝘐𝘛𝘏 𝘛𝘖 𝘔𝘐𝘚𝘚𝘐𝘖𝘕.
+                𝘍𝘙𝘖𝘔 𝘏𝘖𝘔𝘌𝘚 𝘛𝘖 𝘕𝘈𝘛𝘐𝘖𝘕𝘚.
+                𝘑𝘌𝘚𝘜𝘚 𝘍𝘖𝘙 𝘌𝘝𝘌𝘙𝘠 𝘎𝘌𝘕𝘌𝘙𝘈𝘛𝘐𝘖𝘕.
             </p>
 
             <a href="#about" class="btn">
@@ -749,7 +1027,7 @@ nav {
                     <h3>We Are Family</h3>
 
                     <p>
-                        Family Church is a community of believers
+                        Family of Faith Missions, Inc. is a community of believers
                         committed to following Jesus Christ, growing
                         together in faith, and serving our community.
                     </p>
@@ -800,7 +1078,7 @@ nav {
                     <div class="card-content">
 
                         <div class="date">
-                            September 21, 2026
+                            October 11, 2026
                         </div>
 
                         <h3>Sunday Worship Service</h3>
@@ -823,7 +1101,7 @@ nav {
                     <div class="card-content">
 
                         <div class="date">
-                            September 25, 2026
+                            October 11, 2026
                         </div>
 
                         <h3>Youth Fellowship</h3>
@@ -846,7 +1124,7 @@ nav {
                     <div class="card-content">
 
                         <div class="date">
-                            September 28, 2026
+                            October 07, 2026
                         </div>
 
                         <h3>Prayer Meeting</h3>
@@ -971,7 +1249,7 @@ nav {
 
             <div class="cards">
 
-                <div class="card ministry-card">
+                <div class="card ministry-card" data-ministry="kids">
 
                     <i class="fas fa-child"></i>
 
@@ -985,7 +1263,7 @@ nav {
                 </div>
 
 
-                <div class="card ministry-card">
+                <div class="card ministry-card" data-ministry="youth">
 
                     <i class="fas fa-users"></i>
 
@@ -999,7 +1277,7 @@ nav {
                 </div>
 
 
-                <div class="card ministry-card">
+                <div class="card ministry-card" data-ministry="family">
 
                     <i class="fas fa-heart"></i>
 
@@ -1018,12 +1296,116 @@ nav {
 
     </section>
 
+    <section class="gallery" id="ministry-pictures">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2 id="ministry-gallery-heading">Kids Ministry</h2>
+            <p id="ministry-gallery-description">
+                Photos and memories from our Kids Ministry.
+            </p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- KIDS MINISTRY -->
+            <img src="images/kids1.jpg" alt="Kids Ministry 1" data-ministry="kids">
+            <img src="images/kids2.jpg" alt="Kids Ministry 2" data-ministry="kids">
+            <img src="images/kids3.jpg" alt="Kids Ministry 3" data-ministry="kids">
+            <img src="images/kids4.jpg" alt="Kids Ministry 4" data-ministry="kids">
+            <img src="images/kids5.jpg" alt="Kids Ministry 5" data-ministry="kids">
+            <img src="images/kids6.jpg" alt="Kids Ministry 6" data-ministry="kids">
+            <img src="images/kids7.jpg" alt="Kids Ministry 7" data-ministry="kids">
+            <img src="images/kids8.jpg" alt="Kids Ministry 8" data-ministry="kids">
+            <img src="images/kids9.jpg" alt="Kids Ministry 9" data-ministry="kids">
+
+            <!-- YOUTH MINISTRY -->
+            <img src="images/youth1.jpg" alt="Youth Ministry 1" data-ministry="youth" hidden>
+            <img src="images/youth2.jpg" alt="Youth Ministry 2" data-ministry="youth" hidden>
+            <img src="images/youth3.jpg" alt="Youth Ministry 3" data-ministry="youth" hidden>
+            <img src="images/youth4.jpg" alt="Youth Ministry 4" data-ministry="youth" hidden>
+            <img src="images/youth5.jpg" alt="Youth Ministry 5" data-ministry="youth" hidden>
+            <img src="images/youth6.jpg" alt="Youth Ministry 6" data-ministry="youth" hidden>
+            <img src="images/youth7.jpg" alt="Youth Ministry 7" data-ministry="youth" hidden>
+            <img src="images/youth8.jpg" alt="Youth Ministry 8" data-ministry="youth" hidden>
+            <img src="images/youth9.jpg" alt="Youth Ministry 9" data-ministry="youth" hidden>
+
+            <!-- FAMILY MINISTRY -->
+            <img src="images/family1.jpg" alt="Family Ministry 1" data-ministry="family" hidden>
+            <img src="images/family2.jpg" alt="Family Ministry 2" data-ministry="family" hidden>
+            <img src="images/family3.jpg" alt="Family Ministry 3" data-ministry="family" hidden>
+            <img src="images/family4.jpg" alt="Family Ministry 4" data-ministry="family" hidden>
+            <img src="images/family5.jpg" alt="Family Ministry 5" data-ministry="family" hidden>
+            <img src="images/family6.jpg" alt="Family Ministry 6" data-ministry="family" hidden>
+            <img src="images/family7.jpg" alt="Family Ministry 7" data-ministry="family" hidden>
+            <img src="images/family8.jpg" alt="Family Ministry 8" data-ministry="family" hidden>
+            <img src="images/family9.jpg" alt="Family Ministry 9" data-ministry="family" hidden>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Floating Ministry Photo Panel -->
+<div id="ministry-modal" class="ministry-modal" aria-hidden="true">
+    <div class="ministry-modal-content"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modal-ministry-title">
+
+        <button type="button" id="close-ministry-modal"
+                class="close-ministry-modal"
+                aria-label="Close photo panel">
+            &times;
+        </button>
+
+        <h2 id="modal-ministry-title">Kids Ministry</h2>
+        <p id="modal-ministry-description">
+            Photos and memories from our ministry.
+        </p>
+
+        <div id="modal-ministry-photos" class="ministry-photo-grid"></div>
+
+    </div>
+</div>
+
+
 
     <!-- =========================
          VIDEOS
     ========================== -->
 
     <section id="videos">
+
+        <!-- YouTube Preachings Section -->
+<div class="youtube-section">
+    <h2>YouTube Preachings</h2>
+    <p>Watch our sermons, Bible teachings, and messages.</p>
+
+    <div class="youtube-container">
+
+                
+<div class="youtube-card">
+    <iframe
+        src="https://www.youtube.com/embed/PuGyObaydc4"
+        title="Family Church Preachings"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div>
+
+    </div>
+
+    <a href="https://www.youtube.com/@familychurchacts1631"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="video-button">
+    <i class="fab fa-youtube"></i>
+    View Our YouTube Channel
+</a>
+</div>
 
         <div class="container">
 
@@ -1032,12 +1414,11 @@ nav {
                 <h2>Church Videos</h2>
 
                 <p>
-                    Watch our latest sermons and church activities.
+                    Watch our latest church activities.
                 </p>
 
             </div>
 
-            <div class="video-grid">
 
     <div class="video-grid">
 
@@ -1135,7 +1516,8 @@ nav {
     </div>
 
 
-    <!-- VIDEO 3 -->
+    
+        <!-- VIDEO 3 -->
     <div class="video">
         <a href="https://www.facebook.com/reel/2152212382338864/"
            target="_blank"
@@ -1181,12 +1563,22 @@ nav {
         </a>
     </div>
 
+</div> <!-- End of video-grid -->
+
+<!-- FACEBOOK PAGE BUTTON -->
+<div class="facebook-page-button">
+    <a href="https://www.facebook.com/profile.php?id=61558112182416"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn facebook-btn">
+        <i class="fab fa-facebook-f"></i>
+        Visit Our Facebook Page
+    </a>
 </div>
 
-    </section>
-
-
-    <!-- =========================
+</div>
+</section>
+    <!-- ========================
          GALLERY
     ========================== -->
 
@@ -1234,6 +1626,17 @@ nav {
 
         </div>
 
+        <!-- FACEBOOK PHOTOS BUTTON -->
+<div class="facebook-page-button">
+    <a href="https://www.facebook.com/profile.php?id=61558112182416&sk=photos"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="facebook-btn">
+        <i class="fab fa-facebook-f"></i>
+        View Our Facebook Photos
+    </a>
+</div>
+
     </section>
 
 
@@ -1269,7 +1672,7 @@ nav {
                     </p>
 
                     <p>
-                        9:00 AM
+                        9:45 AM
                     </p>
 
                 </div>
@@ -1342,7 +1745,7 @@ nav {
 
                     <p>
                         <i class="fas fa-location-dot"></i>
-                        Family Church
+                        Family of Faith Missions, Inc.
                     </p>
 
                     <p>
@@ -1401,10 +1804,10 @@ nav {
 
     <footer>
 
-        <h3>Family Church</h3>
+        <h3>Family of Faith Missions, Inc.</h3>
 
         <p>
-            Faith • Family • Fellowship
+            Family • Faith • Fellowship
         </p>
 
 
@@ -1420,6 +1823,17 @@ nav {
                 aria-label="Facebook">
 
                 <i class="fab fa-facebook-f"></i>
+
+            </a>
+
+            <!-- YouTube -->
+            <a
+                href="https://www.youtube.com/@familychurchacts1631"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube">
+
+                <i class="fab fa-youtube"></i>
 
             </a>
 
@@ -1439,7 +1853,7 @@ nav {
 
 
         <p>
-            © 2026 Family Church. All Rights Reserved.
+            © 2026 Family of Faith Missions, Inc. All Rights Reserved.
         </p>
 
     </footer>
@@ -1449,49 +1863,99 @@ nav {
          JAVASCRIPT
     ========================== -->
 
-    <script>
+    
+<script>
+    // Mobile Menu
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        navLinks.classList.toggle("active");
+    }
 
-        // Mobile Menu
-        function toggleMenu() {
-
-            const navLinks =
-                document.getElementById("navLinks");
-
-            navLinks.classList.toggle("active");
-
-        }
-
-
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll(".nav-links a").forEach(link => {
-
-            link.addEventListener("click", function() {
-
-                document
-                    .getElementById("navLinks")
-                    .classList.remove("active");
-
-            });
-
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", function() {
+            document.getElementById("navLinks").classList.remove("active");
         });
+    });
 
+    // Contact Form
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
 
-        // Contact Form
-        document
-            .getElementById("contactForm")
-            .addEventListener("submit", function(event) {
+        alert(
+            "Thank you for contacting Family of Faith Missions, Inc.! We will get back to you soon."
+        );
 
-                event.preventDefault();
+        this.reset();
+    });
 
-                alert(
-                    "Thank you for contacting Family Church! We will get back to you soon."
-                );
+    // Floating Ministry Photo Panel
+    const ministryCards = document.querySelectorAll(".ministry-card");
+    const ministryModal = document.getElementById("ministry-modal");
+    const modalTitle = document.getElementById("modal-ministry-title");
+    const modalDescription = document.getElementById("modal-ministry-description");
+    const modalPhotos = document.getElementById("modal-ministry-photos");
+    const closeMinistryModal = document.getElementById("close-ministry-modal");
 
-                this.reset();
+    const ministryNames = {
+        kids: "Kids Ministry",
+        youth: "Youth Ministry",
+        family: "Family Ministry"
+    };
 
+    ministryCards.forEach(function(card) {
+        card.addEventListener("click", function() {
+            const ministry = card.dataset.ministry;
+
+            if (!ministryNames[ministry]) return;
+
+            modalTitle.textContent = ministryNames[ministry];
+            modalDescription.textContent =
+                "Photos and memories from our " + ministryNames[ministry] + ".";
+
+            modalPhotos.replaceChildren();
+
+            const images = document.querySelectorAll(
+                '#ministry-pictures img[data-ministry="' + ministry + '"]'
+            );
+
+            images.forEach(function(originalImage) {
+                const photo = document.createElement("img");
+                photo.src = originalImage.getAttribute("src");
+                photo.alt = originalImage.alt;
+                photo.loading = "lazy";
+                modalPhotos.appendChild(photo);
             });
 
-    </script>
+            ministryModal.classList.add("show");
+            ministryModal.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+            closeMinistryModal.focus();
+        });
+    });
+
+    function closeMinistryPhotoPanel() {
+        ministryModal.classList.remove("show");
+        ministryModal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+    }
+
+    closeMinistryModal.addEventListener("click", closeMinistryPhotoPanel);
+
+    ministryModal.addEventListener("click", function(event) {
+        if (event.target === ministryModal) {
+            closeMinistryPhotoPanel();
+        }
+    });
+
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && ministryModal.classList.contains("show")) {
+            closeMinistryPhotoPanel();
+        }
+    });
+
+</script>
+
 
 </body>
 </html>
