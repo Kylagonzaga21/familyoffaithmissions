@@ -80,11 +80,14 @@ nav {
     }
 
     .menu-btn {
-        display: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: #333;
-    }
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    padding: 8px;
+}
 
     /* =========================
        HERO
@@ -98,7 +101,7 @@ nav {
                 rgba(0, 0, 0, 0.45),
                 rgba(0, 0, 0, 0.45)
             ),
-            url("images/church.jpg") center/cover no-repeat;
+            url("images/church.jpg") center 72% / cover no-repeat;
 
         display: flex;
         justify-content: center;
@@ -597,22 +600,17 @@ nav {
 
         .nav-links {
             display: none;
-
             position: absolute;
             top: 65px;
             left: 0;
-
             width: 100%;
-
-            background: white;
-
+            background: #1a1612;
             flex-direction: column;
             padding: 20px;
-
             text-align: center;
-
             border-top: 1px solid #eeeeee;
-        }
+            z-index: 1001;
+            }
 
         .nav-links.active {
             display: flex;
@@ -919,6 +917,588 @@ nav {
     margin-right: 8px;
 }
 
+
+/* ========================================
+   ELEGANT CHURCH WEBSITE REDESIGN
+   Espresso • Champagne Gold • Warm Ivory
+======================================== */
+
+:root {
+    --espresso: #1a1612;
+    --espresso-light: #292119;
+    --gold: #c5a572;
+    --gold-light: #e2cda5;
+    --ivory: #fbf8f2;
+    --text: #38332d;
+    --muted: #777067;
+}
+
+/* Smooth scrolling and anchored sections */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+section {
+    padding: 100px 24px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* PREMIUM HEADER */
+header {
+    background: rgba(26, 22, 18, 0.97);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+    border-bottom: 1px solid rgba(197, 165, 114, 0.28);
+}
+
+nav {
+    max-width: 1320px;
+    min-height: 76px;
+}
+
+.logo {
+    gap: 14px;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+}
+
+.logo img {
+    width: 68px;
+    height: 68px;
+}
+
+.nav-links {
+    gap: 23px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold-light);
+}
+
+/* CINEMATIC HOMEPAGE */
+.hero {
+    min-height: 88vh;
+    position: relative;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 13, 10, 0.82) 0%,
+            rgba(17, 13, 10, 0.54) 48%,
+            rgba(17, 13, 10, 0.20) 100%
+        ),
+        url("images/church.jpg") center 65% / cover no-repeat;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 90px max(7%, calc((100% - 1200px) / 2));
+}
+
+.hero-content {
+    max-width: 780px;
+    animation: heroReveal 1s ease both;
+}
+
+.hero-eyebrow {
+    color: var(--gold-light);
+    font-size: 13px !important;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 22px !important;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(44px, 6vw, 76px);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+.hero .hero-description {
+    max-width: 590px;
+    color: #f0e9df;
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    background: var(--gold);
+    color: var(--espresso);
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    padding: 15px 25px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--gold-light);
+    color: var(--espresso);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--espresso);
+}
+
+/* SECTION HEADINGS */
+.section-title {
+    margin-bottom: 55px;
+}
+
+.section-title h2,
+.youtube-section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(30px, 4vw, 42px);
+    font-weight: 500;
+    color: var(--espresso);
+    line-height: 1.25;
+}
+
+.section-title h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 2px;
+    background: var(--gold);
+    margin: 18px auto 0;
+}
+
+.section-title p {
+    margin-top: 12px;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+/* ABOUT */
+.about,
+.gallery {
+    background: var(--ivory);
+}
+
+.about-content {
+    gap: 65px;
+}
+
+.about img {
+    border-radius: 3px;
+    box-shadow: 18px 18px 0 rgba(197, 165, 114, 0.20);
+}
+
+.about-text h3 {
+    color: var(--espresso);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.95;
+}
+
+/* ANNOUNCEMENTS AND MINISTRY CARDS */
+.cards {
+    gap: 28px;
+}
+
+.card {
+    border: 1px solid #eee6da;
+    border-radius: 5px;
+    box-shadow: 0 8px 28px rgba(34, 25, 15, 0.06);
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: var(--gold);
+    box-shadow: 0 18px 38px rgba(34, 25, 15, 0.12);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h3,
+.ministry-card h3 {
+    color: var(--espresso);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+}
+
+.date {
+    color: #96764b;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* WEEKLY SCHEDULE */
+.event {
+    min-height: 245px;
+    border-radius: 4px;
+    margin-bottom: 22px;
+    padding: 38px;
+    border: 1px solid rgba(197, 165, 114, 0.5);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    transition: background-size 0.4s ease,
+                box-shadow 0.3s ease;
+}
+
+.event::before {
+    background: linear-gradient(
+        90deg,
+        rgba(16, 13, 10, 0.84),
+        rgba(16, 13, 10, 0.48)
+    );
+    transition: background 0.3s ease;
+}
+
+.event:hover {
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.event h3 {
+    color: var(--gold-light);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.event p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* SERVICE TIMES */
+.service {
+    padding: 40px 25px;
+    background: linear-gradient(145deg, #fff, var(--ivory));
+    border: 1px solid #e9dece;
+    border-radius: 4px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(26, 22, 18, 0.09);
+}
+
+.service i,
+.ministry-card i {
+    color: #a98854;
+}
+
+.service i {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    color: var(--espresso);
+}
+
+/* GALLERY */
+.gallery-grid {
+    gap: 16px;
+}
+
+#gallery .gallery-grid img {
+    background: #eee7dc;
+    border-radius: 3px;
+    transition: box-shadow 0.3s ease;
+}
+
+#gallery .gallery-grid img:hover {
+    box-shadow: 0 8px 25px rgba(26, 22, 18, 0.13);
+}
+
+/* VIDEOS */
+.youtube-section {
+    margin-top: 0;
+    padding: 25px 20px 65px;
+}
+
+.youtube-card {
+    border: 1px solid rgba(197, 165, 114, 0.45);
+    box-shadow: 0 15px 40px rgba(26, 22, 18, 0.15);
+}
+
+.video > a > div {
+    border: 1px solid rgba(197, 165, 114, 0.45);
+    box-shadow: 0 8px 24px rgba(26, 22, 18, 0.10);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.video > a:hover > div {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 32px rgba(26, 22, 18, 0.18);
+}
+
+/* CONTACT */
+.contact {
+    background: var(--ivory);
+}
+
+.contact-info h3 {
+    color: var(--espresso);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+}
+
+.contact-info i {
+    color: #a98854;
+    width: 22px;
+    margin-right: 7px;
+}
+
+form input,
+form textarea {
+    background: white;
+    border: 1px solid #e4dbcf;
+    border-radius: 3px;
+    padding: 15px;
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(197, 165, 114, 0.15);
+}
+
+form button {
+    min-width: 160px;
+}
+
+/* FOOTER */
+footer {
+    border-top: 2px solid var(--gold);
+    padding: 55px 20px 30px;
+    background:
+        radial-gradient(ellipse at top, #34291e 0%, #1a1612 65%);
+}
+
+footer h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    color: var(--gold-light);
+}
+
+footer > p:first-of-type {
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+.social-links a {
+    background: transparent;
+    border: 1px solid rgba(197, 165, 114, 0.65);
+    color: var(--gold-light);
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--gold);
+    color: var(--espresso);
+    transform: translateY(-3px);
+}
+
+/* PHOTO PANEL */
+.ministry-modal {
+    backdrop-filter: blur(7px);
+    background: rgba(15, 12, 9, 0.82);
+}
+
+.ministry-modal-content {
+    border: 1px solid var(--gold);
+    border-radius: 5px;
+}
+
+.ministry-modal-content h2 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.close-ministry-modal:hover {
+    color: #a98854;
+}
+
+/* BUTTONS */
+.facebook-btn,
+.youtube-section .video-button {
+    border-radius: 3px;
+    border-color: var(--gold);
+}
+
+.facebook-btn:hover,
+.youtube-section .video-button:hover {
+    background: var(--gold);
+    color: var(--espresso);
+}
+
+/* SUBTLE HERO ENTRANCE */
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE POLISH */
+@media (max-width: 768px) {
+    section {
+        padding: 70px 20px;
+    }
+
+    .logo {
+        font-size: 14px;
+        gap: 7px;
+    }
+
+    .logo img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .nav-links {
+        top: 100%;
+        gap: 0;
+        padding: 12px 20px;
+        border-top: 1px solid rgba(197, 165, 114, 0.35);
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    .hero {
+        min-height: 76vh;
+        padding: 70px 25px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 9vw, 58px);
+    }
+
+    .hero .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .hero-actions .btn {
+        text-align: center;
+    }
+
+    .about-content {
+        gap: 35px;
+    }
+
+    .event {
+        padding: 28px 22px;
+        min-height: 210px;
+    }
+
+    .event h3 {
+        font-size: 25px;
+    }
+
+    .ministry-modal-content {
+        padding: 60px 16px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo span {
+        max-width: 190px;
+        line-height: 1.3;
+    }
+
+    .hero {
+        min-height: 72vh;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .event p {
+        font-size: 14px;
+    }
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
 </style>
 
 </head>
@@ -976,21 +1556,7 @@ nav {
 
     <section class="hero" id="home">
 
-        <div class="hero-content">
-
-            <h1>Welcome to Family of Faith Missions, Inc.</h1>
-
-            <p>
-                𝘍𝘙𝘖𝘔 𝘍𝘈𝘐𝘛𝘏 𝘛𝘖 𝘔𝘐𝘚𝘚𝘐𝘖𝘕.
-                𝘍𝘙𝘖𝘔 𝘏𝘖𝘔𝘌𝘚 𝘛𝘖 𝘕𝘈𝘛𝘐𝘖𝘕𝘚.
-                𝘑𝘌𝘚𝘜𝘚 𝘍𝘖𝘙 𝘌𝘝𝘌𝘙𝘠 𝘎𝘌𝘕𝘌𝘙𝘈𝘛𝘐𝘖𝘕.
-            </p>
-
-            <a href="#about" class="btn">
-                Learn More
-            </a>
-
-        </div>
+        <div class="hero-content"></div>
 
     </section>
 
@@ -1198,7 +1764,7 @@ nav {
     <h3>FRIDAY</h3>
 
     <p>Katihan HBS — 2:00 PM</p>
-    <p>YEARN — 3:00 PM</p>
+    <p>THRIVE GROUP — 2:00 PM</p>
 
 </div>
 
@@ -1219,7 +1785,7 @@ nav {
 
     <p>Sweet Hour of Prayer — 7:30 AM</p>
     <p>Sunday School — 8:30 AM</p>
-    <p>Worship Service — 9:45 AM</p>
+    <p>Worship Service — 10:00 AM</p>
     <p>Afternoon Fellowships — 1:00 PM</p>
 
 </div>
@@ -1566,15 +2132,18 @@ nav {
 </div> <!-- End of video-grid -->
 
 <!-- FACEBOOK PAGE BUTTON -->
+
+<!-- FACEBOOK PAGE BUTTON -->
 <div class="facebook-page-button">
     <a href="https://www.facebook.com/profile.php?id=61558112182416"
        target="_blank"
        rel="noopener noreferrer"
-       class="btn facebook-btn">
+       class="facebook-btn">
         <i class="fab fa-facebook-f"></i>
         Visit Our Facebook Page
     </a>
 </div>
+
 
 </div>
 </section>
@@ -1644,7 +2213,7 @@ nav {
          SERVICE TIMES
     ========================== -->
 
-    <section class="services">
+    <section class="services" id="services">
 
         <div class="container">
 
@@ -1672,7 +2241,7 @@ nav {
                     </p>
 
                     <p>
-                        9:45 AM
+                        10:00 AM
                     </p>
 
                 </div>
@@ -1699,14 +2268,14 @@ nav {
 
                     <i class="fas fa-users"></i>
 
-                    <h3>YEARN</h3>
+                    <h3>THRIVE GROUP</h3>
 
                     <p>
                         Every Friday
                     </p>
 
                     <p>
-                        3:00 PM
+                        2:00 PM
                     </p>
 
                 </div>
@@ -1755,12 +2324,12 @@ nav {
 
                     <p>
                         <i class="fas fa-envelope"></i>
-                        Email: familychurch.acts1631@gmail.com
+                        Email: familyoffaithmissionsinc@gmail.com
                     </p>
 
                     <p>
                         <i class="fas fa-clock"></i>
-                        Sunday Service: 9:45 AM
+                        Sunday Service: 10:00 AM
                     </p>
 
                 </div>
