@@ -718,6 +718,40 @@ header .logo img {
 
     }
 
+    /* Mobile layout for Ministries */
+@media (max-width: 600px) {
+    .ministries-container,
+    .ministries-grid,
+    .ministry-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .ministry-card {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .ministry-photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ministry-photo-grid img {
+        width: 100%;
+        height: 160px !important;
+        object-fit: contain !important;
+    }
+
+    .ministry-modal-content {
+        width: 96%;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-sizing: border-box;
+    }
+}
+
 /* YouTube Preachings */
 .youtube-section {
     text-align: center;
@@ -1632,6 +1666,92 @@ section .section-subtitle::after {
 section h2 + p,
 section .section-subtitle {
     font-size: 16px !important;
+}
+
+/* Fix ministry popup on mobile */
+@media (max-width: 600px) {
+    #ministry-modal {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        height: 100dvh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+        padding: 12px 0;
+    }
+
+    #ministry-modal .ministry-modal-content {
+        position: relative;
+        width: 94%;
+        max-width: 100%;
+        max-height: none;
+        height: auto;
+        margin: 20px auto;
+        padding: 60px 14px 20px;
+        overflow: visible;
+        box-sizing: border-box;
+    }
+
+    /* Keep the close X visible while scrolling */
+    #ministry-modal .close,
+    #ministry-modal .close-modal,
+    #ministry-modal .modal-close {
+        position: sticky;
+        top: 8px;
+        float: right;
+        z-index: 10000;
+        cursor: pointer;
+    }
+}
+
+
+/* Remove the box around the ministry popup X */
+#ministry-modal .close,
+#ministry-modal .close-modal,
+#ministry-modal .modal-close {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove the box when tapped on mobile */
+#ministry-modal .close:focus,
+#ministry-modal .close:active,
+#ministry-modal .close-modal:focus,
+#ministry-modal .close-modal:active,
+#ministry-modal .modal-close:focus,
+#ministry-modal .modal-close:active {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Force the ministry close X to have no box */
+#ministry-modal button,
+#ministry-modal .close,
+#ministry-modal .close-modal,
+#ministry-modal .modal-close {
+    background: none !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* Remove any box or shadow on hover and tap */
+#ministry-modal button:hover,
+#ministry-modal button:focus,
+#ministry-modal button:active {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 </style>
@@ -2648,6 +2768,67 @@ section .section-subtitle {
             closeMinistryPhotoPanel();
         }
     });
+
+
+// Allow the phone's Back button to close the ministry popup
+(function () {
+    const modal = document.getElementById("ministry-modal");
+
+    if (!modal) return;
+
+    let popupOpen = false;
+    let pushedHistory = false;
+
+    function isModalVisible() {
+        return getComputedStyle(modal).display !== "none" &&
+               modal.getAttribute("aria-hidden") !== "true";
+    }
+
+    function closeMinistryPopup() {
+        // Use your existing close button if available
+        const closeButton = modal.querySelector(
+            ".close, .close-modal, .modal-close, [aria-label='Close']"
+        );
+
+        if (closeButton) {
+            closeButton.click();
+        } else {
+            modal.style.display = "none";
+        }
+
+        popupOpen = false;
+        pushedHistory = false;
+    }
+
+    function syncPopupState() {
+        const visible = isModalVisible();
+
+        if (visible && !popupOpen) {
+            popupOpen = true;
+            history.pushState({ ministryPopup: true }, "");
+            pushedHistory = true;
+        } else if (!visible && popupOpen) {
+            popupOpen = false;
+            if (pushedHistory) {
+                history.back();
+                pushedHistory = false;
+            }
+        }
+    }
+
+    window.addEventListener("popstate", function () {
+        if (popupOpen && isModalVisible()) {
+            closeMinistryPopup();
+        }
+    });
+
+    // Watch for the existing code opening or closing the modal
+    new MutationObserver(syncPopupState).observe(modal, {
+        attributes: true,
+        attributeFilter: ["style", "class", "aria-hidden"]
+    });
+})();
+
 
 </script>
 
