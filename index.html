@@ -14,6 +14,47 @@
 
     <style>
 
+        /* Full-size image preview */
+.image-preview {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px 20px;
+}
+
+.image-preview.show {
+    display: flex;
+}
+
+.image-preview img {
+    display: block;
+    max-width: 95%;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    image-rendering: auto;
+    border-radius: 8px;
+}
+
+#close-preview {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 42px;
+    cursor: pointer;
+}
+
+.ministry-photo-grid img {
+    cursor: default;
+}
 
     * {
         margin: 0;
@@ -59,6 +100,14 @@ nav {
     width: 70px;
     height: 70px;
     object-fit: contain;
+     border-radius: 8px;
+}
+
+header .logo img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
     .nav-links {
@@ -94,23 +143,20 @@ nav {
     ========================== */
 
     .hero {
-        min-height: 80vh;
+    min-height: 80vh;
 
-        background:
-            linear-gradient(
-                rgba(0, 0, 0, 0.45),
-                rgba(0, 0, 0, 0.45)
-            ),
-            url("images/church.jpg") center 72% / cover no-repeat;
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(25, 22, 19, 0.08) 0%,
+            rgba(25, 22, 19, 0.22) 100%
+        ),
+        url("images/church.jpg") !important;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        color: white;
-        padding: 30px 20px;
-    }
+    background-position: center 82% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
 
     .hero-content {
         max-width: 750px;
@@ -824,15 +870,34 @@ nav {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
     width: 100%;
+    align-items: stretch;
 }
 
 .ministry-photo-grid img {
     display: block;
     width: 100%;
-    height: clamp(200px, 26vh, 280px);
-    object-fit: cover;
+    height: 220px !important;
+    object-fit: contain !important;
+    object-position: center;
+    background: #f5f5f5;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+    .ministry-photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ministry-photo-grid img {
+        height: 160px !important;
+    }
+}
+
+.ministry-photo-grid img:hover {
+    transform: scale(1.02);
+    filter: saturate(1) contrast(1);
 }
 
 .ministry-photo-grid img:hover {
@@ -1166,6 +1231,49 @@ nav {
     font-weight: 700;
 }
 
+
+/* Make ministry cards clearly clickable */
+.ministry-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.ministry-card:hover {
+    border-color: #A68A6D;
+    box-shadow: 0 10px 25px rgba(166, 138, 109, 0.25);
+}
+
+.ministry-card:focus-visible {
+    outline: 2px solid #A68A6D;
+    outline-offset: 4px;
+}
+
+/* Show all 9 ministry photos in the popup */
+.ministry-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.ministry-photo-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .ministry-photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .ministry-photo-grid img {
+        height: 160px;
+    }
+}
+
+
 /* WEEKLY SCHEDULE */
 .event {
     min-height: 245px;
@@ -1498,6 +1606,33 @@ footer > p:first-of-type {
     }
 }
 
+/* Move section headings and subtitles upward */
+section {
+    padding-top: 50px !important;
+}
+
+section h2 {
+    margin-top: 0 !important;
+}
+
+section h2 + p,
+section .section-subtitle {
+    margin-top: 8px !important;
+}
+
+/* Remove brown decorative lines before subtitles */
+section h2::before,
+section h2::after,
+section .section-subtitle::before,
+section .section-subtitle::after {
+    display: none !important;
+}
+
+/* Subtitle font size */
+section h2 + p,
+section .section-subtitle {
+    font-size: 16px !important;
+}
 
 </style>
 
@@ -1764,7 +1899,7 @@ footer > p:first-of-type {
     <h3>FRIDAY</h3>
 
     <p>Katihan HBS — 2:00 PM</p>
-    <p>THRIVE GROUP — 2:00 PM</p>
+    <p>Thrive Group — 2:00 PM</p>
 
 </div>
 
@@ -2268,7 +2403,7 @@ footer > p:first-of-type {
 
                     <i class="fas fa-users"></i>
 
-                    <h3>THRIVE GROUP</h3>
+                    <h3>Thrive Group</h3>
 
                     <p>
                         Every Friday
@@ -2335,30 +2470,32 @@ footer > p:first-of-type {
                 </div>
 
 
-                <form id="contactForm">
+                <form action="mailto:familyoffaithmissionsinc@gmail.com" method="post" enctype="text/plain">
 
-                    <input
-                        type="text"
-                        placeholder="Your Name"
-                        required>
+    <input
+        type="text"
+        name="Name"
+        placeholder="Your Name"
+        required>
 
-                    <input
-                        type="email"
-                        placeholder="Your Email"
-                        required>
+    <input
+        type="email"
+        name="Email"
+        placeholder="Your Email"
+        required>
 
-                    <textarea
-                        placeholder="Your Message"
-                        required>
-                    </textarea>
+    <textarea
+        name="Message"
+        placeholder="Your Message"
+        required></textarea>
 
-                    <button
-                        type="submit"
-                        class="btn">
-                        Send Message
-                    </button>
+    <button
+        type="submit"
+        class="btn">
+        Send Message
+    </button>
 
-                </form>
+</form>
 
             </div>
 
@@ -2447,17 +2584,6 @@ footer > p:first-of-type {
         });
     });
 
-    // Contact Form
-    document.getElementById("contactForm").addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        alert(
-            "Thank you for contacting Family of Faith Missions, Inc.! We will get back to you soon."
-        );
-
-        this.reset();
-    });
-
     // Floating Ministry Photo Panel
     const ministryCards = document.querySelectorAll(".ministry-card");
     const ministryModal = document.getElementById("ministry-modal");
@@ -2525,6 +2651,50 @@ footer > p:first-of-type {
 
 </script>
 
+<!-- Image Preview Popup -->
+<div id="image-preview" class="image-preview">
+    <button id="close-preview" aria-label="Close image">&times;</button>
+    <img id="preview-image" src="" alt="Enlarged ministry photo">
+</div>
+
+<script>
+const imagePreview = document.getElementById("image-preview");
+const previewImage = document.getElementById("preview-image");
+const closePreview = document.getElementById("close-preview");
+
+// Open the image when clicked
+document.addEventListener("click", function (event) {
+    const image = event.target.closest(".ministry-photo-grid img");
+
+    if (!image) return;
+
+    previewImage.src = image.src;
+    previewImage.alt = image.alt;
+    imagePreview.classList.add("show");
+});
+
+// Close using the X button
+closePreview.addEventListener("click", function () {
+    imagePreview.classList.remove("show");
+    previewImage.src = "";
+});
+
+// Close when clicking the dark background
+imagePreview.addEventListener("click", function (event) {
+    if (event.target === imagePreview) {
+        imagePreview.classList.remove("show");
+        previewImage.src = "";
+    }
+});
+
+// Close using Escape
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        imagePreview.classList.remove("show");
+        previewImage.src = "";
+    }
+});
+</script>
 
 </body>
 </html>
