@@ -1,0 +1,1183 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1612">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>What We Believe | Family of Faith Missions, Inc.</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* =========================
+           GLOBAL STYLES
+        ========================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 100px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1a1612;
+            background: #ffffff;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        :root {
+            --dark: #1a1612;
+            --brown: #806A50;
+            --accent: #A68A6D;
+            --gold: #c5a572;
+            --cream: #fbf8f2;
+            --beige: #f5efe5;
+            --text: #5e554b;
+            --border: #e8dfd3;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+        header {
+            background: rgba(26, 22, 18, 0.97);
+            backdrop-filter: blur(14px);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+            border-bottom: 1px solid rgba(197, 165, 114, 0.28);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1320px;
+            min-height: 76px;
+            margin: auto;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            height: 60px;
+            color: #faf9f8;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 23px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+            transition: color 0.25s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #e2cda5;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #ffffff;
+            background: transparent;
+            border: none;
+            padding: 8px;
+        }
+
+        /* =========================
+           ABOUT DROPDOWN
+        ========================= */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: -15px;
+            min-width: 210px;
+            padding: 8px 0;
+            list-style: none;
+            background: #ffffff;
+            border-top: 3px solid var(--gold);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+            border-radius: 0 0 5px 5px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: opacity 0.25s ease,
+                        transform 0.25s ease,
+                        visibility 0.25s ease;
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu,
+        .dropdown.open .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 11px 18px;
+            color: var(--dark);
+            font-size: 13px;
+        }
+
+        .dropdown-menu a:hover,
+        .dropdown-menu a.active {
+            background: var(--beige);
+            color: var(--brown);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+        .page-hero {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 75px 7%;
+            text-align: center;
+            color: #ffffff;
+            background:
+                linear-gradient(
+                    rgba(17, 13, 10, 0.68),
+                    rgba(17, 13, 10, 0.72)
+                ),
+                url("images/church.jpg") center 60% / cover no-repeat;
+        }
+
+
+/* CINEMATIC HOMEPAGE */
+.hero {
+    min-height: 80vh;
+
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(25, 22, 19, 0.08) 0%,
+            rgba(25, 22, 19, 0.22) 100%
+        ),
+        url("images/church.jpg") !important;
+
+    background-position: center 82% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+
+}
+
+/* CINEMATIC HOMEPAGE */
+.hero {
+    min-height: 88vh;
+    position: relative;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 13, 10, 0.82) 0%,
+            rgba(17, 13, 10, 0.54) 48%,
+            rgba(17, 13, 10, 0.20) 100%
+        ),
+        url("images/church.jpg") center 65% / cover no-repeat;
+
+}
+
+
+.hero-content {
+    max-width: 780px;
+    animation: heroReveal 1s ease both;
+}
+
+.hero-eyebrow {
+    color: var(--gold-light);
+    font-size: 13px !important;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 22px !important;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(44px, 6vw, 76px);
+    font-weight: 500;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+}
+
+.hero .hero-description {
+    max-width: 590px;
+    color: #f0e9df;
+    font-size: 18px;
+    line-height: 1.9;
+    margin-bottom: 32px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    background: var(--gold);
+    color: var(--espresso);
+    border: 1px solid var(--gold);
+    border-radius: 2px;
+    padding: 15px 25px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--gold-light);
+    color: var(--espresso);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--espresso);
+}
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .eyebrow {
+            display: block;
+            margin-bottom: 14px;
+            color: #e2cda5;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .page-hero h1 {
+            margin-bottom: 20px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(38px, 5vw, 58px);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        .hero-divider {
+            width: 65px;
+            height: 2px;
+            margin: 0 auto 20px;
+            background: var(--gold);
+        }
+
+        .page-hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #f2ede6;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* =========================
+           GENERAL SECTION
+        ========================= */
+        .section {
+            padding: 80px 7%;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-label {
+            display: block;
+            margin-bottom: 12px;
+            color: var(--brown);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(29px, 4vw, 38px);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .section-heading p {
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* =========================
+           INTRODUCTION
+        ========================= */
+        .belief-intro {
+            background: #ffffff;
+        }
+
+        .intro-container {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .intro-decoration {
+            min-height: 270px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: var(--cream);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--accent);
+        }
+
+        .intro-decoration i {
+            margin-bottom: 18px;
+            color: var(--brown);
+            font-size: 42px;
+        }
+
+        .intro-decoration p {
+            color: var(--brown);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        .intro-content h2 {
+            margin-bottom: 20px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(28px, 3.5vw, 36px);
+            font-weight: 500;
+            line-height: 1.35;
+        }
+
+        .intro-content p {
+            margin-bottom: 16px;
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.95;
+        }
+
+        /* =========================
+           STATEMENT OF FAITH
+        ========================= */
+        .beliefs-section {
+            background: var(--cream);
+        }
+
+        .beliefs-grid {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .belief-card {
+            position: relative;
+            padding: 32px;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            box-shadow: 0 7px 22px rgba(26, 22, 18, 0.04);
+            transition: transform 0.25s ease,
+                        box-shadow 0.25s ease;
+        }
+
+        .belief-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(26, 22, 18, 0.09);
+        }
+
+        .belief-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 55px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .belief-number {
+            margin-bottom: 8px;
+            color: var(--accent);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .belief-card h3 {
+            margin-bottom: 12px;
+            color: var(--dark);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            font-weight: 500;
+        }
+
+        .belief-card p {
+            color: var(--text);
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .verse {
+            margin-top: 17px;
+            padding-top: 13px;
+            border-top: 1px solid var(--border);
+            color: var(--brown);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* =========================
+           SCRIPTURE FEATURE
+        ========================= */
+        .scripture-section {
+            padding: 75px 7%;
+            text-align: center;
+            color: #ffffff;
+            background: var(--dark);
+        }
+
+        .scripture-container {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .scripture-section .section-label {
+            color: #e2cda5;
+        }
+
+        .scripture-section blockquote {
+            margin: 20px 0;
+            color: #f8f3eb;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(23px, 3.5vw, 32px);
+            font-style: italic;
+            line-height: 1.65;
+        }
+
+        .scripture-reference {
+            color: #e2cda5;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        /* =========================
+           CALL TO ACTION
+        ========================= */
+        .connect-section {
+            padding: 75px 7%;
+            text-align: center;
+            background: var(--cream);
+            border-top: 1px solid var(--border);
+        }
+
+        .connect-section h2 {
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+
+        .connect-section p {
+            max-width: 650px;
+            margin: 0 auto 28px;
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .site-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 28px;
+            border: 1px solid var(--accent);
+            border-radius: 3px;
+            background: var(--accent);
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.25s ease,
+                        border-color 0.25s ease,
+                        transform 0.25s ease;
+        }
+
+        .site-button:hover {
+            background: var(--brown);
+            border-color: var(--brown);
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+        footer {
+            padding: 45px 20px 25px;
+            text-align: center;
+            color: #ffffff;
+            border-top: 2px solid var(--gold);
+            background: radial-gradient(
+                ellipse at top,
+                #34291e 0%,
+                #1a1612 65%
+            );
+        }
+
+        footer h3 {
+            margin-bottom: 5px;
+            color: #e2cda5;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        footer .tagline {
+            margin-bottom: 30px;
+            color: #ded5c9;
+            font-size: 13px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--brown);
+            border-radius: 50%;
+            color: #e2cda5;
+            text-decoration: none;
+            transition: color 0.25s ease,
+                        background 0.25s ease,
+                        border-color 0.25s ease;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+            background: var(--brown);
+            border-color: var(--brown);
+        }
+
+        footer .copyright {
+            max-width: 900px;
+            margin: auto;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            color: #cccccc;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+        @media (max-width: 1100px) {
+            .logo {
+                font-size: 15px;
+                gap: 9px;
+            }
+
+            .logo img {
+                width: 54px;
+                height: 54px;
+            }
+
+            .nav-links {
+                gap: 13px;
+            }
+
+            .nav-links > li > a {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                flex-wrap: wrap;
+                padding: 8px 5%;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                max-height: calc(100vh - 76px);
+                overflow-y: auto;
+                padding: 12px 22px 20px;
+                background: var(--dark);
+                border-top: 1px solid rgba(197, 165, 114, 0.3);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links > li {
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .nav-links > li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-links > li > a {
+                display: block;
+                padding: 12px 10px;
+                font-size: 13px;
+            }
+
+            .dropdown-menu {
+                position: static;
+                display: none;
+                width: 100%;
+                min-width: 0;
+                padding: 4px 0;
+                border-top: 1px solid var(--gold);
+                border-radius: 0;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: #282119;
+            }
+
+            .dropdown.open .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu a {
+                padding: 12px;
+                color: #f7f0e6;
+            }
+
+            .dropdown-menu a:hover,
+            .dropdown-menu a.active {
+                background: #3a2e22;
+                color: #e2cda5;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 65px 6%;
+            }
+
+            .page-hero {
+                min-height: 360px;
+                padding: 60px 6%;
+            }
+
+            .intro-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .intro-decoration {
+                min-height: 210px;
+            }
+
+            .beliefs-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .belief-card {
+                padding: 28px;
+            }
+
+            .scripture-section,
+            .connect-section {
+                padding: 60px 6%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                max-width: 80%;
+                gap: 8px;
+                font-size: 13px;
+            }
+
+            .logo img {
+                width: 47px;
+                height: 47px;
+            }
+
+            .logo span {
+                max-width: 210px;
+                line-height: 1.3;
+            }
+
+            .page-hero {
+                min-height: 320px;
+                padding: 50px 6%;
+            }
+
+            .page-hero h1 {
+                font-size: 36px;
+            }
+
+            .page-hero p,
+            .section-heading p {
+                font-size: 14px;
+            }
+
+            .belief-card {
+                padding: 25px 22px;
+            }
+
+            .belief-card h3 {
+                font-size: 21px;
+            }
+
+            .scripture-section blockquote {
+                font-size: 23px;
+            }
+
+            footer h3 {
+                font-size: 21px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER / NAVIGATION
+    ========================== -->
+    <header>
+        <nav aria-label="Main navigation">
+
+            <a class="logo" href="index.html#home">
+                <img src="images/logo.png" alt="Family of Faith Missions logo">
+                <span>Family of Faith Missions, Inc.</span>
+            </a>
+
+            <button class="menu-btn"
+                    id="menuBtn"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-controls="navLinks"
+                    aria-expanded="false">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">Home</a></li>
+
+                <li class="dropdown" id="aboutDropdown">
+                    <a href="who-we-are.html"
+                       class="active about-link"
+                       aria-haspopup="true"
+                       aria-expanded="false">
+                        About
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="who-we-are.html">Who We Are</a></li>
+                        <li><a href="what-we-believe.html" class="active">What We Believe</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="index.html#announcements">Announcements</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#videos">Videos</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="give.html">Give</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- =========================
+         PAGE HERO
+    ========================== -->
+    <!-- CINEMATIC COVER IMAGE -->
+<section class="hero" id="home"></section>
+
+    <!-- =========================
+         INTRODUCTION
+    ========================== -->
+    <section class="section belief-intro">
+        <div class="intro-container">
+
+            <div class="intro-decoration">
+                <i class="fa-solid fa-book-bible" aria-hidden="true"></i>
+                <p>"Your word is a lamp to my feet and a light to my path."</p>
+                <span class="verse">Psalm 119:105</span>
+            </div>
+
+            <div class="intro-content">
+                <span class="section-label">THE FOUNDATION OF OUR FAITH</span>
+                <h2>Built on the Word of God</h2>
+
+                <p>
+                    We believe the Bible is God's Word and the foundation
+                    for our faith, teaching, and daily living. It guides us
+                    in knowing God, following Jesus Christ, and serving
+                    others with humility and love.
+                </p>
+
+                <p>
+                    The beliefs below are a sample statement of faith for
+                    website planning. Please review them with your church
+                    leadership and adjust them to match your congregation's
+                    officially approved doctrine before publishing.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         STATEMENT OF FAITH
+    ========================== -->
+    <section class="section beliefs-section" id="beliefs">
+        <div class="section-heading">
+            <span class="section-label">WHAT WE STAND FOR</span>
+            <h2>Our Statement of Faith</h2>
+            <p>
+                These sample statements summarize central Christian beliefs.
+                Scripture references are provided for further study.
+            </p>
+        </div>
+
+        <div class="beliefs-grid">
+
+            <article class="belief-card">
+                <div class="belief-number">SCRIPTURE</div>
+                <h3>The Bible</h3>
+                <p>
+                    We believe the Bible is the inspired Word of God and
+                    our trustworthy guide for faith, truth, and godly living.
+                </p>
+                <div class="verse">2 Timothy 3:16–17 · Psalm 119:105</div>
+            </article>
+
+            <article class="belief-card">
+                <div class="belief-number">GOD</div>
+                <h3>One True God</h3>
+                <p>
+                    We believe in one true God, the Creator of heaven and
+                    earth, who reveals Himself as Father, Son, and Holy Spirit.
+                </p>
+                <div class="verse">Deuteronomy 6:4 · Matthew 28:19</div>
+            </article>
+
+            <article class="belief-card">
+                <div class="belief-number">JESUS CHRIST</div>
+                <h3>Jesus Christ</h3>
+                <p>
+                    We believe Jesus Christ is the Son of God, who came
+                    into the world, died for our sins, rose again, and is
+                    Lord and Savior.
+                </p>
+                <div class="verse">John 3:16 · 1 Corinthians 15:3–4</div>
+            </article>
+
+            <article class="belief-card">
+                <div class="belief-number">SALVATION</div>
+                <h3>Salvation by Grace</h3>
+                <p>
+                    We believe salvation is God's gift of grace, received
+                    through faith in Jesus Christ, not earned by human works.
+                </p>
+                <div class="verse">Ephesians 2:8–9 · Romans 10:9–10</div>
+            </article>
+
+            <article class="belief-card">
+                <div class="belief-number">HOLY SPIRIT</div>
+                <h3>The Holy Spirit</h3>
+                <p>
+                    We believe the Holy Spirit works in believers to guide,
+                    strengthen, transform, and empower them to live for God
+                    and serve others.
+                </p>
+                <div class="verse">John 14:26 · Acts 1:8</div>
+            </article>
+
+            <article class="belief-card">
+                <div class="belief-number">THE CHURCH</div>
+                <h3>The Church</h3>
+                <p>
+                    We believe the Church is the body of Christ, called to
+                    worship God, build up believers, share the Gospel, and
+                    make disciples of all nations.
+                </p>
+                <div class="verse">Matthew 28:19–20 · Hebrews 10:24–25</div>
+            </article>
+
+            <article class="belief-card">
+                <div class="belief-number">CHRISTIAN LIVING</div>
+                <h3>A Life of Faith and Love</h3>
+                <p>
+                    We believe followers of Jesus are called to grow in
+                    holiness, love their neighbors, serve faithfully, and
+                    reflect Christ in their daily lives.
+                </p>
+                <div class="verse">Micah 6:8 · John 13:34–35</div>
+            </article>
+
+            <article class="belief-card">
+                <div class="belief-number">THE RETURN OF JESUS CHRIST</div>
+                <h3>The Return of Jesus</h3>
+                <p>
+                    We believe Jesus Christ will return as He promised,
+                    and we seek to live faithfully while awaiting His return.
+                </p>
+                <div class="verse">John 14:2–3 · 1 Thessalonians 4:16–17</div>
+            </article>
+
+        </div>
+    </section>
+    
+
+    <!-- =========================
+         SCRIPTURE FEATURE
+    ========================== -->
+    <section class="scripture-section">
+        <div class="scripture-container">
+            <span class="section-label">OUR GUIDING PRINCIPLE</span>
+
+            <blockquote>
+                "Whatever you do, do it all for the glory of God."
+            </blockquote>
+
+            <div class="scripture-reference">1 CORINTHIANS 10:31</div>
+        </div>
+    </section>
+
+    <!-- =========================
+         CALL TO ACTION
+    ========================== -->
+    <section class="connect-section">
+        <span class="section-label">GROW WITH US</span>
+
+        <h2>Discover Faith in Community</h2>
+
+        <p>
+            We invite you to worship with us, grow in God's Word,
+            and experience the joy of serving Christ together.
+        </p>
+
+        <a href="index.html#contact" class="site-button">
+            Connect With Us
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        <h3>Family of Faith Missions, Inc.</h3>
+        <p class="tagline">Family • Faith • Fellowship</p>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61558112182416"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.youtube.com/@familychurchacts1631"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="YouTube">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+
+            <a href="https://www.instagram.com/familyoffaithmissionsinc/?hl=en"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Family of Faith Missions, Inc. All Rights Reserved.
+        </p>
+    </footer>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+        const aboutDropdown = document.getElementById("aboutDropdown");
+        const aboutLink = aboutDropdown.querySelector(".about-link");
+
+        // Toggle mobile navigation
+        menuBtn.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("active");
+
+            menuBtn.setAttribute("aria-expanded", String(isOpen));
+            menuBtn.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            menuBtn.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
+                : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+        });
+
+        // On mobile, first click opens the About dropdown.
+        aboutLink.addEventListener("click", function (event) {
+            if (window.matchMedia("(max-width: 900px)").matches &&
+                !aboutDropdown.classList.contains("open")) {
+                event.preventDefault();
+                aboutDropdown.classList.add("open");
+                aboutLink.setAttribute("aria-expanded", "true");
+            }
+        });
+
+        // Close the mobile menu after selecting a destination.
+        navLinks.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                const isAboutLink = link.classList.contains("about-link");
+
+                if (isAboutLink &&
+                    window.matchMedia("(max-width: 900px)").matches &&
+                    aboutDropdown.classList.contains("open")) {
+                    return;
+                }
+
+                if (!link.closest(".dropdown-menu") || link.closest(".dropdown-menu")) {
+                    navLinks.classList.remove("active");
+                    menuBtn.setAttribute("aria-expanded", "false");
+                    menuBtn.setAttribute("aria-label", "Open navigation menu");
+                    menuBtn.innerHTML =
+                        '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+                    aboutDropdown.classList.remove("open");
+                    aboutLink.setAttribute("aria-expanded", "false");
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside.
+        document.addEventListener("click", function (event) {
+            if (!aboutDropdown.contains(event.target)) {
+                aboutDropdown.classList.remove("open");
+                aboutLink.setAttribute("aria-expanded", "false");
+            }
+        });
+
+        // Reset mobile menu when returning to desktop width.
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 900) {
+                navLinks.classList.remove("active");
+                aboutDropdown.classList.remove("open");
+                menuBtn.setAttribute("aria-expanded", "false");
+                menuBtn.setAttribute("aria-label", "Open navigation menu");
+                menuBtn.innerHTML =
+                    '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
+                aboutLink.setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
+
+</body>
+</html>

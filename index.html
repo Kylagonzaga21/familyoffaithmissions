@@ -9,10 +9,232 @@
     <title>Family of Faith Missions, Inc.</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></liink>
 
     <style>
+
+        
+/* HEADER */
+header {
+    background: rgba(26, 22, 18, 0.97);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+    border-bottom: 1px solid rgba(197, 165, 114, 0.28);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1320px;
+    min-height: 76px;
+    margin: auto;
+    padding: 8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    height: 60px;
+    color: #faf9f8;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 23px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold-light, #e2cda5);
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 8px;
+}
+
+/* ABOUT DROPDOWN */
+nav ul li.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+    background: white;
+    border-top: 2px solid #A68A6D;
+    box-shadow: 0 8px 22px rgba(26, 22, 18, 0.12);
+    border-radius: 0 0 4px 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease,
+                transform 0.25s ease,
+                visibility 0.25s ease;
+    z-index: 1001;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 18px;
+    color: #1a1612;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5efe5;
+    color: #806A50;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* CINEMATIC COVER IMAGE */
+.hero {
+    min-height: 88vh;
+    position: relative;
+    padding: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 13, 10, 0.82) 0%,
+            rgba(17, 13, 10, 0.54) 48%,
+            rgba(17, 13, 10, 0.20) 100%
+        ),
+        url("images/church.jpg") center 65% / cover no-repeat;
+}
+
+/* MOBILE HEADER */
+@media (max-width: 768px) {
+    nav {
+        min-height: 76px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        background: #1a1612;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 20px;
+        border-top: 1px solid rgba(197, 165, 114, 0.35);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: center;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li.dropdown {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border-radius: 0;
+        border-top: 1px solid #e8dfd3;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .hero {
+        min-height: 76vh;
+        background-position: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 14px;
+        gap: 7px;
+    }
+
+    .logo img {
+        width: 52px;
+        height: 52px;
+    }
+
+    .logo span {
+        max-width: 190px;
+        line-height: 1.3;
+    }
+
+    .hero {
+        min-height: 72vh;
+    }
+}
+
 
         /* Full-size image preview */
 .image-preview {
@@ -528,6 +750,69 @@ header .logo img {
         margin-bottom: 8px;
     }
 
+    
+/* GIVE SECTION ON HOME PAGE */
+.give-section {
+    padding: 65px 8%;
+    background: #f5efe5;
+    text-align: center;
+}
+
+.give-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.give-label {
+    display: block;
+    color: #806A50;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.give-content h2 {
+    color: #1a1612;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin: 0 0 15px;
+}
+
+.give-content p {
+    color: #5e554b;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 auto 25px;
+}
+
+.give-button {
+    display: inline-block;
+    background: #1a1612;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.give-button:hover {
+    background: #806A50;
+}
+
+@media (max-width: 768px) {
+    .give-section {
+        padding: 50px 6%;
+    }
+
+    .give-content h2 {
+        font-size: 28px;
+    }
+}
+
+
     /* =========================
        CONTACT
     ========================== */
@@ -594,40 +879,49 @@ header .logo img {
     }
 
     footer h3 {
-        font-weight: 500;
-        margin-bottom: 8px;
-    }
+    margin-bottom: 5px;
+}
 
-    .social-links {
-        margin: 22px 0;
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-    }
+footer .tagline {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #ded5c9;
+    font-size: 13px;
+}
 
-    .social-links a {
-        width: 40px;
-        height: 40px;
+     .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--brown);
+    border-radius: 50%;
+    color: #e2cda5;
+    text-decoration: none;
+    transition: color 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+}
 
-        border-radius: 50%;
-        background: #ffffff;
-        color: #A68A6D;
+.social-links a:hover,
+.social-links a:focus,
+.social-links a:visited {
+    text-decoration: none;
+}
 
-        text-decoration: none;
-        font-size: 17px;
-
-        transition: 0.2s;
-    }
-
-    .social-links a:hover {
-        background: #A68A6D;
-        color: white;
-        transform: none;
-    }
+        .social-links a:hover {
+            color: #ffffff;
+            background: var(--brown);
+            border-color: var(--brown);
+        }
 
     footer p {
         font-size: 13px;
@@ -717,6 +1011,209 @@ header .logo img {
         }
 
     }
+
+    .contact-section {
+    padding: 60px 8%;
+    background: #ffffff;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.contact-label {
+    display: block;
+    color: #A68A6D;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.contact-heading h2 {
+    color: #1a1612;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.contact-heading p {
+    color: #777067;
+    font-size: 16px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 950px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.contact-card {
+    padding: 28px;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.contact-details {
+    background: #ffffff;
+    border: 1px solid #e9e1d6;
+    box-shadow: 0 8px 25px rgba(26, 22, 18, 0.05);
+}
+
+.contact-details h3 {
+    color: #1a1612;
+    font-size: 25px;
+    margin: 0 0 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5efe5;
+    color: #806A50;
+    font-size: 20px;
+}
+
+.contact-item h4 {
+    margin: 0 0 5px;
+    color: #1a1612;
+    font-size: 15px;
+}
+
+.contact-item p {
+    margin: 0;
+    color: #777067;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    color: #777067;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #A68A6D;
+}
+
+.contact-welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f5efe5;
+    color: #1a1612;
+}
+
+.welcome-symbol {
+    color: #A68A6D;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.welcome-label {
+    color: #806A50;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.contact-welcome h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0;
+    color: #1a1612;
+}
+
+.welcome-divider {
+    width: 55px;
+    height: 3px;
+    background: #A68A6D;
+    margin: 25px 0;
+}
+
+.welcome-message {
+    color: #5e554b;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 25px;
+}
+
+.contact-welcome blockquote {
+    border-left: 3px solid #A68A6D;
+    padding-left: 18px;
+    margin: 0;
+    color: #38332d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+.contact-welcome blockquote span {
+    display: block;
+    margin-top: 8px;
+    color: #806A50;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+/* Move the welcome card content upward */
+.contact-welcome {
+    justify-content: flex-start;
+    padding-top: 25px;
+}
+
+.contact-welcome h3 {
+    margin-top: 40;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 6%;
+    }
+
+    .contact-heading h2 {
+        font-size: 32px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        padding: 24px 20px;
+    }
+
+    .contact-welcome h3 {
+        font-size: 29px;
+    }
+}
 
     /* Mobile layout for Ministries */
 @media (max-width: 600px) {
@@ -1628,6 +2125,92 @@ footer > p:first-of-type {
     }
 }
 
+
+/* ABOUT DROPDOWN */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 190px;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+    background: #ffffff;
+    border-top: 2px solid #A68A6D;
+    box-shadow: 0 8px 22px rgba(26, 22, 18, 0.12);
+    border-radius: 0 0 4px 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease,
+                transform 0.25s ease,
+                visibility 0.25s ease;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 18px;
+    color: #1a1612;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5efe5;
+    color: #806A50;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu,
+.dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* MOBILE DROPDOWN */
+@media (max-width: 768px) {
+    nav ul li.dropdown {
+        width: 100%;
+    }
+
+    nav ul li.dropdown > a {
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        min-width: 0;
+        width: 100%;
+        box-shadow: none;
+        border-top: 1px solid #e8dfd3;
+        border-radius: 0;
+        transform: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+}
+
+
 /* Respect visitors who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *,
@@ -1754,66 +2337,106 @@ section .section-subtitle {
     box-shadow: none !important;
 }
 
+#contact a {
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+
+/* Fix the actual Ministries popup close button */
+#ministry-modal #close-ministry-modal {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    z-index: 10001;
+
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+
+    color: #1a1612;
+    font-size: 35px;
+    line-height: 1;
+    padding: 0 !important;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+#ministry-modal #close-ministry-modal:hover,
+#ministry-modal #close-ministry-modal:focus,
+#ministry-modal #close-ministry-modal:active {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+@media (max-width: 600px) {
+    #ministry-modal {
+        align-items: flex-start;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #ministry-modal .ministry-modal-content {
+        margin: 10px auto;
+        flex-shrink: 0;
+    }
+}
+
+
 </style>
 
 </head>
 
 <body>
 
-    <header>
-
-        <nav>
-
-            <div class="logo">
-    <img src="images/logo.png" alt="Family Church Logo">
-    <span>Family of Faith Missions, Inc.</span>
+    
+<!-- HEADER / NAVIGATION -->
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Family Church Logo">
+            <span>Family of Faith Missions, Inc.</span>
         </div>
 
-            <div class="menu-btn" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </div>
+        <button class="menu-btn" type="button"
+                onclick="toggleMenu()" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
 
-            <ul class="nav-links" id="navLinks">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#home">Home</a></li>
 
-                <li>
-                    <a href="#home">Home</a>
-                </li>
+            <li class="dropdown">
+                <a href="who-we-are.html" class="about-link">About</a>
+                <ul class="dropdown-menu">
+                    <li><a href="who-we-are.html">Who We Are</a></li>
+                    <li><a href="what-we-believe.html">What We Believe</a></li>
+                </ul>
+            </li>
 
-                <li>
-                    <a href="#about">About</a>
-                </li>
+            <li><a href="index.html#announcements">Announcements</a></li>
+            <li><a href="index.html#events">Events</a></li>
+            <li><a href="index.html#videos">Videos</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="give.html">Give</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-                <li>
-                    <a href="#announcements">Announcements</a>
-                </li>
+<!-- CINEMATIC COVER IMAGE -->
+<section class="hero" id="home"></section>
 
-                <li>
-                    <a href="#events">Events</a>
-                </li>
-
-                <li>
-                    <a href="#videos">Videos</a>
-                </li>
-
-                <li>
-                    <a href="#gallery">Gallery</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    <section class="hero" id="home">
-
-        <div class="hero-content"></div>
-
-    </section>
 
 
     <!-- =========================
@@ -2541,87 +3164,95 @@ section .section-subtitle {
 
     </section>
 
+    <!-- GIVE SECTION -->
+    <section id="give" class="give-section">
+        <div class="give-content">
+            <span class="give-label">YOUR GENEROSITY MAKES A DIFFERENCE</span>
+
+            <h2>Give with a Grateful Heart</h2>
+
+            <p>
+                Your generosity helps support the ministry, reach more people,
+                and share God's love with our community.
+            </p>
+
+            <!-- GIVE TODAY BUTTON -->
+            <div class="facebook-page-button">
+                <a href="give.html" class="facebook-btn">
+                    Give Now
+                </a>
+            </div>
+            
+        </div>
+    </section>
+
 
     <!-- =========================
-         CONTACT
-    ========================== -->
+     CONTACT
+========================== -->
 
-    <section class="contact" id="contact">
+<section class="contact" id="contact">
+    <div class="container">
 
-        <div class="container">
-
-            <div class="section-title">
-
-                <h2>Contact Us</h2>
-
-                <p>
-                    We would love to hear from you.
-                </p>
-
-            </div>
-
-
-            <div class="contact-content">
-
-                <div class="contact-info">
-
-                    <h3>Get In Touch</h3>
-
-                    <p>
-                        <i class="fas fa-location-dot"></i>
-                        Family of Faith Missions, Inc.
-                    </p>
-
-                    <p>
-                        <i class="fas fa-phone"></i>
-                        Phone: 0935 727 3837
-                    </p>
-
-                    <p>
-                        <i class="fas fa-envelope"></i>
-                        Email: familyoffaithmissionsinc@gmail.com
-                    </p>
-
-                    <p>
-                        <i class="fas fa-clock"></i>
-                        Sunday Service: 10:00 AM
-                    </p>
-
-                </div>
-
-
-                <form action="mailto:familyoffaithmissionsinc@gmail.com" method="post" enctype="text/plain">
-
-    <input
-        type="text"
-        name="Name"
-        placeholder="Your Name"
-        required>
-
-    <input
-        type="email"
-        name="Email"
-        placeholder="Your Email"
-        required>
-
-    <textarea
-        name="Message"
-        placeholder="Your Message"
-        required></textarea>
-
-    <button
-        type="submit"
-        class="btn">
-        Send Message
-    </button>
-
-</form>
-
-            </div>
-
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you.</p>
         </div>
 
-    </section>
+        <div class="contact-content">
+
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+
+                <p>
+                <i class="fas fa-church"></i>
+                Family of Faith Missions, Inc.
+                 </p>
+
+                <p>
+                    <i class="fas fa-location-dot"></i>
+                    4th Floor, 60 Katihan Road, Poblacion, Muntinlupa City
+                </p>
+
+                <p>
+                <i class="fas fa-phone"></i>
+                <a href="tel:09357273837">0935 727 3837</a>
+                </p>
+
+                <p>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:familyoffaithmissionsinc@gmail.com">
+                    familyoffaithmissionsinc@gmail.com
+                </a>
+                </p>
+
+                <p>
+                    <i class="fas fa-clock"></i>
+                    Sunday Service: 10:00 AM
+                </p>
+            </div>
+
+             <div class="contact-card contact-welcome">
+            <span class="welcome-label">YOU ARE WELCOME HERE</span>
+
+            <h3>We're Here<br>for You</h3>
+
+            <div class="welcome-divider"></div>
+
+            <p class="welcome-message">
+                Whether you're looking for a church family, need prayer,
+                or simply have a question, we'd love to connect with you.
+            </p>
+
+            <blockquote>
+                “We love because he first loved us.”
+                <span>1 John 4:19</span>
+            </blockquote>
+        </div>
+
+        </div>
+    </div>
+</section>
 
 
     <!-- =========================
@@ -2629,54 +3260,31 @@ section .section-subtitle {
     ========================== -->
 
     <footer>
+    <h3>Family of Faith Missions, Inc.</h3>
 
-        <h3>Family of Faith Missions, Inc.</h3>
-
-        <p>
-            Family • Faith • Fellowship
-        </p>
-
+    <p class="tagline">Family • Faith • Fellowship</p>
 
         <!-- SOCIAL MEDIA LINKS -->
 
         <div class="social-links">
+    <a href="https://www.facebook.com/profile.php?id=61558112182416"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Facebook">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
 
-            <!-- Facebook -->
-            <a
-                href="https://www.facebook.com/profile.php?id=61558112182416"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Facebook">
+    <a href="https://www.instagram.com/familyoffaithmissionsinc/?hl=en"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
 
-                <i class="fab fa-facebook-f"></i>
-
-            </a>
-
-            <!-- YouTube -->
-            <a
-                href="https://www.youtube.com/@familychurchacts1631"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="YouTube">
-
-                <i class="fab fa-youtube"></i>
-
-            </a>
-
-
-            <!-- Instagram -->
-            <a
-                href="https://www.instagram.com/familychurch77/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram">
-
-                <i class="fab fa-instagram"></i>
-
-            </a>
-
-        </div>
-
+    <a href="https://www.youtube.com/@familychurchacts1631"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="YouTube">
+        <i class="fa-brands fa-youtube"></i>
+    </a>
+</div>
 
         <p>
             © 2026 Family of Faith Missions, Inc. All Rights Reserved.
@@ -2769,66 +3377,52 @@ section .section-subtitle {
         }
     });
 
+/* Let the phone's Back button close the Ministries popup */
+let ministryHistoryAdded = false;
+let closingFromBackButton = false;
 
-// Allow the phone's Back button to close the ministry popup
-(function () {
-    const modal = document.getElementById("ministry-modal");
+function openMinistryHistory() {
+    if (ministryHistoryAdded) return;
 
-    if (!modal) return;
+    history.pushState(
+        { ministryPopup: true },
+        "",
+        window.location.href
+    );
 
-    let popupOpen = false;
-    let pushedHistory = false;
+    ministryHistoryAdded = true;
+}
 
-    function isModalVisible() {
-        return getComputedStyle(modal).display !== "none" &&
-               modal.getAttribute("aria-hidden") !== "true";
+function closeMinistryHistory() {
+    if (!ministryHistoryAdded || closingFromBackButton) return;
+
+    closingFromBackButton = true;
+    history.back();
+}
+
+window.addEventListener("popstate", function () {
+    ministryHistoryAdded = false;
+
+    if (ministryModal.classList.contains("show")) {
+        closingFromBackButton = true;
+        closeMinistryPhotoPanel();
+        closingFromBackButton = false;
     }
+});
 
-    function closeMinistryPopup() {
-        // Use your existing close button if available
-        const closeButton = modal.querySelector(
-            ".close, .close-modal, .modal-close, [aria-label='Close']"
-        );
-
-        if (closeButton) {
-            closeButton.click();
-        } else {
-            modal.style.display = "none";
-        }
-
-        popupOpen = false;
-        pushedHistory = false;
+/* Track when the popup opens or closes */
+const ministryPopupObserver = new MutationObserver(function () {
+    if (ministryModal.classList.contains("show")) {
+        openMinistryHistory();
+    } else if (ministryHistoryAdded && !closingFromBackButton) {
+        closeMinistryHistory();
     }
+});
 
-    function syncPopupState() {
-        const visible = isModalVisible();
-
-        if (visible && !popupOpen) {
-            popupOpen = true;
-            history.pushState({ ministryPopup: true }, "");
-            pushedHistory = true;
-        } else if (!visible && popupOpen) {
-            popupOpen = false;
-            if (pushedHistory) {
-                history.back();
-                pushedHistory = false;
-            }
-        }
-    }
-
-    window.addEventListener("popstate", function () {
-        if (popupOpen && isModalVisible()) {
-            closeMinistryPopup();
-        }
-    });
-
-    // Watch for the existing code opening or closing the modal
-    new MutationObserver(syncPopupState).observe(modal, {
-        attributes: true,
-        attributeFilter: ["style", "class", "aria-hidden"]
-    });
-})();
-
+ministryPopupObserver.observe(ministryModal, {
+    attributes: true,
+    attributeFilter: ["class"]
+});
 
 </script>
 
@@ -2876,6 +3470,64 @@ document.addEventListener("keydown", function (event) {
     }
 });
 </script>
+
+
+<script>
+document.querySelectorAll('.dropdown > .about-link').forEach(link => {
+    link.addEventListener('click', function (event) {
+        const dropdown = this.parentElement;
+
+        if (!dropdown.classList.contains('open')) {
+            event.preventDefault();
+            dropdown.classList.add('open');
+        }
+    });
+});
+
+document.addEventListener('click', function (event) {
+    document.querySelectorAll('.dropdown.open').forEach(dropdown => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove('open');
+        }
+    });
+});
+</script>
+
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+
+// Close mobile navigation after selecting a link
+document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", function () {
+        document.getElementById("navLinks").classList.remove("active");
+    });
+});
+
+// Open About dropdown on click
+document.querySelectorAll(".dropdown > .about-link").forEach(link => {
+    link.addEventListener("click", function (event) {
+        const dropdown = this.parentElement;
+
+        if (!dropdown.classList.contains("open")) {
+            event.preventDefault();
+            dropdown.classList.add("open");
+        }
+    });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener("click", function (event) {
+    document.querySelectorAll(".dropdown.open").forEach(dropdown => {
+        if (!dropdown.contains(event.target)) {
+            dropdown.classList.remove("open");
+        }
+    });
+});
+</script>
+
 
 </body>
 </html>
