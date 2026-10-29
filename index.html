@@ -2392,6 +2392,24 @@ section .section-subtitle {
     }
 }
 
+/* Hide the About arrow on desktop */
+.about-arrow {
+    display: none;
+}
+
+/* Show the arrow on mobile only */
+@media (max-width: 768px) {
+    .about-arrow {
+        display: inline-block;
+        margin-left: 6px;
+        font-size: 12px;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown.active .about-arrow {
+        transform: rotate(180deg);
+    }
+}
 
 </style>
 
@@ -2417,12 +2435,14 @@ section .section-subtitle {
             <li><a href="index.html#home">Home</a></li>
 
             <li class="dropdown">
-                <a href="who-we-are.html" class="about-link">About</a>
-                <ul class="dropdown-menu">
-                    <li><a href="who-we-are.html">Who We Are</a></li>
-                    <li><a href="what-we-believe.html">What We Believe</a></li>
-                </ul>
-            </li>
+    <a href="who-we-are.html" class="about-link">
+        About <span class="about-arrow">⌄</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li><a href="who-we-are.html">Who We Are</a></li>
+        <li><a href="what-we-believe.html">What We Believe</a></li>
+    </ul>
+</li>
 
             <li><a href="index.html#announcements">Announcements</a></li>
             <li><a href="index.html#events">Events</a></li>
