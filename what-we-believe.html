@@ -838,6 +838,54 @@
                 animation-duration: 0.01ms !important;
             }
         }
+
+        /* Adjust cover image on mobile phones */
+        @media (max-width: 768px) {
+            .hero {
+                background-size: cover;
+                background-position: center top;
+                min-height: 60vh;
+            }
+        }
+
+        /* Show About submenu when arrow is clicked */
+#aboutDropdown.open .dropdown-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* DESKTOP: Hide arrow and show submenu on hover */
+@media screen and (min-width: 901px) {
+    #aboutDropdown .dropdown-arrow {
+        display: none !important;
+    }
+
+    #aboutDropdown:hover .dropdown-menu,
+    #aboutDropdown:focus-within .dropdown-menu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
+/* MOBILE: Show arrow and require clicking */
+@media screen and (max-width: 900px) {
+    #aboutDropdown .dropdown-arrow {
+        display: inline-flex !important;
+    }
+
+    #aboutDropdown .dropdown-menu {
+        display: none !important;
+    }
+
+    #aboutDropdown.open .dropdown-menu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+}
+
     </style>
 </head>
 
@@ -867,18 +915,32 @@
                 <li><a href="index.html#home">Home</a></li>
 
                 <li class="dropdown" id="aboutDropdown">
-                    <a href="who-we-are.html"
-                       class="active about-link"
-                       aria-haspopup="true"
-                       aria-expanded="false">
-                        About
-                    </a>
+    <div class="dropdown-toggle">
+        <a href="what-we-believe.html" class="active">
+            About
+        </a>
 
-                    <ul class="dropdown-menu">
-                        <li><a href="who-we-are.html">Who We Are</a></li>
-                        <li><a href="what-we-believe.html" class="active">What We Believe</a></li>
-                    </ul>
-                </li>
+        <button class="dropdown-arrow"
+                type="button"
+                aria-label="Toggle About submenu"
+                aria-expanded="false">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <ul class="dropdown-menu">
+        <li>
+            <a href="who-we-are.html" class="active">
+                Who We Are
+            </a>
+        </li>
+        <li>
+            <a href="what-we-believe.html">
+                What We Believe
+            </a>
+        </li>
+    </ul>
+</li>
 
                 <li><a href="index.html#announcements">Announcements</a></li>
                 <li><a href="index.html#events">Events</a></li>
@@ -1104,79 +1166,85 @@
          JAVASCRIPT
     ========================== -->
     <script>
-        const menuBtn = document.getElementById("menuBtn");
-        const navLinks = document.getElementById("navLinks");
-        const aboutDropdown = document.getElementById("aboutDropdown");
-        const aboutLink = aboutDropdown.querySelector(".about-link");
+        
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+const aboutDropdown = document.getElementById("aboutDropdown");
 
-        // Toggle mobile navigation
-        menuBtn.addEventListener("click", function () {
-            const isOpen = navLinks.classList.toggle("active");
+const arrowBtn = aboutDropdown?.querySelector(".dropdown-arrow");
 
-            menuBtn.setAttribute("aria-expanded", String(isOpen));
-            menuBtn.setAttribute(
-                "aria-label",
-                isOpen ? "Close navigation menu" : "Open navigation menu"
-            );
+// Toggle burger menu
+menuBtn?.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("active");
 
-            menuBtn.innerHTML = isOpen
-                ? '<i class="fa-solid fa-xmark" aria-hidden="true"></i>'
-                : '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
-        });
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    menuBtn.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
 
-        // On mobile, first click opens the About dropdown.
-        aboutLink.addEventListener("click", function (event) {
-            if (window.matchMedia("(max-width: 900px)").matches &&
-                !aboutDropdown.classList.contains("open")) {
-                event.preventDefault();
-                aboutDropdown.classList.add("open");
-                aboutLink.setAttribute("aria-expanded", "true");
-            }
-        });
+    menuBtn.innerHTML = isOpen
+        ? '<i class="fas fa-times" aria-hidden="true"></i>'
+        : '<i class="fas fa-bars" aria-hidden="true"></i>';
+});
 
-        // Close the mobile menu after selecting a destination.
-        navLinks.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                const isAboutLink = link.classList.contains("about-link");
+// Toggle About submenu using the arrow button
+arrowBtn?.addEventListener("click", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
 
-                if (isAboutLink &&
-                    window.matchMedia("(max-width: 900px)").matches &&
-                    aboutDropdown.classList.contains("open")) {
-                    return;
-                }
+    const isOpen = aboutDropdown.classList.toggle("open");
 
-                if (!link.closest(".dropdown-menu") || link.closest(".dropdown-menu")) {
-                    navLinks.classList.remove("active");
-                    menuBtn.setAttribute("aria-expanded", "false");
-                    menuBtn.setAttribute("aria-label", "Open navigation menu");
-                    menuBtn.innerHTML =
-                        '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
-                    aboutDropdown.classList.remove("open");
-                    aboutLink.setAttribute("aria-expanded", "false");
-                }
-            });
-        });
+    arrowBtn.setAttribute("aria-expanded", String(isOpen));
+});
 
-        // Close dropdown when clicking outside.
-        document.addEventListener("click", function (event) {
-            if (!aboutDropdown.contains(event.target)) {
-                aboutDropdown.classList.remove("open");
-                aboutLink.setAttribute("aria-expanded", "false");
-            }
-        });
+// Close menu after selecting a submenu destination
+navLinks?.querySelectorAll(".dropdown-menu a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        aboutDropdown.classList.remove("open");
 
-        // Reset mobile menu when returning to desktop width.
-        window.addEventListener("resize", function () {
-            if (window.innerWidth > 900) {
-                navLinks.classList.remove("active");
-                aboutDropdown.classList.remove("open");
-                menuBtn.setAttribute("aria-expanded", "false");
-                menuBtn.setAttribute("aria-label", "Open navigation menu");
-                menuBtn.innerHTML =
-                    '<i class="fa-solid fa-bars" aria-hidden="true"></i>';
-                aboutLink.setAttribute("aria-expanded", "false");
-            }
-        });
+        menuBtn?.setAttribute("aria-expanded", "false");
+        menuBtn?.setAttribute("aria-label", "Open navigation menu");
+
+        if (menuBtn) {
+            menuBtn.innerHTML =
+                '<i class="fas fa-bars" aria-hidden="true">';
+        }
+
+        arrowBtn?.setAttribute("aria-expanded", "false");
+    });
+});
+
+// Close submenu when clicking outside
+document.addEventListener("click", function (event) {
+    if (
+        aboutDropdown &&
+        !aboutDropdown.contains(event.target)
+    ) {
+        aboutDropdown.classList.remove("open");
+        arrowBtn?.setAttribute("aria-expanded", "false");
+    }
+});
+
+// Reset mobile navigation when switching to desktop
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 900) {
+        navLinks?.classList.remove("active");
+        aboutDropdown?.classList.remove("open");
+
+        menuBtn?.setAttribute("aria-expanded", "false");
+        menuBtn?.setAttribute("aria-label", "Open navigation menu");
+
+        if (menuBtn) {
+            menuBtn.innerHTML =
+                '<i class="fas fa-bars" aria-hidden="true">';
+        }
+
+        arrowBtn?.setAttribute("aria-expanded", "false");
+    }
+});
+
     </script>
 
 </body>
