@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -324,6 +324,143 @@ footer > p:last-of-type {
     margin: 0;
 }
 
+/* GIVING PURPOSE SECTION */
+.giving-purpose-section {
+    width: 100%;
+    padding: 65px 7%;
+    background: #f8f7f5;
+}
+
+.giving-purpose-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.giving-purpose-title {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 46px;
+    line-height: 1.08;
+    font-weight: 800;
+    color: #221f1b;
+    margin-bottom: 30px;
+}
+
+/* TWO-CARD GRID */
+.giving-purpose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+/* CARD DESIGN */
+.giving-purpose-card {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+}
+
+/* DARK OVERLAY */
+.giving-purpose-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.35)
+    );
+}
+
+/* BACKGROUND IMAGES */
+.tithe-card {
+    background-image: url("images/tithe.jpg");
+}
+
+.next-level-card {
+    background-image: url("images/next-level.jpg");
+}
+
+/* CARD TEXT */
+.giving-purpose-content {
+    position: relative;
+    z-index: 1;
+    padding: 25px 20px;
+    color: #ffffff;
+}
+
+.giving-purpose-content h3 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.giving-purpose-content p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.giving-verse {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #e5c9a8;
+    border-bottom: 1px solid #e5c9a8;
+    padding-bottom: 3px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .giving-purpose-title {
+        font-size: 38px;
+    }
+
+    .giving-purpose-card {
+        min-height: 380px;
+    }
+
+    .giving-purpose-content {
+        padding: 20px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .giving-purpose-section {
+        padding: 45px 5%;
+    }
+
+    .giving-purpose-title {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .giving-purpose-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .giving-purpose-card {
+        min-height: 350px;
+    }
+
+    .giving-purpose-content h3 {
+        font-size: 23px;
+    }
+
+    .giving-purpose-content p {
+        font-size: 14px;
+    }
+}
         
     </style>
 </head>
@@ -402,6 +539,62 @@ footer > p:last-of-type {
 
         </section>
     </main>
+
+    <section class="giving-purpose-section" id="giving-purpose">
+    <div class="giving-purpose-container">
+
+        <h2 class="giving-purpose-title">
+            Your Giving, God's Work.
+        </h2>
+
+        <div class="giving-purpose-grid">
+
+            <!-- THE TITHE CARD -->
+            <div class="giving-purpose-card tithe-card">
+                <div class="giving-purpose-content">
+                    <h3>The Tithe</h3>
+
+                    <p>
+                        The Tithe is the 10% of our income that we set apart
+                        for the Lord. It belongs to Him, and giving it is an
+                        act of worship, obedience, and faithfulness. As we
+                        honor God with our tithes, we acknowledge that
+                        everything we have comes from Him. These tithes are
+                        entrusted to the church to support the work and needs
+                        of His house.
+                    </p>
+
+                    <span class="giving-verse">
+                        Malachi 3:10
+                    </span>
+                </div>
+            </div>
+
+
+            <!-- NEXT LEVEL CARD -->
+            <div class="giving-purpose-card next-level-card">
+                <div class="giving-purpose-content">
+                    <h3>Missions & Outreach</h3>
+
+                    <p>
+                        The Next Level fund supports our church's outreaches,
+                        ministries, and missions. It helps provide resources
+                        for community outreach, ministry activities,
+                        evangelism, and mission efforts. Through your
+                        generosity, we can reach more people, serve our
+                        community, strengthen our ministries, and share
+                        the Gospel beyond the walls of our church.
+                    </p>
+
+                    <span class="giving-verse">
+                        Matthew 28:19–20
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- LUXURY FOOTER -->
 <footer>

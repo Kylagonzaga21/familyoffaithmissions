@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-
-
     <title>Family of Faith Missions, Inc.</title>
 
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></liink>
 
     <style>
 
-        
-/* HEADER */
 header {
     background: rgba(26, 22, 18, 0.97);
     backdrop-filter: blur(14px);
@@ -132,7 +127,6 @@ nav {
     transform: translateY(0);
 }
 
-/* CINEMATIC COVER IMAGE */
 .hero {
     min-height: 88vh;
     position: relative;
@@ -144,10 +138,11 @@ nav {
             rgba(17, 13, 10, 0.54) 48%,
             rgba(17, 13, 10, 0.20) 100%
         ),
+
         url("images/church.jpg") center 65% / cover no-repeat;
+
 }
 
-/* MOBILE HEADER */
 @media (max-width: 768px) {
     nav {
         min-height: 76px;
@@ -207,9 +202,10 @@ nav {
         min-height: 76vh;
         background-position: center;
     }
-}
 
+}
 @media (max-width: 480px) {
+
     .logo {
         font-size: 14px;
         gap: 7px;
@@ -228,10 +224,9 @@ nav {
     .hero {
         min-height: 72vh;
     }
+
 }
 
-
-        /* Full-size image preview */
 .image-preview {
     display: none;
     position: fixed;
@@ -241,6 +236,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 50px 20px 20px;
+
 }
 
 .image-preview.show {
@@ -326,13 +322,11 @@ header .logo img {
     object-fit: contain;
     border-radius: 8px;
 }
-
     .nav-links {
         display: flex;
         list-style: none;
         gap: 28px;
     }
-
     .nav-links a {
     text-decoration: none;
     color: white;
@@ -340,11 +334,9 @@ header .logo img {
     font-weight: 500;
     transition: 0.2s;
     }
-
     .nav-links a:hover {
     color: #A68A6D;
     }
-
     .menu-btn {
     display: none;
     font-size: 24px;
@@ -355,13 +347,8 @@ header .logo img {
     padding: 8px;
 }
 
-    /* =========================
-       HERO
-    ========================== */
-
     .hero {
     min-height: 80vh;
-
     background-image:
         linear-gradient(
             180deg,
@@ -369,7 +356,6 @@ header .logo img {
             rgba(25, 22, 19, 0.22) 100%
         ),
         url("images/church.jpg") !important;
-
     background-position: center 82% !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
@@ -406,10 +392,6 @@ header .logo img {
         background: #806A50;
     }
 
-    /* =========================
-       GENERAL SECTIONS
-    ========================== */
-
     section {
         padding: 75px 20px;
     }
@@ -435,10 +417,6 @@ header .logo img {
         color: #777;
         font-size: 15px;
     }
-
-    /* =========================
-       ABOUT
-    ========================== */
 
     .about {
         background: #fafafa;
@@ -501,6 +479,7 @@ header .logo img {
 }
 
 /* When the cursor points to a card */
+
 .card:hover {
     transform: translateY(-8px);
     border-color: #A68A6D;
@@ -510,7 +489,6 @@ header .logo img {
 .card-content {
     padding: 20px;
 }
-
 
     .card-content h3 {
         color: #333;
@@ -532,25 +510,18 @@ header .logo img {
     .event {
         position: relative;
         overflow: hidden;
-
         min-height: 210px;
         margin-bottom: 18px;
         padding: 30px;
-
         border-radius: 6px;
-
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-
         color: white;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-
-    /* Dark image overlay */
 
     .event::before {
         content: "";
@@ -564,7 +535,6 @@ header .logo img {
     position: relative;
     z-index: 1;
 }
-
 .event h3 {
     color: #fffbf5;
     font-size: 25px;
@@ -584,47 +554,34 @@ header .logo img {
     .tuesday {
         background-image: url("images/imagetuesday.jpg");
     }
-
     .wednesday {
         background-image: url("images/imagewednesday.jpg");
     }
-
     .thursday {
         background-image: url("images/imagethursday.jpg");
     }
-
     .friday {
         background-image: url("images/imagefriday.jpg");
     }
-
     .saturday {
         background-image: url("images/imagesaturday.jpg");
     }
-
     .sunday {
         background-image: url("images/imagesunday.jpg");
     }
-
-
     .ministry-card {
         text-align: center;
         padding: 35px 25px;
     }
-
     .ministry-card i {
         font-size: 38px;
         color: #A68A6D;
         margin-bottom: 15px;
     }
-
     .ministry-card h3 {
         font-weight: 500;
         margin-bottom: 8px;
     }
-
-    /* =========================
-       VIDEOS
-    ========================== */
 
     .video-grid {
     display: grid;
@@ -635,1803 +592,3001 @@ header .logo img {
 }
 
 .video {
+
     width: 300px;
+
 }
 
 @media (max-width: 1000px) {
+
     .video-grid {
+
         grid-template-columns: repeat(2, 300px);
+
     }
+
 }
 
 @media (max-width: 650px) {
+
     .video-grid {
+
         grid-template-columns: 1fr;
+
         width: 100%;
+
     }
 
     .video {
+
         width: 300px;
+
         margin: 0 auto;
+
     }
+
 }
 
     
+
 /* =========================
+
    GALLERY
+
 ========================== */
 
 /* General gallery background */
+
 .gallery {
+
     background: #fafafa;
+
 }
 
 .gallery-grid {
+
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 12px;
+
 }
 
 /* General gallery images */
+
 .gallery-grid img {
+
     width: 100%;
+
     height: 220px;
+
     object-fit: contain;
+
     background: #f5f5f5;
+
     display: block;
+
     border-radius: 5px;
+
 }
 
 /* Original Church Gallery: no hover zoom */
+
 #gallery .gallery-grid img:hover {
+
     transform: none;
+
 }
 
 /* Ministry photo hover effect */
+
 #ministry-pictures .gallery-grid img {
+
     height: 240px;
+
     object-fit: cover;
+
     border-radius: 12px;
+
     cursor: pointer;
+
     transition: transform 0.35s ease,
+
                 filter 0.35s ease,
+
                 box-shadow 0.35s ease;
+
 }
 
 /* Hover effect for ministry photos */
+
 #ministry-pictures .gallery-grid img:hover {
+
     transform: scale(1.04);
+
     filter: brightness(0.78);
+
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
     position: relative;
+
     z-index: 2;
+
 }
 
 /* Keep unselected ministry photos hidden */
+
 #ministry-pictures img[hidden] {
+
     display: none !important;
+
 }
 
-
     /* =========================
+
        SERVICE TIMES
+
     ========================== */
 
     .services {
+
         text-align: center;
+
     }
 
     .service-box {
+
         display: grid;
+
         grid-template-columns: repeat(3, 1fr);
+
         gap: 20px;
+
     }
 
     .service {
+
         padding: 30px 20px;
+
         background: #fafafa;
+
         border: 1px solid #eeeeee;
+
         border-radius: 6px;
+
     }
 
     .service i {
+
         font-size: 30px;
+
         color: #A68A6D;
+
         margin-bottom: 12px;
+
     }
 
     .service h3 {
+
         font-weight: 500;
+
         margin-bottom: 8px;
+
     }
 
     
+
 /* GIVE SECTION ON HOME PAGE */
+
 .give-section {
+
     padding: 65px 8%;
+
     background: #f5efe5;
+
     text-align: center;
+
 }
 
 .give-content {
+
     max-width: 720px;
+
     margin: 0 auto;
+
 }
 
 .give-label {
+
     display: block;
+
     color: #806A50;
+
     font-size: 11px;
+
     font-weight: 600;
+
     letter-spacing: 2px;
+
     margin-bottom: 12px;
+
 }
 
 .give-content h2 {
+
     color: #1a1612;
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 34px;
+
     font-weight: 500;
+
     margin: 0 0 15px;
+
 }
 
 .give-content p {
+
     color: #5e554b;
+
     font-size: 15px;
+
     line-height: 1.8;
+
     margin: 0 auto 25px;
+
 }
 
 .give-button {
+
     display: inline-block;
+
     background: #1a1612;
+
     color: #ffffff;
+
     padding: 12px 30px;
+
     border-radius: 4px;
+
     text-decoration: none;
+
     font-size: 14px;
+
     transition: background 0.3s ease;
+
 }
 
 .give-button:hover {
+
     background: #806A50;
+
 }
 
 @media (max-width: 768px) {
+
     .give-section {
+
         padding: 50px 6%;
+
     }
 
     .give-content h2 {
+
         font-size: 28px;
+
     }
+
 }
 
-
     /* =========================
+
        CONTACT
+
     ========================== */
 
     .contact {
+
         background: #fafafa;
+
     }
 
     .contact-content {
+
         display: grid;
+
         grid-template-columns: 1fr 1fr;
+
         gap: 50px;
+
     }
 
     .contact-info h3 {
+
         color: #A68A6D;
+
         font-weight: 500;
+
         margin-bottom: 18px;
+
     }
 
     .contact-info p {
+
         margin-bottom: 10px;
+
         color: #555;
+
     }
 
     form input,
+
     form textarea {
+
         width: 100%;
+
         padding: 12px;
+
         margin-bottom: 14px;
 
         border: 1px solid #ddd;
+
         border-radius: 4px;
 
         font-family: inherit;
+
         font-size: 14px;
+
     }
 
     form input:focus,
+
     form textarea:focus {
+
         outline: none;
+
         border-color: #A68A6D;
+
     }
 
     form textarea {
+
         height: 140px;
+
         resize: vertical;
+
     }
 
     form button {
+
         border: none;
+
         cursor: pointer;
+
     }
 
     /* =========================
+
        FOOTER
+
     ========================== */
 
     footer {
+
         background: #1a1612;
+
         color: white;
+
         text-align: center;
+
         padding: 45px 20px;
+
     }
 
     footer h3 {
+
     margin-bottom: 5px;
+
 }
 
 footer .tagline {
+
     margin-top: 0;
+
     margin-bottom: 30px;
+
     color: #ded5c9;
+
     font-size: 13px;
+
 }
 
      .social-links {
+
     display: flex;
+
     justify-content: center;
+
     gap: 15px;
+
     margin-bottom: 25px;
+
 }
 
 .social-links a {
+
     width: 40px;
+
     height: 40px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     border: 1px solid var(--brown);
+
     border-radius: 50%;
+
     color: #e2cda5;
+
     text-decoration: none;
+
     transition: color 0.25s ease,
+
                 background 0.25s ease,
+
                 border-color 0.25s ease;
+
 }
 
 .social-links a:hover,
+
 .social-links a:focus,
+
 .social-links a:visited {
+
     text-decoration: none;
+
 }
 
         .social-links a:hover {
+
             color: #ffffff;
+
             background: var(--brown);
+
             border-color: var(--brown);
+
         }
 
     footer p {
+
         font-size: 13px;
+
         color: #ccc;
+
     }
 
     /* =========================
+
        MOBILE
+
     ========================== */
 
     @media (max-width: 768px) {
 
         .menu-btn {
+
             display: block;
+
         }
 
         .nav-links {
+
             display: none;
+
             position: absolute;
+
             top: 65px;
+
             left: 0;
+
             width: 100%;
+
             background: #1a1612;
+
             flex-direction: column;
+
             padding: 20px;
+
             text-align: center;
+
             border-top: 1px solid #eeeeee;
+
             z-index: 1001;
+
             }
 
         .nav-links.active {
+
             display: flex;
+
         }
 
         .hero {
+
             min-height: 70vh;
+
         }
 
         .hero h1 {
+
             font-size: 40px;
+
         }
 
         .about-content,
+
         .contact-content,
+
         .video-grid {
+
             grid-template-columns: 1fr;
+
         }
 
         .cards {
+
             grid-template-columns: 1fr;
+
         }
 
         .gallery-grid {
+
             grid-template-columns: repeat(2, 1fr);
+
         }
 
         .service-box {
+
             grid-template-columns: 1fr;
+
         }
+
     }
 
     @media (max-width: 480px) {
 
         .hero h1 {
+
             font-size: 32px;
+
         }
 
         .hero p {
+
             font-size: 16px;
+
         }
 
         section {
+
             padding: 55px 18px;
+
         }
 
         .gallery-grid {
+
             grid-template-columns: 1fr;
+
         }
 
         .event {
+
             min-height: 190px;
+
             padding: 25px;
+
         }
 
         .event h3 {
+
             font-size: 22px;
+
         }
 
     }
 
     .contact-section {
+
     padding: 60px 8%;
+
     background: #ffffff;
+
 }
 
 .contact-heading {
+
     text-align: center;
+
     margin-bottom: 45px;
+
 }
 
 .contact-label {
+
     display: block;
+
     color: #A68A6D;
+
     font-size: 12px;
+
     font-weight: 600;
+
     letter-spacing: 3px;
+
     margin-bottom: 12px;
+
 }
 
 .contact-heading h2 {
+
     color: #1a1612;
+
     font-size: 38px;
+
     margin-bottom: 10px;
+
 }
 
 .contact-heading p {
+
     color: #777067;
+
     font-size: 16px;
+
 }
 
 .contact-container {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 24px;
+
     max-width: 950px;
+
     margin: 0 auto;
+
     align-items: stretch;
+
 }
 
 .contact-card {
+
     padding: 28px;
+
     border-radius: 12px;
+
     box-sizing: border-box;
+
 }
 
 .contact-details {
+
     background: #ffffff;
+
     border: 1px solid #e9e1d6;
+
     box-shadow: 0 8px 25px rgba(26, 22, 18, 0.05);
+
 }
 
 .contact-details h3 {
+
     color: #1a1612;
+
     font-size: 25px;
+
     margin: 0 0 30px;
+
 }
 
 .contact-item {
+
     display: flex;
+
     align-items: flex-start;
+
     gap: 15px;
+
     margin-bottom: 24px;
+
 }
 
 .contact-item:last-child {
+
     margin-bottom: 0;
+
 }
 
 .contact-icon {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-shrink: 0;
+
     width: 40px;
+
     height: 40px;
+
     border-radius: 50%;
+
     background: #f5efe5;
+
     color: #806A50;
+
     font-size: 20px;
+
 }
 
 .contact-item h4 {
+
     margin: 0 0 5px;
+
     color: #1a1612;
+
     font-size: 15px;
+
 }
 
 .contact-item p {
+
     margin: 0;
+
     color: #777067;
+
     font-size: 14px;
+
     line-height: 1.7;
+
     overflow-wrap: anywhere;
+
 }
 
 .contact-item a {
+
     color: #777067;
+
     text-decoration: none;
+
 }
 
 .contact-item a:hover {
+
     color: #A68A6D;
+
 }
 
 .contact-welcome {
+
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
+
     background: #f5efe5;
+
     color: #1a1612;
+
 }
 
 .welcome-symbol {
+
     color: #A68A6D;
+
     font-size: 32px;
+
     margin-bottom: 20px;
+
 }
 
 .welcome-label {
+
     color: #806A50;
+
     font-size: 11px;
+
     font-weight: 600;
+
     letter-spacing: 2px;
+
     margin-bottom: 15px;
+
 }
 
 .contact-welcome h3 {
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 32px;
+
     line-height: 1.2;
+
     font-weight: 500;
+
     margin: 0;
+
     color: #1a1612;
+
 }
 
 .welcome-divider {
+
     width: 55px;
+
     height: 3px;
+
     background: #A68A6D;
+
     margin: 25px 0;
+
 }
 
 .welcome-message {
+
     color: #5e554b;
+
     font-size: 15px;
+
     line-height: 1.9;
+
     margin: 0 0 25px;
+
 }
 
 .contact-welcome blockquote {
+
     border-left: 3px solid #A68A6D;
+
     padding-left: 18px;
+
     margin: 0;
+
     color: #38332d;
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 17px;
+
     font-style: italic;
+
     line-height: 1.7;
+
 }
 
 .contact-welcome blockquote span {
+
     display: block;
+
     margin-top: 8px;
+
     color: #806A50;
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 12px;
+
     font-style: normal;
+
     letter-spacing: 1px;
+
 }
 
 /* Move the welcome card content upward */
+
 .contact-welcome {
+
     justify-content: flex-start;
+
     padding-top: 25px;
+
 }
 
 .contact-welcome h3 {
+
     margin-top: 40;
+
 }
 
 @media (max-width: 768px) {
+
     .contact-section {
+
         padding: 60px 6%;
+
     }
 
     .contact-heading h2 {
+
         font-size: 32px;
+
     }
 
     .contact-container {
+
         grid-template-columns: 1fr;
+
         gap: 20px;
+
     }
 
     .contact-card {
+
         padding: 24px 20px;
+
     }
 
     .contact-welcome h3 {
+
         font-size: 29px;
+
     }
+
 }
 
     /* Mobile layout for Ministries */
+
 @media (max-width: 600px) {
+
     .ministries-container,
+
     .ministries-grid,
+
     .ministry-grid {
+
         grid-template-columns: repeat(1, minmax(0, 1fr));
+
         gap: 20px;
+
     }
 
     .ministry-card {
+
         width: 100%;
+
         max-width: 100%;
+
         box-sizing: border-box;
+
     }
 
     .ministry-photo-grid {
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         gap: 10px;
+
     }
 
     .ministry-photo-grid img {
+
         width: 100%;
+
         height: 160px !important;
+
         object-fit: contain !important;
+
     }
 
     .ministry-modal-content {
+
         width: 96%;
+
         max-height: 90vh;
+
         overflow-y: auto;
+
         box-sizing: border-box;
+
     }
+
 }
 
 /* YouTube Preachings */
+
 .youtube-section {
+
     text-align: center;
+
     margin-top: 60px;
+
     padding: 40px 20px;
+
 }
 
 .youtube-section h2 {
+
     color: #1a1612;
+
     margin-bottom: 15px;
+
 }
 
 .youtube-section > p {
+
     color: #777;
+
     margin-bottom: 30px;
+
 }
 
 .youtube-container {
+
     max-width: 850px;
+
     margin: 0 auto 30px;
+
 }
 
 .youtube-card {
+
     overflow: hidden;
+
     border-radius: 10px;
+
     background: #000;
+
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+
 }
 
 .youtube-card iframe {
+
     display: block;
+
     width: 100%;
+
     aspect-ratio: 16 / 9;
+
     border: none;
+
 }
 
 /* YouTube Channel Button */
+
 .youtube-section .video-button {
+
     display: inline-block;
+
     background: #1a1612;
+
     color: #ffffff;
+
     border: 1px solid #A68A6D;
+
     padding: 12px 24px;
+
     border-radius: 6px;
+
     text-decoration: none;
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 14px;
+
     font-weight: 500;
+
     transition: background 0.3s ease, transform 0.3s ease;
+
 }
 
 .youtube-section .video-button:hover {
+
     background: #A68A6D;
+
     color: #ffffff;
+
     transform: translateY(-2px);
+
 }
 
 .youtube-section .video-button i {
+
     margin-right: 8px;
+
 }
 
 /* Ministry Pictures */
+
 #ministry-pictures {
+
     scroll-margin-top: 90px;
+
 }
 
 #ministry-pictures .gallery-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 20px;
+
 }
 
 #ministry-pictures .gallery-grid img {
+
     width: 100%;
+
     height: 240px;
+
     object-fit: cover;
+
     border-radius: 10px;
+
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+
 }
 
 #ministry-pictures .gallery-grid img[hidden] {
+
     display: none;
+
 }
 
 @media (max-width: 600px) {
+
     #ministry-pictures .gallery-grid {
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         gap: 12px;
+
     }
 
     #ministry-pictures .gallery-grid img {
+
         height: 180px;
+
     }
+
 }
 
-
 /* Floating ministry photo panel */
+
 .ministry-modal {
+
     display: none;
+
     position: fixed;
+
     inset: 0;
+
     z-index: 9999;
+
     background: rgba(0, 0, 0, 0.75);
+
     padding: 20px;
+
     align-items: center;
+
     justify-content: center;
+
 }
 
 .ministry-modal.show {
+
     display: flex;
+
 }
 
 .ministry-modal-content {
+
     position: relative;
+
     background: #fff;
+
     color: #1a1612;
+
     width: 100%;
+
     max-width: 900px;
+
     max-height: 90vh;
+
     overflow-y: auto;
+
     padding: 35px;
+
     border-radius: 14px;
+
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+
 }
 
 .ministry-modal-content h2 {
+
     color: #1a1612;
+
     margin: 0 40px 8px 0;
+
 }
 
 .ministry-modal-content p {
+
     margin-bottom: 25px;
+
     color: #666;
+
 }
 
 .close-ministry-modal {
+
     position: absolute;
+
     top: 12px;
+
     right: 18px;
+
     border: none;
+
     background: transparent;
+
     color: #1a1612;
+
     font-size: 35px;
+
     cursor: pointer;
+
 }
 
-
 .ministry-photo-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 16px;
+
     width: 100%;
+
     align-items: stretch;
+
 }
 
 .ministry-photo-grid img {
+
     display: block;
+
     width: 100%;
+
     height: 220px !important;
+
     object-fit: contain !important;
+
     object-position: center;
+
     background: #f5f5f5;
+
     border-radius: 8px;
+
     box-sizing: border-box;
+
 }
 
 @media (max-width: 600px) {
+
     .ministry-photo-grid {
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         gap: 10px;
+
     }
 
     .ministry-photo-grid img {
+
         height: 160px !important;
+
     }
+
 }
 
 .ministry-photo-grid img:hover {
+
     transform: scale(1.02);
+
     filter: saturate(1) contrast(1);
+
 }
 
 .ministry-photo-grid img:hover {
+
     transform: scale(1.03);
+
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
 }
 
 @media (max-width: 900px) {
+
     .ministry-photo-grid {
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         gap: 12px;
+
     }
 
     .ministry-photo-grid img {
+
         height: 220px;
+
     }
+
 }
 
 @media (max-width: 600px) {
+
     .ministry-modal {
+
         padding: 10px;
+
     }
 
     .ministry-modal-content {
+
         padding: 65px 10px 20px;
+
         max-height: none;
+
     }
 
     .ministry-photo-grid {
+
         grid-template-columns: 1fr;
+
         gap: 14px;
+
     }
 
     .ministry-photo-grid img {
+
         height: 260px;
+
     }
+
 }
 
 #ministry-pictures {
+
     display: none;
+
 }
 
 /* Facebook Page Button */
+
 .facebook-page-button {
+
     text-align: center !important;
+
     width: 100% !important;
+
     margin: 30px auto 10px !important;
+
 }
 
 .facebook-page-button .facebook-btn {
+
     display: table;
+
     margin-left: auto !important;
+
     margin-right: auto !important;
+
 }
 
 .facebook-btn,
+
 .youtube-section .video-button {
+
     display: inline-block;
+
     box-sizing: border-box;
+
     background: #1a1612;
+
     color: #ffffff;
+
     border: 1px solid #A68A6D;
+
     padding: 12px 24px;
+
     border-radius: 6px;
+
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 14px;
+
     font-weight: 500;
+
     line-height: normal;
+
     text-decoration: none;
+
     transition: background 0.3s ease, transform 0.3s ease;
+
 }
 
 .facebook-btn:hover,
+
 .youtube-section .video-button:hover {
+
     background: #A68A6D;
+
     color: #ffffff;
+
     transform: translateY(-2px);
+
 }
 
 .facebook-btn i,
+
 .youtube-section .video-button i {
+
     margin-right: 8px;
+
 }
 
-
 /* ========================================
+
    ELEGANT CHURCH WEBSITE REDESIGN
+
    Espresso • Champagne Gold • Warm Ivory
+
 ======================================== */
 
 :root {
+
     --espresso: #1a1612;
+
     --espresso-light: #292119;
+
     --gold: #c5a572;
+
     --gold-light: #e2cda5;
+
     --ivory: #fbf8f2;
+
     --text: #38332d;
+
     --muted: #777067;
+
 }
 
 /* Smooth scrolling and anchored sections */
+
 html {
+
     scroll-behavior: smooth;
+
     scroll-padding-top: 90px;
+
 }
 
 section {
+
     padding: 100px 24px;
+
 }
 
 .container {
+
     max-width: 1200px;
+
 }
 
 /* PREMIUM HEADER */
+
 header {
+
     background: rgba(26, 22, 18, 0.97);
+
     backdrop-filter: blur(14px);
+
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.18);
+
     border-bottom: 1px solid rgba(197, 165, 114, 0.28);
+
 }
 
 nav {
+
     max-width: 1320px;
+
     min-height: 76px;
+
 }
 
 .logo {
+
     gap: 14px;
+
     font-size: 18px;
+
     letter-spacing: 0.3px;
+
 }
 
 .logo img {
+
     width: 68px;
+
     height: 68px;
+
 }
 
 .nav-links {
+
     gap: 23px;
+
 }
 
 .nav-links a {
+
     font-size: 13px;
+
     letter-spacing: 0.4px;
+
     transition: color 0.3s ease;
+
 }
 
 .nav-links a:hover {
+
     color: var(--gold-light);
+
 }
 
 /* CINEMATIC HOMEPAGE */
+
 .hero {
+
     min-height: 88vh;
+
     position: relative;
+
     background:
+
         linear-gradient(
+
             90deg,
+
             rgba(17, 13, 10, 0.82) 0%,
+
             rgba(17, 13, 10, 0.54) 48%,
+
             rgba(17, 13, 10, 0.20) 100%
+
         ),
+
         url("images/church.jpg") center 65% / cover no-repeat;
+
     justify-content: flex-start;
+
     text-align: left;
+
     padding: 90px max(7%, calc((100% - 1200px) / 2));
+
 }
 
 .hero-content {
+
     max-width: 780px;
+
     animation: heroReveal 1s ease both;
+
 }
 
 .hero-eyebrow {
+
     color: var(--gold-light);
+
     font-size: 13px !important;
+
     font-weight: 700;
+
     letter-spacing: 4px;
+
     margin-bottom: 22px !important;
+
 }
 
 .hero h1 {
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: clamp(44px, 6vw, 76px);
+
     font-weight: 500;
+
     line-height: 1.12;
+
     letter-spacing: -1.5px;
+
     margin-bottom: 25px;
+
     text-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+
 }
 
 .hero .hero-description {
+
     max-width: 590px;
+
     color: #f0e9df;
+
     font-size: 18px;
+
     line-height: 1.9;
+
     margin-bottom: 32px;
+
 }
 
 .hero-actions {
+
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 14px;
+
 }
 
 .btn {
+
     background: var(--gold);
+
     color: var(--espresso);
+
     border: 1px solid var(--gold);
+
     border-radius: 2px;
+
     padding: 15px 25px;
+
     font-weight: 700;
+
     letter-spacing: 0.3px;
+
     transition: all 0.3s ease;
+
 }
 
 .btn:hover {
+
     background: var(--gold-light);
+
     color: var(--espresso);
+
     transform: translateY(-3px);
+
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
 }
 
 .btn-outline {
+
     background: transparent;
+
     color: white;
+
     border-color: rgba(255, 255, 255, 0.7);
+
 }
 
 .btn-outline:hover {
+
     background: white;
+
     color: var(--espresso);
+
 }
 
 /* SECTION HEADINGS */
+
 .section-title {
+
     margin-bottom: 55px;
+
 }
 
 .section-title h2,
+
 .youtube-section h2 {
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: clamp(30px, 4vw, 42px);
+
     font-weight: 500;
+
     color: var(--espresso);
+
     line-height: 1.25;
+
 }
 
 .section-title h2::after {
+
     content: "";
+
     display: block;
+
     width: 55px;
+
     height: 2px;
+
     background: var(--gold);
+
     margin: 18px auto 0;
+
 }
 
 .section-title p {
+
     margin-top: 12px;
+
     font-size: 15px;
+
     color: var(--muted);
+
 }
 
 /* ABOUT */
+
 .about,
+
 .gallery {
+
     background: var(--ivory);
+
 }
 
 .about-content {
+
     gap: 65px;
+
 }
 
 .about img {
+
     border-radius: 3px;
+
     box-shadow: 18px 18px 0 rgba(197, 165, 114, 0.20);
+
 }
 
 .about-text h3 {
+
     color: var(--espresso);
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 34px;
+
     margin-bottom: 20px;
+
 }
 
 .about-text p {
+
     line-height: 1.95;
+
 }
 
 /* ANNOUNCEMENTS AND MINISTRY CARDS */
+
 .cards {
+
     gap: 28px;
+
 }
 
 .card {
+
     border: 1px solid #eee6da;
+
     border-radius: 5px;
+
     box-shadow: 0 8px 28px rgba(34, 25, 15, 0.06);
+
     transition: transform 0.35s ease,
+
                 box-shadow 0.35s ease,
+
                 border-color 0.35s ease;
+
 }
 
 .card:hover {
+
     transform: translateY(-7px);
+
     border-color: var(--gold);
+
     box-shadow: 0 18px 38px rgba(34, 25, 15, 0.12);
+
 }
 
 .card img {
+
     width: 100%;
+
 }
 
 .card-content {
+
     padding: 25px;
+
 }
 
 .card-content h3,
+
 .ministry-card h3 {
+
     color: var(--espresso);
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 22px;
+
 }
 
 .date {
+
     color: #96764b;
+
     letter-spacing: 0.5px;
+
     text-transform: uppercase;
+
     font-size: 11px;
+
     font-weight: 700;
+
 }
 
-
 /* Make ministry cards clearly clickable */
+
 .ministry-card {
+
     cursor: pointer;
+
     position: relative;
+
 }
 
 .ministry-card:hover {
+
     border-color: #A68A6D;
+
     box-shadow: 0 10px 25px rgba(166, 138, 109, 0.25);
+
 }
 
 .ministry-card:focus-visible {
+
     outline: 2px solid #A68A6D;
+
     outline-offset: 4px;
+
 }
 
 /* Show all 9 ministry photos in the popup */
+
 .ministry-photo-grid {
+
     display: grid;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 16px;
+
 }
 
 .ministry-photo-grid img {
+
     width: 100%;
+
     height: 220px;
+
     object-fit: cover;
+
     border-radius: 8px;
+
 }
 
 @media (max-width: 600px) {
+
     .ministry-photo-grid {
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         gap: 10px;
+
     }
 
     .ministry-photo-grid img {
+
         height: 160px;
+
     }
+
 }
 
-
 /* WEEKLY SCHEDULE */
+
 .event {
+
     min-height: 245px;
+
     border-radius: 4px;
+
     margin-bottom: 22px;
+
     padding: 38px;
+
     border: 1px solid rgba(197, 165, 114, 0.5);
+
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+
     transition: background-size 0.4s ease,
+
                 box-shadow 0.3s ease;
+
 }
 
 .event::before {
+
     background: linear-gradient(
+
         90deg,
+
         rgba(16, 13, 10, 0.84),
+
         rgba(16, 13, 10, 0.48)
+
     );
+
     transition: background 0.3s ease;
+
 }
 
 .event:hover {
+
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+
 }
 
 .event h3 {
+
     color: var(--gold-light);
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 30px;
+
     letter-spacing: 3px;
+
 }
 
 .event p {
+
     font-size: 16px;
+
     line-height: 1.8;
+
 }
 
 /* SERVICE TIMES */
+
 .service {
+
     padding: 40px 25px;
+
     background: linear-gradient(145deg, #fff, var(--ivory));
+
     border: 1px solid #e9dece;
+
     border-radius: 4px;
+
     transition: transform 0.3s ease,
+
                 box-shadow 0.3s ease;
+
 }
 
 .service:hover {
+
     transform: translateY(-6px);
+
     box-shadow: 0 15px 35px rgba(26, 22, 18, 0.09);
+
 }
 
 .service i,
+
 .ministry-card i {
+
     color: #a98854;
+
 }
 
 .service i {
+
     font-size: 34px;
+
     margin-bottom: 20px;
+
 }
 
 .service h3 {
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 22px;
+
     color: var(--espresso);
+
 }
 
 /* GALLERY */
+
 .gallery-grid {
+
     gap: 16px;
+
 }
 
 #gallery .gallery-grid img {
+
     background: #eee7dc;
+
     border-radius: 3px;
+
     transition: box-shadow 0.3s ease;
+
 }
 
 #gallery .gallery-grid img:hover {
+
     box-shadow: 0 8px 25px rgba(26, 22, 18, 0.13);
+
 }
 
 /* VIDEOS */
+
 .youtube-section {
+
     margin-top: 0;
+
     padding: 25px 20px 65px;
+
 }
 
 .youtube-card {
+
     border: 1px solid rgba(197, 165, 114, 0.45);
+
     box-shadow: 0 15px 40px rgba(26, 22, 18, 0.15);
+
 }
 
 .video > a > div {
+
     border: 1px solid rgba(197, 165, 114, 0.45);
+
     box-shadow: 0 8px 24px rgba(26, 22, 18, 0.10);
+
     transition: transform 0.3s ease,
+
                 box-shadow 0.3s ease;
+
 }
 
 .video > a:hover > div {
+
     transform: translateY(-5px);
+
     box-shadow: 0 15px 32px rgba(26, 22, 18, 0.18);
+
 }
 
 /* CONTACT */
+
 .contact {
+
     background: var(--ivory);
+
 }
 
 .contact-info h3 {
+
     color: var(--espresso);
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 28px;
+
 }
 
 .contact-info i {
+
     color: #a98854;
+
     width: 22px;
+
     margin-right: 7px;
+
 }
 
 form input,
+
 form textarea {
+
     background: white;
+
     border: 1px solid #e4dbcf;
+
     border-radius: 3px;
+
     padding: 15px;
+
     transition: border-color 0.25s ease,
+
                 box-shadow 0.25s ease;
+
 }
 
 form input:focus,
+
 form textarea:focus {
+
     border-color: var(--gold);
+
     box-shadow: 0 0 0 3px rgba(197, 165, 114, 0.15);
+
 }
 
 form button {
+
     min-width: 160px;
+
 }
 
 /* FOOTER */
+
 footer {
+
     border-top: 2px solid var(--gold);
+
     padding: 55px 20px 30px;
+
     background:
+
         radial-gradient(ellipse at top, #34291e 0%, #1a1612 65%);
+
 }
 
 footer h3 {
+
     font-family: Georgia, "Times New Roman", serif;
+
     font-size: 27px;
+
     color: var(--gold-light);
+
 }
 
 footer > p:first-of-type {
+
     letter-spacing: 2px;
+
     margin-top: 8px;
+
 }
 
 .social-links a {
+
     background: transparent;
+
     border: 1px solid rgba(197, 165, 114, 0.65);
+
     color: var(--gold-light);
+
     transition: all 0.3s ease;
+
 }
 
 .social-links a:hover {
+
     background: var(--gold);
+
     color: var(--espresso);
+
     transform: translateY(-3px);
+
 }
 
 /* PHOTO PANEL */
+
 .ministry-modal {
+
     backdrop-filter: blur(7px);
+
     background: rgba(15, 12, 9, 0.82);
+
 }
 
 .ministry-modal-content {
+
     border: 1px solid var(--gold);
+
     border-radius: 5px;
+
 }
 
 .ministry-modal-content h2 {
+
     font-family: Georgia, "Times New Roman", serif;
+
 }
 
 .close-ministry-modal:hover {
+
     color: #a98854;
+
 }
 
 /* BUTTONS */
+
 .facebook-btn,
+
 .youtube-section .video-button {
+
     border-radius: 3px;
+
     border-color: var(--gold);
+
 }
 
 .facebook-btn:hover,
+
 .youtube-section .video-button:hover {
+
     background: var(--gold);
+
     color: var(--espresso);
+
 }
 
 /* SUBTLE HERO ENTRANCE */
+
 @keyframes heroReveal {
+
     from {
+
         opacity: 0;
+
         transform: translateY(18px);
+
     }
+
     to {
+
         opacity: 1;
+
         transform: translateY(0);
+
     }
+
 }
 
 /* MOBILE POLISH */
+
 @media (max-width: 768px) {
+
     section {
+
         padding: 70px 20px;
+
     }
 
     .logo {
+
         font-size: 14px;
+
         gap: 7px;
+
     }
 
     .logo img {
+
         width: 52px;
+
         height: 52px;
+
     }
 
     .nav-links {
+
         top: 100%;
+
         gap: 0;
+
         padding: 12px 20px;
+
         border-top: 1px solid rgba(197, 165, 114, 0.35);
+
     }
 
     .nav-links li {
+
         padding: 12px 0;
+
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
     }
 
     .nav-links li:last-child {
+
         border-bottom: none;
+
     }
 
     .hero {
+
         min-height: 76vh;
+
         padding: 70px 25px;
+
         background-position: center;
+
     }
 
     .hero h1 {
+
         font-size: clamp(38px, 9vw, 58px);
+
     }
 
     .hero .hero-description {
+
         font-size: 16px;
+
     }
 
     .hero-actions {
+
         align-items: stretch;
+
         flex-direction: column;
+
         max-width: 300px;
+
     }
 
     .hero-actions .btn {
+
         text-align: center;
+
     }
 
     .about-content {
+
         gap: 35px;
+
     }
 
     .event {
+
         padding: 28px 22px;
+
         min-height: 210px;
+
     }
 
     .event h3 {
+
         font-size: 25px;
+
     }
 
     .ministry-modal-content {
+
         padding: 60px 16px 20px;
+
     }
+
 }
 
 @media (max-width: 480px) {
+
     .logo span {
+
         max-width: 190px;
+
         line-height: 1.3;
+
     }
 
     .hero {
+
         min-height: 72vh;
+
     }
 
     .hero h1 {
+
         font-size: 38px;
+
     }
 
     .section-title {
+
         margin-bottom: 35px;
+
     }
 
     .section-title h2 {
+
         font-size: 30px;
+
     }
 
     .event p {
+
         font-size: 14px;
+
     }
+
 }
 
 nav ul li.dropdown > a {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 7px;
+
 }
 
 .dropdown-menu {
+
     display: block;
+
     position: absolute;
+
     top: 100%;
+
     left: 0;
+
     min-width: 190px;
+
     padding: 8px 0;
+
     margin: 0;
+
     list-style: none;
+
     background: #ffffff;
+
     border-top: 2px solid #A68A6D;
+
     box-shadow: 0 8px 22px rgba(26, 22, 18, 0.12);
+
     border-radius: 0 0 4px 4px;
+
     opacity: 0;
+
     visibility: hidden;
+
     transform: translateY(8px);
+
     transition: opacity 0.25s ease,
+
                 transform 0.25s ease,
+
                 visibility 0.25s ease;
+
     z-index: 1000;
+
 }
 
 .dropdown-menu li a {
+
     display: block;
+
     padding: 12px 18px;
+
     color: #1a1612;
+
     font-size: 13px;
+
     text-decoration: none;
+
     white-space: nowrap;
+
     transition: background 0.2s ease, color 0.2s ease;
-}
 
-.dropdown-menu li a:hover {
-    background: #f5efe5;
-    color: #806A50;
 }
-
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu,
-.dropdown.open .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
 
 /* MOBILE DROPDOWN */
+
 @media (max-width: 768px) {
+
     nav ul li.dropdown {
+
         width: 100%;
+
     }
 
     nav ul li.dropdown > a {
+
         justify-content: center;
+
     }
 
     .dropdown-menu {
+
         position: static;
+
         min-width: 0;
+
         width: 100%;
+
         box-shadow: none;
+
         border-top: 1px solid #e8dfd3;
+
         border-radius: 0;
+
         transform: none;
+
         display: none;
+
         opacity: 1;
+
         visibility: visible;
+
     }
 
     .dropdown.open .dropdown-menu {
+
         display: block;
+
     }
+
 }
 
-
 /* Respect visitors who prefer reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
+
     *,
+
     *::before,
+
     *::after {
+
         animation-duration: 0.01ms !important;
+
         animation-iteration-count: 1 !important;
+
         scroll-behavior: auto !important;
+
         transition-duration: 0.01ms !important;
+
     }
+
 }
 
 /* Move section headings and subtitles upward */
+
 section {
+
     padding-top: 50px !important;
+
 }
 
 section h2 {
+
     margin-top: 0 !important;
+
 }
 
 section h2 + p,
+
 section .section-subtitle {
+
     margin-top: 8px !important;
+
 }
 
 /* Remove brown decorative lines before subtitles */
+
 section h2::before,
+
 section h2::after,
+
 section .section-subtitle::before,
+
 section .section-subtitle::after {
+
     display: none !important;
+
 }
 
 /* Subtitle font size */
+
 section h2 + p,
+
 section .section-subtitle {
+
     font-size: 16px !important;
+
 }
 
 /* Fix ministry popup on mobile */
+
 @media (max-width: 600px) {
+
     #ministry-modal {
+
         position: fixed;
+
         inset: 0;
+
         width: 100%;
+
         height: 100%;
+
         height: 100dvh;
+
         overflow-y: auto;
+
         -webkit-overflow-scrolling: touch;
+
         box-sizing: border-box;
+
         padding: 12px 0;
+
     }
 
     #ministry-modal .ministry-modal-content {
+
         position: relative;
+
         width: 94%;
+
         max-width: 100%;
+
         max-height: none;
+
         height: auto;
+
         margin: 20px auto;
+
         padding: 60px 14px 20px;
+
         overflow: visible;
+
         box-sizing: border-box;
+
     }
 
     /* Keep the close X visible while scrolling */
+
     #ministry-modal .close,
+
     #ministry-modal .close-modal,
+
     #ministry-modal .modal-close {
+
         position: sticky;
+
         top: 8px;
+
         float: right;
+
         z-index: 10000;
+
         cursor: pointer;
+
     }
+
 }
 
-
 /* Remove the box around the ministry popup X */
+
 #ministry-modal .close,
+
 #ministry-modal .close-modal,
+
 #ministry-modal .modal-close {
+
     background: transparent !important;
+
     border: none !important;
+
     box-shadow: none !important;
+
     outline: none;
+
     border-radius: 0 !important;
+
     padding: 0 !important;
+
 }
 
 /* Remove the box when tapped on mobile */
+
 #ministry-modal .close:focus,
+
 #ministry-modal .close:active,
+
 #ministry-modal .close-modal:focus,
+
 #ministry-modal .close-modal:active,
+
 #ministry-modal .modal-close:focus,
+
 #ministry-modal .modal-close:active {
+
     background: transparent !important;
+
     box-shadow: none !important;
+
 }
 
 /* Force the ministry close X to have no box */
+
 #ministry-modal button,
+
 #ministry-modal .close,
+
 #ministry-modal .close-modal,
+
 #ministry-modal .modal-close {
+
     background: none !important;
+
     background-color: transparent !important;
+
     border: 0 !important;
+
     outline: 0 !important;
+
     box-shadow: none !important;
+
     border-radius: 0 !important;
+
     -webkit-appearance: none;
+
     appearance: none;
+
 }
 
 /* Remove any box or shadow on hover and tap */
+
 #ministry-modal button:hover,
+
 #ministry-modal button:focus,
+
 #ministry-modal button:active {
+
     background: transparent !important;
+
     border: none !important;
+
     box-shadow: none !important;
+
 }
 
 #contact a {
+
     font: inherit;
+
     color: inherit;
+
     text-decoration: none;
+
 }
 
 #contact a:hover {
+
     text-decoration: underline;
+
 }
 
-
 /* Fix the actual Ministries popup close button */
+
 #ministry-modal #close-ministry-modal {
+
     position: absolute;
+
     top: 12px;
+
     right: 18px;
+
     z-index: 10001;
 
     background: transparent !important;
+
     border: none !important;
+
     box-shadow: none !important;
+
     outline: none !important;
+
     border-radius: 0 !important;
 
     color: #1a1612;
+
     font-size: 35px;
+
     line-height: 1;
+
     padding: 0 !important;
+
     cursor: pointer;
+
     -webkit-appearance: none;
+
     appearance: none;
+
 }
 
 #ministry-modal #close-ministry-modal:hover,
+
 #ministry-modal #close-ministry-modal:focus,
+
 #ministry-modal #close-ministry-modal:active {
+
     background: transparent !important;
+
     border: none !important;
+
     box-shadow: none !important;
+
     outline: none !important;
+
 }
 
 @media (max-width: 600px) {
+
     #ministry-modal {
+
         align-items: flex-start;
+
         overflow-y: auto;
+
         -webkit-overflow-scrolling: touch;
+
     }
 
     #ministry-modal .ministry-modal-content {
+
         margin: 10px auto;
+
         flex-shrink: 0;
+
     }
+
 }
 
 /* Mobile dropdown */
+
 @media (max-width: 768px) {
+
     .dropdown-menu {
+
         display: none;
+
         flex-direction: column;
+
     }
 
     .dropdown.open .dropdown-menu {
+
         display: flex;
+
         opacity: 1;
+
         visibility: visible;
+
         transform: translateY(0);
+
     }
+
 }
 
 /* Adjust cover image on mobile phones */
+
 @media (max-width: 768px) {
+
     .hero {
+
         background-size: cover;
+
         background-position: center top;
+
         min-height: 60vh;
+
     }
+
 }
 
 .dropdown-toggle {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     gap: 10px;
+
 }
 
 .dropdown-arrow {
+
     background: none;
+
     border: none;
+
     cursor: pointer;
+
     padding: 10px;
+
     color: inherit;
+
     font-size: 14px;
+
     transform: translateY(-3px);
+
 }
 
 .dropdown-menu {
+
     display: none;
+
     list-style: none;
+
     padding-left: 15px;
+
     margin: 0;
+
 }
 
 .dropdown.open > .dropdown-menu {
+
     display: block;
+
 }
 
 .dropdown.open .dropdown-arrow i {
@@ -2439,528 +3594,844 @@ section .section-subtitle {
 }
 
 .dropdown-arrow i {
+
     transition: transform 0.2s ease;
+
 }
 
     .dropdown-menu {
+
         display: block;
+
         position: absolute;
+
         top: 100%;
+
         left: 0;
+
         min-width: 190px;
+
         opacity: 0;
+
         visibility: hidden;
+
         pointer-events: none;
+
         transform: translateY(8px);
+
         transition: opacity 0.25s ease,
+
                     transform 0.25s ease,
+
                     visibility 0.25s ease;
+
         z-index: 1001;
+
     }
 
     .dropdown:hover > .dropdown-menu,
+
     .dropdown:focus-within > .dropdown-menu {
+
         opacity: 1;
+
         visibility: visible;
+
         pointer-events: auto;
+
         transform: translateY(0);
+
     }
 
 .dropdown-toggle {
+
     display: flex;
+
     align-items: center;
+
     gap: 6px;
+
 }
 
 .dropdown-arrow {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     border: none;
+
     background: transparent;
+
     color: inherit;
+
     cursor: pointer;
+
 }
 
 .dropdown-arrow i {
-    transition: transform 0.3s ease;
-}
 
-.dropdown.open .dropdown-arrow i {
-    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+
 }
 
 /* DESKTOP DROPDOWN */
+
 @media screen and (min-width: 769px) {
+
     .dropdown-menu {
+
         display: none;
+
         position: absolute;
+
         top: 100%;
+
         left: 0;
+
         min-width: 200px;
+
         background: #ffffff;
+
         border-top: 3px solid #A68A6D;
+
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
         z-index: 1000;
+
     }
 
     .dropdown:hover .dropdown-menu,
+
     .dropdown:focus-within .dropdown-menu {
+
         display: block;
+
     }
 
     .dropdown-menu a {
+
         display: block;
+
         padding: 12px 16px;
+
         color: #1a1612;
+
         text-decoration: none;
+
     }
 
     .dropdown-menu a:hover {
+
         background: #f5efe5;
+
         color: #806A50;
+
     }
 
     .dropdown-arrow {
+
         display: none;
+
     }
+
 }
 
 /* MOBILE DROPDOWN */
+
 @media screen and (max-width: 768px) {
+
     .dropdown-toggle {
+
         display: flex;
+
         align-items: center;
+
         justify-content: space-between;
+
         width: 100%;
+
     }
 
     .dropdown-arrow {
+
         display: inline-flex;
+
         visibility: visible;
+
         opacity: 1;
+
         flex-shrink: 0;
+
         padding: 8px;
+
         color: inherit;
+
     }
 
     .dropdown-menu {
+
         display: none;
+
         position: static;
+
         width: 100%;
+
         background: #1a1612;
+
         box-shadow: none;
+
         border: none;
+
     }
 
     .dropdown.open .dropdown-menu {
+
         display: block;
+
     }
 
     .dropdown-menu a {
+
         display: block;
+
         padding: 12px 24px;
+
         color: #ffffff;
+
         text-decoration: none;
+
     }
 
     .dropdown-menu a:hover {
+
         background: #806A50;
+
         color: #ffffff;
+
     }
+
 }
 
 /* FIX: Keep About submenu options in the correct order */
+
 .dropdown-menu {
+
     flex-direction: column;
+
 }
 
 .dropdown-menu li {
+
     order: initial !important;
+
 }
 
 /* FIX: Keep About submenu order consistent */
+
 .dropdown-menu.about-submenu {
+
     display: none;
+
     flex-direction: column !important;
+
     direction: ltr !important;
+
 }
 
 .dropdown.open > .dropdown-menu.about-submenu {
+
     display: flex !important;
+
 }
 
 .dropdown-menu.about-submenu > li {
+
     display: block !important;
+
     order: 0 !important;
+
     position: static !important;
+
 }
 
 .dropdown-menu.about-submenu > li > a {
+
     display: block !important;
+
 }
 
 /* FIX: Keep About submenu in the correct order */
+
 nav ul.nav-links li.dropdown > .dropdown-menu {
+
     flex-direction: column !important;
+
 }
 
 nav ul.nav-links li.dropdown > .dropdown-menu > li:nth-child(1) {
+
     order: 1 !important;
+
 }
 
 nav ul.nav-links li.dropdown > .dropdown-menu > li:nth-child(2) {
+
     order: 2 !important;
+
 }
 
 /* Desktop dropdown */
+
 @media screen and (min-width: 769px) {
+
     nav ul.nav-links li.dropdown > .dropdown-menu {
+
         display: flex !important;
+
     }
+
 }
 
 /* Mobile dropdown */
+
 @media screen and (max-width: 768px) {
+
     nav ul.nav-links li.dropdown:not(.open) > .dropdown-menu {
+
         display: none !important;
+
     }
 
     nav ul.nav-links li.dropdown.open > .dropdown-menu {
+
         display: flex !important;
+
         flex-direction: column !important;
+
     }
+
 }
 
 /* Keep About submenu order consistent */
+
 nav ul.nav-links li.dropdown > ul.dropdown-menu {
+
     display: flex;
+
     flex-direction: column;
+
 }
 
 nav ul.nav-links li.dropdown > ul.dropdown-menu > li {
+
     order: unset !important;
+
     position: static !important;
+
 }
 
 /* What We Believe always first */
+
 nav ul.nav-links li.dropdown > ul.dropdown-menu > li:first-child {
+
     order: 1 !important;
+
 }
 
 /* Who We Are always second */
-nav ul.nav-links li.dropdown > ul.dropdown-menu > li:last-child {
-    order: 2 !important;
-}
 
+nav ul.nav-links li.dropdown > ul.dropdown-menu > li:last-child {
+
+    order: 2 !important;
+
+}
 
 /* ABOUT DROPDOWN — SINGLE SOURCE OF TRUTH */
 
 nav ul li.dropdown {
-    position: relative;
-}
 
-.dropdown-toggle {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    position: relative;
+
 }
 
 .dropdown-menu {
+
     list-style: none;
+
     margin: 0;
+
     padding: 8px 0;
+
     background: #ffffff;
+
     border-top: 2px solid #A68A6D;
+
     box-shadow: 0 8px 22px rgba(26, 22, 18, 0.12);
+
     z-index: 1001;
+
 }
 
 .dropdown-menu li {
+
     display: block;
+
     order: 0;
+
     position: static;
+
 }
 
 .dropdown-menu li a {
+
     display: block;
+
     box-sizing: border-box;
+
     width: 100%;
+
     padding: 12px 18px;
+
     color: #1a1612;
+
     font-size: 13px;
+
     text-decoration: none;
+
     white-space: nowrap;
-}
 
-.dropdown-menu li a:hover {
-    background: #f5efe5;
-    color: #806A50;
 }
-
 
 /* DESKTOP: Hide the About arrow */
+
 @media (min-width: 769px) {
+
     nav ul.nav-links li.dropdown > .dropdown-toggle > .dropdown-arrow {
+
         display: none !important;
+
     }
+
 }
 
 /* MOBILE: Keep the About arrow visible */
+
 @media (max-width: 768px) {
+
     nav ul.nav-links li.dropdown > .dropdown-toggle > .dropdown-arrow {
+
         display: inline-flex !important;
+
         align-items: center;
+
         justify-content: center;
+
         flex-shrink: 0;
+
         width: 32px;
+
         height: 32px;
+
         padding: 0;
+
         margin: 0;
+
         border: none;
+
         background: transparent;
+
         color: inherit;
+
         cursor: pointer;
+
         visibility: visible !important;
+
         opacity: 1 !important;
+
     }
+
 }
 
-
-
 /* Mobile */
+
 @media (max-width: 768px) {
+
     .dropdown-toggle {
+
         justify-content: center;
+
         width: 100%;
+
     }
 
     .dropdown-arrow {
+
         display: inline-flex;
+
         align-items: center;
+
         justify-content: center;
+
         padding: 8px;
+
         background: transparent;
+
         border: none;
+
         color: inherit;
+
         cursor: pointer;
+
     }
 
     .dropdown-menu {
+
         display: none;
+
         position: static;
+
         width: 100%;
+
         min-width: 0;
+
         padding: 0;
+
         background: #1a1612;
+
         border: none;
+
         box-shadow: none;
+
         opacity: 1;
+
         visibility: visible;
+
         transform: none;
+
         pointer-events: auto;
+
     }
 
     .dropdown.open > .dropdown-toggle + .dropdown-menu {
+
         display: block;
+
     }
 
     .dropdown-menu li a {
+
         padding: 12px 24px;
+
         color: #ffffff;
+
         white-space: normal;
+
     }
 
     .dropdown-menu li a:hover {
+
         background: #806A50;
+
         color: #ffffff;
+
     }
+
 }
 
-
 @media screen and (max-width: 768px) {
+
     #navLinks .dropdown > .dropdown-toggle {
+
         display: flex;
+
         align-items: center;
+
         justify-content: space-between;
+
         width: 100%;
+
         gap: 10px;
+
     }
 
     #navLinks .dropdown > .dropdown-toggle > a {
+
         flex: 1;
+
         text-align: center;
+
     }
 
     #navLinks .dropdown > .dropdown-toggle > .dropdown-arrow {
+
         display: inline-flex !important;
+
         align-items: center;
+
         justify-content: center;
+
         flex: 0 0 36px;
+
         width: 36px;
+
         height: 36px;
+
         margin: 0;
+
         padding: 0;
+
         border: none;
+
         background: transparent;
+
         color: inherit;
+
         visibility: visible !important;
+
         opacity: 1 !important;
+
         cursor: pointer;
+
     }
 
     #navLinks .dropdown > .dropdown-toggle > .dropdown-arrow i {
+
         display: inline-block !important;
+
         visibility: visible !important;
+
         opacity: 1 !important;
+
     }
+
 }
 
 @media screen and (min-width: 769px) {
-    #navLinks .dropdown > .dropdown-toggle > .dropdown-arrow {
-        display: none !important;
-    }
-}
 
+    #navLinks .dropdown > .dropdown-toggle > .dropdown-arrow {
+
+        display: none !important;
+
+    }
+
+}
 
 /* MOBILE: Always show the About arrow, even on the About page */
+
 @media screen and (max-width: 768px) {
+
     #navLinks li.dropdown > .dropdown-toggle > .dropdown-arrow,
+
     #navLinks li.dropdown > .dropdown-toggle > .dropdown-arrow:focus,
+
     #navLinks li.dropdown > .dropdown-toggle > .dropdown-arrow:active {
+
         display: inline-flex !important;
+
         visibility: visible !important;
+
         opacity: 1 !important;
+
         align-items: center !important;
+
         justify-content: center !important;
+
         flex-shrink: 0 !important;
+
         width: 36px !important;
+
         height: 36px !important;
+
         position: relative !important;
+
         z-index: 9999 !important;
+
     }
 
     #navLinks li.dropdown > .dropdown-toggle > .dropdown-arrow i {
+        font-size: 12px !important;
         display: inline-block !important;
+
         visibility: visible !important;
+
         opacity: 1 !important;
-    }
-}
 
-/* ABOUT ARROW: visible on mobile, hidden on desktop */
-
-/* Mobile: always show the arrow */
-@media screen and (max-width: 768px) {
-    #navLinks li.dropdown > .dropdown-toggle {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        width: 100% !important;
     }
 
-    #navLinks li.dropdown > .dropdown-toggle > a {
-        display: block !important;
-        flex: 1 1 auto !important;
-        text-align: center !important;
-    }
-
-    #navLinks li.dropdown > .dropdown-toggle > .dropdown-arrow {
-        display: inline-flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        flex: 0 0 36px !important;
-        width: 36px !important;
-        height: 36px !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        position: relative !important;
-        z-index: 1002 !important;
-    }
-
-    #navLinks li.dropdown > .dropdown-toggle > .dropdown-arrow i {
-        display: inline-block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
 }
 
 /* Desktop: hide the arrow */
+
 @media screen and (min-width: 769px) {
+
     #navLinks li.dropdown > .dropdown-toggle > .dropdown-arrow {
+
         display: none !important;
+
     }
+
 }
 
+/* Show About submenu when arrow is clicked */
+
+#aboutDropdown.open .dropdown-menu {
+
+    display: block !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+}
+
+/* DESKTOP: Hide arrow and show submenu on hover */
+
+@media screen and (min-width: 901px) {
+
+    #aboutDropdown .dropdown-arrow {
+
+        display: none !important;
+
+    }
+
+    #aboutDropdown:hover .dropdown-menu,
+
+    #aboutDropdown:focus-within .dropdown-menu {
+
+        display: block !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+    }
+
+}
+
+/* MOBILE: Show arrow and require clicking */
+
+@media screen and (max-width: 900px) {
+
+    #aboutDropdown .dropdown-arrow {
+
+        display: inline-flex !important;
+
+    }
+
+    #aboutDropdown .dropdown-menu {
+
+        display: none !important;
+
+    }
+
+    #aboutDropdown.open .dropdown-menu {
+
+        display: block !important;
+
+        visibility: visible !important;
+
+        opacity: 1 !important;
+
+    }
+
+}
+
+/* FIX: Equal height for all mobile navigation items */
+@media (max-width: 768px) {
+
+    .nav-links > li {
+        padding: 0 !important;
+        min-height: 54px !important;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .nav-links > li > a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        min-height: 54px !important;
+        box-sizing: border-box !important;
+    }
+
+    #aboutDropdown > .dropdown-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        min-height: 54px !important;
+        gap: 6px !important;
+    }
+
+    #aboutDropdown > .dropdown-toggle > a {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+}
+
+/* FINAL MOBILE ABOUT ALIGNMENT */
 @media screen and (max-width: 768px) {
     #navLinks li.dropdown > .dropdown-toggle {
-        display: flex !important;
-        justify-content: center !important;
+        display: grid !important;
+        grid-template-columns: 1fr auto 1fr !important;
         align-items: center !important;
-        gap: 6px !important;
+        justify-content: initial !important;
+        gap: 0 !important;
         width: 100% !important;
     }
 
     #navLinks li.dropdown > .dropdown-toggle > a {
-        flex: 0 0 auto !important;
+        grid-column: 2 !important;
+        justify-self: center !important;
+        width: auto !important;
+        flex: none !important;
         text-align: center !important;
         margin: 0 !important;
     }
 
-    #navLinks li.dropdown > .dropdown-toggle > .dropdown-arrow {
+    #navLinks li.dropdown > .dropdown-toggle > button.dropdown-arrow {
+        grid-column: 3 !important;
+        justify-self: start !important;
+        position: static !important;
+        margin: 0 0 0 6px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #navLinks li.dropdown > .dropdown-toggle > button.dropdown-arrow {
+        width: 36px !important;
+        height: 36px !important;
+        padding: 0 !important;
+        margin-left: 6px !important;
         display: inline-flex !important;
-        flex: 0 0 auto !important;
         align-items: center !important;
         justify-content: center !important;
-        width: auto !important;
-        height: auto !important;
-        padding: 4px !important;
-        margin: 0 !important;
-        position: static !important;
+        background: none !important;
+        border: none !important;
+        color: #9CA3AF !important;
     }
 
-    .dropdown-arrow {
-    transform: translateY(-1px) !important;
-}
-}
+    #navLinks li.dropdown > .dropdown-toggle > button.dropdown-arrow i {
+        font-size: 12px !important;
+        color: #9CA3AF !important;
+    }
 
-/* Show About submenu when arrow is clicked */
-#aboutDropdown.open .dropdown-menu {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    #aboutDropdown .dropdown-arrow i {
+    transition: transform 0.3s ease !important;
+    transform: translate(-4px, 3px) rotate(0deg) !important;
 }
 
-/* DESKTOP: Hide arrow and show submenu on hover */
-@media screen and (min-width: 901px) {
-    #aboutDropdown .dropdown-arrow {
-        display: none !important;
-    }
-
-    #aboutDropdown:hover .dropdown-menu,
-    #aboutDropdown:focus-within .dropdown-menu {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
+#aboutDropdown.open .dropdown-arrow i {
+    transform: translate(-4px, 3px) rotate(180deg) !important;
 }
 
-/* MOBILE: Show arrow and require clicking */
-@media screen and (max-width: 900px) {
-    #aboutDropdown .dropdown-arrow {
-        display: inline-flex !important;
-    }
-
-    #aboutDropdown .dropdown-menu {
-        display: none !important;
-    }
-
-    #aboutDropdown.open .dropdown-menu {
-        display: block !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
 }
 
 </style>
@@ -2970,57 +4441,90 @@ nav ul li.dropdown {
 <body>
 
     
+
 <!-- HEADER / NAVIGATION -->
+
 <header>
+
     <nav>
+
         <div class="logo">
+
             <img src="images/logo.png" alt="Family Church Logo">
+
             <span>Family of Faith Missions, Inc.</span>
+
         </div>
 
         <button class="menu-btn" type="button"
+
                 onclick="toggleMenu()" aria-label="Toggle navigation">
+
             <i class="fas fa-bars"></i>
+
         </button>
 
         <ul class="nav-links" id="navLinks">
+
             <li><a href="index.html#home">Home</a></li>
 
             <li class="dropdown" id="aboutDropdown">
+
     <div class="dropdown-toggle">
+
         <a href="who-we-are.html">About</a>
 
         <button class="dropdown-arrow"
+
                 type="button"
+
                 aria-label="Toggle About submenu"
+
                 aria-expanded="false">
+
             <i class="fas fa-chevron-down"></i>
+
         </button>
+
     </div>
 
     <ul class="dropdown-menu">
-        <li><a href="what-we-believe.html">What We Believe</a></li>
-        <li><a href="who-we-are.html">Who We Are</a></li>
-    </ul>
+    <li>
+        <a href="who-we-are.html">Who We Are</a>
+    </li>
+    <li>
+        <a href="what-we-believe.html">What We Believe</a>
+    </li>
+</ul>
+
 </li>
 
             <li><a href="index.html#announcements">Announcements</a></li>
+
             <li><a href="index.html#events">Events</a></li>
+
             <li><a href="index.html#videos">Videos</a></li>
+
             <li><a href="index.html#gallery">Gallery</a></li>
+
             <li><a href="give.html">Give</a></li>
+
             <li><a href="index.html#contact">Contact</a></li>
+
         </ul>
+
     </nav>
+
 </header>
 
 <!-- CINEMATIC COVER IMAGE -->
+
 <section class="hero" id="home"></section>
 
-
-
     <!-- =========================
+
          ABOUT
+
     ========================== -->
 
     <section class="about" id="about">
@@ -3032,7 +4536,9 @@ nav ul li.dropdown {
                 <h2>About Us</h2>
 
                 <p>
+
                     Get to know our church and our mission.
+
                 </p>
 
             </div>
@@ -3042,6 +4548,7 @@ nav ul li.dropdown {
                 <div>
 
                     <img src="images/church-family.jpg"
+
                          alt="Family Church">
 
                 </div>
@@ -3051,18 +4558,27 @@ nav ul li.dropdown {
                     <h3>We Are Family</h3>
 
                     <p>
+
                         Family of Faith Missions, Inc. is a community of believers
+
                         committed to following Jesus Christ, growing
+
                         together in faith, and serving our community.
+
                     </p>
 
                     <br>
 
                     <p>
+
                         Our desire is to create a welcoming environment
+
                         where individuals and families can worship God,
+
                         build meaningful relationships, and discover
+
                         their purpose.
+
                     </p>
 
                 </div>
@@ -3073,9 +4589,10 @@ nav ul li.dropdown {
 
     </section>
 
-
     <!-- =========================
+
          ANNOUNCEMENTS
+
     ========================== -->
 
     <section id="announcements">
@@ -3087,7 +4604,9 @@ nav ul li.dropdown {
                 <h2>Latest Announcements</h2>
 
                 <p>
+
                     Stay updated with what's happening in our church.
+
                 </p>
 
             </div>
@@ -3097,65 +4616,81 @@ nav ul li.dropdown {
                 <div class="card">
 
                     <img src="images/event1.jpg"
+
                          alt="Church Event">
 
                     <div class="card-content">
 
                         <div class="date">
-                            October 11, 2026
+
+                            November 15, 2026
+
                         </div>
 
                         <h3>Sunday Worship Service</h3>
 
                         <p>
+
                             Join us this Sunday for worship,
+
                             fellowship, and God's Word.
+
                         </p>
 
                     </div>
 
                 </div>
 
-
                 <div class="card">
 
                     <img src="images/event2.jpg"
+
                          alt="Youth Ministry">
 
                     <div class="card-content">
 
                         <div class="date">
-                            October 11, 2026
+
+                            November 15, 2026
+
                         </div>
 
                         <h3>Youth Fellowship</h3>
 
                         <p>
+
                             A special gathering for our young
+
                             people to connect and grow in faith.
+
                         </p>
 
                     </div>
 
                 </div>
 
-
                 <div class="card">
 
                     <img src="images/event3.jpg"
+
                          alt="Prayer Meeting">
 
                     <div class="card-content">
 
                         <div class="date">
-                            October 07, 2026
+
+                            November 11, 2026
+
                         </div>
 
                         <h3>Prayer Meeting</h3>
 
                         <p>
+
                             Come together as a church family
+
                             to pray and seek God's presence.
+
                         </p>
 
                     </div>
@@ -3168,9 +4703,10 @@ nav ul li.dropdown {
 
     </section>
 
-
     <!-- =========================
+
          EVENTS
+
     ========================== -->
 
     <section class="events" id="events">
@@ -3182,31 +4718,32 @@ nav ul li.dropdown {
                 <h2>Weekly Schedule</h2>
 
                 <p>
+
                     Mark your calendars and join us!
+
                 </p>
 
             </div>
-
 
            <div class="event tuesday">
 
     <h3>TUESDAY</h3>
 
     <p>Camella 4B Home Bible Study — 2:00 PM</p>
+
     <p>Mentoring — 6:00 PM</p>
 
 </div>
-
 
 <div class="event wednesday">
 
     <h3>WEDNESDAY</h3>
 
     <p>SHOP — 2:00 PM</p>
+
     <p>Prayer Meeting — 6:00 PM</p>
 
 </div>
-
 
 <div class="event thursday">
 
@@ -3216,34 +4753,36 @@ nav ul li.dropdown {
 
 </div>
 
-
 <div class="event friday">
 
     <h3>FRIDAY</h3>
 
     <p>Katihan HBS — 2:00 PM</p>
+
     <p>Thrive Group — 2:00 PM</p>
 
 </div>
-
 
 <div class="event saturday">
 
     <h3>SATURDAY</h3>
 
     <p>Outreaches and HBS</p>
+
     <p>Music Team Practice — 4:00 PM</p>
 
 </div>
-
 
 <div class="event sunday">
 
     <h3>SUNDAY</h3>
 
     <p>Sweet Hour of Prayer — 7:30 AM</p>
+
     <p>Sunday School — 8:30 AM</p>
+
     <p>Worship Service — 10:00 AM</p>
+
     <p>Afternoon Fellowships — 1:00 PM</p>
 
 </div>
@@ -3252,9 +4791,10 @@ nav ul li.dropdown {
 
     </section>
 
-
     <!-- =========================
+
          MINISTRIES
+
     ========================== -->
 
     <section>
@@ -3266,7 +4806,9 @@ nav ul li.dropdown {
                 <h2>Our Ministries</h2>
 
                 <p>
+
                     There is a place for everyone in the family.
+
                 </p>
 
             </div>
@@ -3280,12 +4822,14 @@ nav ul li.dropdown {
                     <h3>Kids Ministry</h3>
 
                     <p>
+
                         Helping children learn about God's
+
                         love in a fun and meaningful way.
+
                     </p>
 
                 </div>
-
 
                 <div class="card ministry-card" data-ministry="youth">
 
@@ -3294,12 +4838,14 @@ nav ul li.dropdown {
                     <h3>Youth Ministry</h3>
 
                     <p>
+
                         Building a generation that follows
+
                         Christ and makes a difference.
+
                     </p>
 
                 </div>
-
 
                 <div class="card ministry-card" data-ministry="family">
 
@@ -3308,8 +4854,11 @@ nav ul li.dropdown {
                     <h3>Family Ministry</h3>
 
                     <p>
+
                         Strengthening families through
+
                         faith, fellowship, and God's Word.
+
                     </p>
 
                 </div>
@@ -3325,45 +4874,77 @@ nav ul li.dropdown {
     <div class="container">
 
         <div class="section-title">
+
             <h2 id="ministry-gallery-heading">Kids Ministry</h2>
+
             <p id="ministry-gallery-description">
+
                 Photos and memories from our Kids Ministry.
+
             </p>
+
         </div>
 
         <div class="gallery-grid">
 
             <!-- KIDS MINISTRY -->
+
             <img src="images/kids1.jpg" alt="Kids Ministry 1" data-ministry="kids">
+
             <img src="images/kids2.jpg" alt="Kids Ministry 2" data-ministry="kids">
+
             <img src="images/kids3.jpg" alt="Kids Ministry 3" data-ministry="kids">
+
             <img src="images/kids4.jpg" alt="Kids Ministry 4" data-ministry="kids">
+
             <img src="images/kids5.jpg" alt="Kids Ministry 5" data-ministry="kids">
+
             <img src="images/kids6.jpg" alt="Kids Ministry 6" data-ministry="kids">
+
             <img src="images/kids7.jpg" alt="Kids Ministry 7" data-ministry="kids">
+
             <img src="images/kids8.jpg" alt="Kids Ministry 8" data-ministry="kids">
+
             <img src="images/kids9.jpg" alt="Kids Ministry 9" data-ministry="kids">
 
             <!-- YOUTH MINISTRY -->
+
             <img src="images/youth1.jpg" alt="Youth Ministry 1" data-ministry="youth" hidden>
+
             <img src="images/youth2.jpg" alt="Youth Ministry 2" data-ministry="youth" hidden>
+
             <img src="images/youth3.jpg" alt="Youth Ministry 3" data-ministry="youth" hidden>
+
             <img src="images/youth4.jpg" alt="Youth Ministry 4" data-ministry="youth" hidden>
+
             <img src="images/youth5.jpg" alt="Youth Ministry 5" data-ministry="youth" hidden>
+
             <img src="images/youth6.jpg" alt="Youth Ministry 6" data-ministry="youth" hidden>
+
             <img src="images/youth7.jpg" alt="Youth Ministry 7" data-ministry="youth" hidden>
+
             <img src="images/youth8.jpg" alt="Youth Ministry 8" data-ministry="youth" hidden>
+
             <img src="images/youth9.jpg" alt="Youth Ministry 9" data-ministry="youth" hidden>
 
             <!-- FAMILY MINISTRY -->
+
             <img src="images/family1.jpg" alt="Family Ministry 1" data-ministry="family" hidden>
+
             <img src="images/family2.jpg" alt="Family Ministry 2" data-ministry="family" hidden>
+
             <img src="images/family3.jpg" alt="Family Ministry 3" data-ministry="family" hidden>
+
             <img src="images/family4.jpg" alt="Family Ministry 4" data-ministry="family" hidden>
+
             <img src="images/family5.jpg" alt="Family Ministry 5" data-ministry="family" hidden>
+
             <img src="images/family6.jpg" alt="Family Ministry 6" data-ministry="family" hidden>
+
             <img src="images/family7.jpg" alt="Family Ministry 7" data-ministry="family" hidden>
+
             <img src="images/family8.jpg" alt="Family Ministry 8" data-ministry="family" hidden>
+
             <img src="images/family9.jpg" alt="Family Ministry 9" data-ministry="family" hidden>
 
         </div>
@@ -3371,64 +4952,97 @@ nav ul li.dropdown {
     </div>
 
 </section>
+
 <!-- Floating Ministry Photo Panel -->
+
 <div id="ministry-modal" class="ministry-modal" aria-hidden="true">
+
     <div class="ministry-modal-content"
+
          role="dialog"
+
          aria-modal="true"
+
          aria-labelledby="modal-ministry-title">
 
         <button type="button" id="close-ministry-modal"
+
                 class="close-ministry-modal"
+
                 aria-label="Close photo panel">
+
             &times;
+
         </button>
 
         <h2 id="modal-ministry-title">Kids Ministry</h2>
+
         <p id="modal-ministry-description">
+
             Photos and memories from our ministry.
+
         </p>
 
         <div id="modal-ministry-photos" class="ministry-photo-grid"></div>
 
     </div>
+
 </div>
 
-
-
     <!-- =========================
+
          VIDEOS
+
     ========================== -->
 
     <section id="videos">
 
         <!-- YouTube Preachings Section -->
+
 <div class="youtube-section">
+
     <h2>YouTube Preachings</h2>
+
     <p>Watch our sermons, Bible teachings, and messages.</p>
 
     <div class="youtube-container">
 
                 
+
 <div class="youtube-card">
+
     <iframe
+
         src="https://www.youtube.com/embed/PuGyObaydc4"
+
         title="Family Church Preachings"
+
         referrerpolicy="strict-origin-when-cross-origin"
+
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
         allowfullscreen>
+
     </iframe>
+
 </div>
 
     </div>
 
     <a href="https://www.youtube.com/@familychurchacts1631"
+
    target="_blank"
+
    rel="noopener noreferrer"
+
    class="video-button">
+
     <i class="fab fa-youtube"></i>
+
     View Our YouTube Channel
+
 </a>
+
 </div>
 
         <div class="container">
@@ -3438,120 +5052,193 @@ nav ul li.dropdown {
                 <h2>Church Videos</h2>
 
                 <p>
+
                     Watch our latest church activities.
+
                 </p>
 
             </div>
-
 
     <div class="video-grid">
 
     <!-- VIDEO 1 -->
+
     <div class="video">
+
         <a href="https://www.facebook.com/reel/1043837205310881/"
+
            target="_blank"
+
            style="text-decoration: none;">
 
             <div style="
+
                 height: 476px;
+
                 background:
+
                     linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
+
                     url('images/video1.png') center/cover no-repeat;
+
                 display: flex;
+
                 flex-direction: column;
+
                 justify-content: center;
+
                 align-items: center;
+
                 text-align: center;
+
                 color: white;
+
                 border-radius: 5px;
+
                 padding: 30px;
+
             ">
 
                 <i class="fab fa-facebook"
+
                    style="font-size: 50px; margin-bottom: 20px;">
+
                 </i>
 
                 <h3 style="margin-bottom: 10px;">
+
                     Watch Our Video
+
                 </h3>
 
                 <p style="color: white;">
+
                     Watch this video on our Facebook page
+
                 </p>
 
                 <span style="
+
                     margin-top: 15px;
+
                     background: #A68A6D;
+
                     padding: 10px 20px;
+
                     border-radius: 5px;
+
                 ">
+
                     Watch on Facebook
+
                 </span>
 
             </div>
-        </a>
-    </div>
 
+        </a>
+
+    </div>
 
     <!-- VIDEO 2 -->
+
     <div class="video">
-        <a href="https://www.facebook.com/reel/986780407785770/"
+
+        <a href="https://www.facebook.com/reel/29566998102883472"
+
            target="_blank"
+
            style="text-decoration: none;">
 
             <div style="
+
                 height: 476px;
+
                 background:
+
                     linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
-                    url('images/video2.png') center/cover no-repeat;
+
+                    url('images/video2.jpg') center/cover no-repeat;
+
                 display: flex;
+
                 flex-direction: column;
+
                 justify-content: center;
+
                 align-items: center;
+
                 text-align: center;
+
                 color: white;
+
                 border-radius: 5px;
+
                 padding: 30px;
+
             ">
 
                 <i class="fab fa-facebook"
+
                    style="font-size: 50px; margin-bottom: 20px;">
+
                 </i>
 
                 <h3 style="margin-bottom: 10px;">
+
                     Watch Our Video
+
                 </h3>
 
                 <p style="color: white;">
+
                     Watch this video on our Facebook page
+
                 </p>
 
                 <span style="
+
                     margin-top: 15px;
+
                     background: #A68A6D;
+
                     padding: 10px 20px;
+
                     border-radius: 5px;
+
                 ">
+
                     Watch on Facebook
+
                 </span>
 
             </div>
-        </a>
-    </div>
 
+        </a>
+
+    </div>
 
     
+
         <!-- VIDEO 3 -->
+
     <div class="video">
-        <a href="https://www.facebook.com/reel/2152212382338864/"
+
+        <a href="https://www.facebook.com/reel/1018692921253174/"
+
            target="_blank"
+
            style="text-decoration: none;">
 
             <div style="
+
                 height: 476px;
+
                 background:
+
                     linear-gradient(rgba(0,0,0,0.50), rgba(0,0,0,0.50)),
-                    url('images/video3.png') center/cover no-repeat;
+
+                    url('images/video3.jpg') center/cover no-repeat;
+
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -3560,6 +5247,7 @@ nav ul li.dropdown {
                 color: white;
                 border-radius: 5px;
                 padding: 30px;
+
             ">
 
                 <i class="fab fa-facebook"
@@ -3579,35 +5267,31 @@ nav ul li.dropdown {
                     background: #A68A6D;
                     padding: 10px 20px;
                     border-radius: 5px;
+
                 ">
                     Watch on Facebook
                 </span>
-
             </div>
         </a>
     </div>
+</div> 
 
-</div> <!-- End of video-grid -->
-
-<!-- FACEBOOK PAGE BUTTON -->
-
-<!-- FACEBOOK PAGE BUTTON -->
 <div class="facebook-page-button">
+
     <a href="https://www.facebook.com/profile.php?id=61558112182416"
        target="_blank"
        rel="noopener noreferrer"
        class="facebook-btn">
         <i class="fab fa-facebook-f"></i>
         Visit Our Facebook Page
+
     </a>
-</div>
-
 
 </div>
+
+</div>
+
 </section>
-    <!-- ========================
-         GALLERY
-    ========================== -->
 
     <section class="gallery" id="gallery">
 
@@ -3618,7 +5302,9 @@ nav ul li.dropdown {
                 <h2>Church Gallery</h2>
 
                 <p>
+
                     Moments and memories from our church family.
+
                 </p>
 
             </div>
@@ -3626,27 +5312,35 @@ nav ul li.dropdown {
             <div class="gallery-grid">
 
                 <img src="images/gallery1.jpg"
+
                      alt="Church Activity">
 
                 <img src="images/gallery2.jpg"
+
                      alt="Church Activity">
 
                 <img src="images/gallery3.jpg"
+
                      alt="Church Activity">
 
                 <img src="images/gallery4.jpg"
+
                      alt="Church Activity">
 
                 <img src="images/gallery5.jpg"
+
                      alt="Church Activity">
 
                 <img src="images/gallery6.jpg"
+
                      alt="Church Activity">
 
                 <img src="images/gallery7.jpg"
+
                      alt="Church Activity">
 
                 <img src="images/gallery8.jpg"
+
                      alt="Church Activity">
 
             </div>
@@ -3654,21 +5348,31 @@ nav ul li.dropdown {
         </div>
 
         <!-- FACEBOOK PHOTOS BUTTON -->
+
 <div class="facebook-page-button">
+
     <a href="https://www.facebook.com/profile.php?id=61558112182416&sk=photos"
+
        target="_blank"
+
        rel="noopener noreferrer"
+
        class="facebook-btn">
+
         <i class="fab fa-facebook-f"></i>
+
         View Our Facebook Photos
+
     </a>
+
 </div>
 
     </section>
 
-
     <!-- =========================
+
          SERVICE TIMES
+
     ========================== -->
 
     <section class="services" id="services">
@@ -3680,11 +5384,12 @@ nav ul li.dropdown {
                 <h2>Service Times</h2>
 
                 <p>
+
                     We would love to worship with you.
+
                 </p>
 
             </div>
-
 
             <div class="service-box">
 
@@ -3695,15 +5400,18 @@ nav ul li.dropdown {
                     <h3>Sunday Worship</h3>
 
                     <p>
+
                         Every Sunday
+
                     </p>
 
                     <p>
+
                         10:00 AM
+
                     </p>
 
                 </div>
-
 
                 <div class="service">
 
@@ -3712,15 +5420,18 @@ nav ul li.dropdown {
                     <h3>Prayer Meeting</h3>
 
                     <p>
+
                         Every Wednesday
+
                     </p>
 
                     <p>
+
                         6:00 PM
+
                     </p>
 
                 </div>
-
 
                 <div class="service">
 
@@ -3729,11 +5440,15 @@ nav ul li.dropdown {
                     <h3>Thrive Group</h3>
 
                     <p>
+
                         Every Friday
+
                     </p>
 
                     <p>
+
                         2:00 PM
+
                     </p>
 
                 </div>
@@ -3745,76 +5460,117 @@ nav ul li.dropdown {
     </section>
 
     <!-- GIVE SECTION -->
+
     <section id="give" class="give-section">
+
         <div class="give-content">
+
             <span class="give-label">YOUR GENEROSITY MAKES A DIFFERENCE</span>
 
             <h2>Give with a Grateful Heart</h2>
 
             <p>
+
                 Your generosity helps support the ministry, reach more people,
+
                 and share God's love with our community.
+
             </p>
 
             <!-- GIVE TODAY BUTTON -->
+
             <div class="facebook-page-button">
+
                 <a href="give.html" class="facebook-btn">
+
                     Give Now
+
                 </a>
+
             </div>
+
             
+
         </div>
+
     </section>
 
-
     <!-- =========================
+
      CONTACT
+
 ========================== -->
 
 <section class="contact" id="contact">
+
     <div class="container">
 
         <div class="section-title">
+
             <h2>Contact Us</h2>
+
             <p>We would love to hear from you.</p>
+
         </div>
 
         <div class="contact-content">
 
             <div class="contact-info">
+
                 <h3>Get In Touch</h3>
 
                 <p>
+
                 <i class="fas fa-church"></i>
+
                 Family of Faith Missions, Inc.
+
                  </p>
 
                 <p>
+
                     <i class="fas fa-location-dot"></i>
+
                     4th Floor, 60 Katihan Road, Poblacion, Muntinlupa City
+
                 </p>
 
                 <p>
+
                 <i class="fas fa-phone"></i>
+
                 <a href="tel:09357273837">0935 727 3837</a>
+
                 </p>
 
                 <p>
+
                 <i class="fas fa-envelope"></i>
+
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=familyoffaithmissionsinc@gmail.com"
+
                 target="_blank"
+
                 rel="noopener noreferrer">
+
                     familyoffaithmissionsinc@gmail.com
+
                 </a>
+
                 </p>
 
                 <p>
+
                     <i class="fas fa-clock"></i>
+
                     Sunday Service: 10:00 AM
+
                 </p>
+
             </div>
 
              <div class="contact-card contact-welcome">
+
             <span class="welcome-label">YOU ARE WELCOME HERE</span>
 
             <h3>We're Here<br>for You</h3>
@@ -3822,26 +5578,37 @@ nav ul li.dropdown {
             <div class="welcome-divider"></div>
 
             <p class="welcome-message">
+
                 Whether you're looking for a church family, need prayer,
+
                 or simply have a question, we'd love to connect with you.
+
             </p>
 
             <blockquote>
+
                 “We love because he first loved us.”
+
                 <span>1 John 4:19</span>
+
             </blockquote>
+
         </div>
 
         </div>
+
     </div>
+
 </section>
 
-
     <!-- =========================
+
          FOOTER
+
     ========================== -->
 
     <footer>
+
     <h3>Family of Faith Missions, Inc.</h3>
 
     <p class="tagline">Family • Faith • Fellowship</p>
@@ -3849,294 +5616,457 @@ nav ul li.dropdown {
         <!-- SOCIAL MEDIA LINKS -->
 
         <div class="social-links">
+
     <a href="https://www.facebook.com/profile.php?id=61558112182416"
+
        target="_blank" rel="noopener noreferrer"
+
        aria-label="Facebook">
+
         <i class="fa-brands fa-facebook-f"></i>
+
     </a>
 
     <a href="https://www.instagram.com/familyoffaithmissionsinc/?hl=en"
+
        target="_blank" rel="noopener noreferrer"
+
        aria-label="Instagram">
+
         <i class="fa-brands fa-instagram"></i>
+
     </a>
 
     <a href="https://www.youtube.com/@familychurchacts1631"
+
        target="_blank" rel="noopener noreferrer"
+
        aria-label="YouTube">
+
         <i class="fa-brands fa-youtube"></i>
+
     </a>
+
 </div>
 
         <p>
+
             © 2026 Family of Faith Missions, Inc. All Rights Reserved.
+
         </p>
 
     </footer>
 
-
     <!-- =========================
+
          JAVASCRIPT
+
     ========================== -->
 
     
+
 <script>
+
     // Mobile Menu
+
     function toggleMenu() {
+
         const navLinks = document.getElementById("navLinks");
+
         navLinks.classList.toggle("active");
+
     }
 
     // Close mobile menu when a link is clicked
+
     document.querySelectorAll(".nav-links a").forEach(link => {
+
         link.addEventListener("click", function() {
+
             document.getElementById("navLinks").classList.remove("active");
+
         });
+
     });
 
     // Floating Ministry Photo Panel
+
     const ministryCards = document.querySelectorAll(".ministry-card");
+
     const ministryModal = document.getElementById("ministry-modal");
+
     const modalTitle = document.getElementById("modal-ministry-title");
+
     const modalDescription = document.getElementById("modal-ministry-description");
+
     const modalPhotos = document.getElementById("modal-ministry-photos");
+
     const closeMinistryModal = document.getElementById("close-ministry-modal");
 
     const ministryNames = {
+
         kids: "Kids Ministry",
+
         youth: "Youth Ministry",
+
         family: "Family Ministry"
+
     };
 
     ministryCards.forEach(function(card) {
+
         card.addEventListener("click", function() {
+
             const ministry = card.dataset.ministry;
 
             if (!ministryNames[ministry]) return;
 
             modalTitle.textContent = ministryNames[ministry];
+
             modalDescription.textContent =
+
                 "Photos and memories from our " + ministryNames[ministry] + ".";
 
             modalPhotos.replaceChildren();
 
             const images = document.querySelectorAll(
+
                 '#ministry-pictures img[data-ministry="' + ministry + '"]'
+
             );
 
             images.forEach(function(originalImage) {
+
                 const photo = document.createElement("img");
+
                 photo.src = originalImage.getAttribute("src");
+
                 photo.alt = originalImage.alt;
+
                 photo.loading = "lazy";
+
                 modalPhotos.appendChild(photo);
+
             });
 
             ministryModal.classList.add("show");
+
             ministryModal.setAttribute("aria-hidden", "false");
+
             document.body.style.overflow = "hidden";
+
             closeMinistryModal.focus();
+
         });
+
     });
 
     function closeMinistryPhotoPanel() {
+
         ministryModal.classList.remove("show");
+
         ministryModal.setAttribute("aria-hidden", "true");
+
         document.body.style.overflow = "";
+
     }
 
     closeMinistryModal.addEventListener("click", closeMinistryPhotoPanel);
 
     ministryModal.addEventListener("click", function(event) {
+
         if (event.target === ministryModal) {
+
             closeMinistryPhotoPanel();
+
         }
+
     });
 
     document.addEventListener("keydown", function(event) {
+
         if (event.key === "Escape" && ministryModal.classList.contains("show")) {
+
             closeMinistryPhotoPanel();
+
         }
+
     });
 
 /* Let the phone's Back button close the Ministries popup */
+
 let ministryHistoryAdded = false;
+
 let closingFromBackButton = false;
 
 function openMinistryHistory() {
+
     if (ministryHistoryAdded) return;
 
     history.pushState(
+
         { ministryPopup: true },
+
         "",
+
         window.location.href
+
     );
 
     ministryHistoryAdded = true;
+
 }
 
 function closeMinistryHistory() {
+
     if (!ministryHistoryAdded || closingFromBackButton) return;
 
     closingFromBackButton = true;
+
     history.back();
+
 }
 
 window.addEventListener("popstate", function () {
+
     ministryHistoryAdded = false;
 
     if (ministryModal.classList.contains("show")) {
+
         closingFromBackButton = true;
+
         closeMinistryPhotoPanel();
+
         closingFromBackButton = false;
+
     }
+
 });
 
 /* Track when the popup opens or closes */
+
 const ministryPopupObserver = new MutationObserver(function () {
+
     if (ministryModal.classList.contains("show")) {
+
         openMinistryHistory();
+
     } else if (ministryHistoryAdded && !closingFromBackButton) {
+
         closeMinistryHistory();
+
     }
+
 });
 
 ministryPopupObserver.observe(ministryModal, {
+
     attributes: true,
+
     attributeFilter: ["class"]
+
 });
 
 </script>
 
 <!-- Image Preview Popup -->
+
 <div id="image-preview" class="image-preview">
+
     <button id="close-preview" aria-label="Close image">&times;</button>
+
     <img id="preview-image" src="" alt="Enlarged ministry photo">
+
 </div>
 
 <script>
+
 const imagePreview = document.getElementById("image-preview");
+
 const previewImage = document.getElementById("preview-image");
+
 const closePreview = document.getElementById("close-preview");
 
 // Open the image when clicked
+
 document.addEventListener("click", function (event) {
+
     const image = event.target.closest(".ministry-photo-grid img");
 
     if (!image) return;
 
     previewImage.src = image.src;
+
     previewImage.alt = image.alt;
+
     imagePreview.classList.add("show");
+
 });
 
 // Close using the X button
+
 closePreview.addEventListener("click", function () {
+
     imagePreview.classList.remove("show");
+
     previewImage.src = "";
+
 });
 
 // Close when clicking the dark background
+
 imagePreview.addEventListener("click", function (event) {
+
     if (event.target === imagePreview) {
+
         imagePreview.classList.remove("show");
+
         previewImage.src = "";
+
     }
+
 });
 
 // Close using Escape
+
 document.addEventListener("keydown", function (event) {
+
     if (event.key === "Escape") {
+
         imagePreview.classList.remove("show");
+
         previewImage.src = "";
+
     }
+
 });
+
 </script>
 
-
 <script>
+
 // About submenu: one arrow handler only
 
 const menuBtn = document.getElementById("menuBtn");
+
 const navLinks = document.getElementById("navLinks");
+
 const aboutDropdown = document.getElementById("aboutDropdown");
 
 const arrowBtn = aboutDropdown?.querySelector(".dropdown-arrow");
 
 // Toggle burger menu
+
 menuBtn?.addEventListener("click", function () {
+
     const isOpen = navLinks.classList.toggle("active");
 
     menuBtn.setAttribute("aria-expanded", String(isOpen));
+
     menuBtn.setAttribute(
+
         "aria-label",
+
         isOpen ? "Close navigation menu" : "Open navigation menu"
+
     );
 
     menuBtn.innerHTML = isOpen
+
         ? '<i class="fas fa-times" aria-hidden="true"></i>'
+
         : '<i class="fas fa-bars" aria-hidden="true"></i>';
+
 });
 
 // Toggle About submenu using the arrow button
+
 arrowBtn?.addEventListener("click", function (event) {
     event.preventDefault();
     event.stopPropagation();
-
     const isOpen = aboutDropdown.classList.toggle("open");
-
     arrowBtn.setAttribute("aria-expanded", String(isOpen));
+
 });
 
 // Close menu after selecting a submenu destination
+
 navLinks?.querySelectorAll(".dropdown-menu a").forEach(function (link) {
+
     link.addEventListener("click", function () {
+
         navLinks.classList.remove("active");
+
         aboutDropdown.classList.remove("open");
 
         menuBtn?.setAttribute("aria-expanded", "false");
+
         menuBtn?.setAttribute("aria-label", "Open navigation menu");
 
         if (menuBtn) {
+
             menuBtn.innerHTML =
+
                 '<i class="fas fa-bars" aria-hidden="true">';
+
         }
 
         arrowBtn?.setAttribute("aria-expanded", "false");
+
     });
+
 });
 
 // Close submenu when clicking outside
+
 document.addEventListener("click", function (event) {
+
     if (
+
         aboutDropdown &&
+
         !aboutDropdown.contains(event.target)
+
     ) {
+
         aboutDropdown.classList.remove("open");
+
         arrowBtn?.setAttribute("aria-expanded", "false");
+
     }
+
 });
 
 // Reset mobile navigation when switching to desktop
+
 window.addEventListener("resize", function () {
+
     if (window.innerWidth > 900) {
+
         navLinks?.classList.remove("active");
+
         aboutDropdown?.classList.remove("open");
 
         menuBtn?.setAttribute("aria-expanded", "false");
+
         menuBtn?.setAttribute("aria-label", "Open navigation menu");
 
         if (menuBtn) {
+
             menuBtn.innerHTML =
+
                 '<i class="fas fa-bars" aria-hidden="true">';
+
         }
 
         arrowBtn?.setAttribute("aria-expanded", "false");
+
     }
+
 });
 
 </script>
 
-
 </body>
+
 </html>

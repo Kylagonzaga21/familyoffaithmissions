@@ -946,6 +946,158 @@ nav {
     }
 }
 
+
+/* ABOUT MENU — CENTER THE WORD, KEEP ARROW BESIDE IT */
+
+#aboutDropdown .dropdown-toggle {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+/* Keep ABOUT text exactly centered */
+#aboutDropdown .dropdown-toggle > a {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Arrow sits beside ABOUT, without affecting its centering */
+#aboutDropdown button.dropdown-arrow {
+    position: absolute !important;
+    left: calc(50% + 23px) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 28px !important;
+    height: 32px !important;
+    min-width: 28px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+
+    color: #888888 !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+}
+
+/* Mobile: show arrow */
+@media screen and (max-width: 900px) {
+    #aboutDropdown button.dropdown-arrow {
+        display: inline-flex !important;
+    }
+}
+
+/* Desktop: hide arrow */
+@media screen and (min-width: 901px) {
+    #aboutDropdown button.dropdown-arrow {
+        display: none !important;
+    }
+}
+
+
+/* FIX: Equal height for all mobile navigation items */
+@media (max-width: 768px) {
+    .nav-links > li {
+        padding: 0 !important;
+        min-height: 54px !important;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .nav-links > li > a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        min-height: 54px !important;
+        box-sizing: border-box !important;
+    }
+
+    #aboutDropdown > .dropdown-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        min-height: 54px !important;
+        gap: 6px !important;
+    }
+
+    #aboutDropdown > .dropdown-toggle > a {
+        display: inline-flex !important;
+        align-items: center !important;
+        min-height: 54px !important;
+    }
+} /* CLOSED MOBILE NAVIGATION */
+
+
+/* CENTER HERO TEXT */
+.page-hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-hero-text {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 850px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center !important;
+}
+
+.page-hero-text h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff !important;
+    margin-bottom: 10px;
+    text-align: center !important;
+}
+
+.page-hero-text p {
+    font-size: 18px;
+    color: #ffffff !important;
+    letter-spacing: 2px;
+    text-align: center !important;
+}
+
+/* MOBILE HERO TEXT */
+@media (max-width: 768px) {
+    .page-hero-text h1 {
+        font-size: 28px;
+    }
+
+    .page-hero-text p {
+        font-size: 14px;
+    }
+}
+
+/* SLIGHT GRAY OVERLAY */
+.hero.page-hero {
+    background-image:
+        linear-gradient(
+            rgba(45, 45, 45, 0.40),
+            rgba(45, 45, 45, 0.40)
+        ),
+        url("images/church.jpg") !important;
+}
+
     </style>
 </head>
 
@@ -993,17 +1145,14 @@ nav {
     </div>
 
     <ul class="dropdown-menu">
-        <li>
-            <a href="who-we-are.html" class="active">
-                Who We Are
-            </a>
-        </li>
-        <li>
-            <a href="what-we-believe.html">
-                What We Believe
-            </a>
-        </li>
-    </ul>
+    <li>
+        <a href="who-we-are.html">Who We Are</a>
+    </li>
+    <li>
+        <a href="what-we-believe.html">What We Believe</a>
+    </li>
+</ul>
+
 </li>
 
                 <li>
@@ -1034,8 +1183,12 @@ nav {
         </nav>
     </header>
 
-    <!-- CINEMATIC COVER IMAGE -->
-<section class="hero" id="home"></section>
+    <section class="hero page-hero">
+    <div class="page-hero-text">
+        <h1>WHO WE ARE</h1>
+        <p>Learn about our church</p>
+    </div>
+    </section>
 
     <!-- =========================
          CHURCH INTRODUCTION
